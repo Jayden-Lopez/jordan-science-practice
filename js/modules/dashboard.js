@@ -1,11 +1,7 @@
 // Parent dashboard functions
-import { database, ref, set, get } from '../config/firebase.js';
-import { userProgress, parentSettings, setUserProgress, setParentSettings, hashPin } from './state.js';
-import { curriculum } from '../data/curriculum.js';
-import { renderUnits, updateStats } from './practice.js';
 
 // Show parent dashboard
-export function showParentDashboard() {
+function showParentDashboard() {
     document.getElementById('mainMenu').style.display = 'none';
     document.getElementById('practiceScreen').style.display = 'none';
     document.getElementById('parentDashboard').style.display = 'block';
@@ -15,9 +11,9 @@ export function showParentDashboard() {
 }
 
 // Verify PIN
-export function verifyPin() {
+function verifyPin() {
     const enteredPin = document.getElementById('pinInput').value;
-    if (hashPin(enteredPin) === parentSettings.pinHash) {
+    if (window.AppState.hashPin(enteredPin) === window.AppState.parentSettings.pinHash) {
         document.getElementById('pinScreen').style.display = 'none';
         document.getElementById('dashboardContent').style.display = 'block';
         renderProgressChart();
@@ -28,18 +24,18 @@ export function verifyPin() {
 }
 
 // Close parent dashboard
-export function closeParentDashboard() {
+function closeParentDashboard() {
     document.getElementById('parentDashboard').style.display = 'none';
     document.getElementById('mainMenu').style.display = 'block';
 }
 
 // Render progress chart
-export function renderProgressChart() {
+function renderProgressChart() {
     const chartContainer = document.getElementById('progressChart');
     chartContainer.innerHTML = '<h3>Chapter Progress</h3>';
 
     for (let i = 1; i <= 15; i++) {
-        const progress = userProgress[i] || { correct: 0, total: 0, accuracy: 0, mastered: false, incorrectAnswers: [] };
+        const progress = window.AppState.userProgress[i] || { correct: 0, total: 0, accuracy: 0, mastered: false, incorrectAnswers: [] };
         const item = document.createElement('div');
         item.className = 'chapter-progress-item';
 
@@ -55,7 +51,7 @@ export function renderProgressChart() {
                 ${progress.total > 0 ? `${progress.correct}/${progress.total} (${Math.round(progress.accuracy)}%)` : 'Not started'}
                 ${progress.mastered ? ' ✓ Mastered' : ''}
                 ${progress.incorrectAnswers && progress.incorrectAnswers.length > 0 ?
-                    `<br><button class="btn btn-secondary" style="font-size: 0.8em; padding: 5px 10px; margin-top: 5px;" onclick="window.showIncorrectAnswers(${i})">
+                    `<br><button class="btn btn-secondary" style="font-size: 0.8em; padding: 5px 10px; margin-top: 5px;" onclick="window.DashboardManager.showIncorrectAnswers(${i})">
                         View ${progress.incorrectAnswers.length} Incorrect Answer${progress.incorrectAnswers.length > 1 ? 's' : ''}
                     </button>` : ''}
             </div>
@@ -68,8 +64,8 @@ export function renderProgressChart() {
 }
 
 // Show incorrect answers for a chapter
-export function showIncorrectAnswers(chapterId) {
-    const progress = userProgress[chapterId];
+function showIncorrectAnswers(chapterId) {
+    const progress = window.AppState.userProgress[chapterId];
     if (!progress || !progress.incorrectAnswers || progress.incorrectAnswers.length === 0) {
         alert('No incorrect answers recorded for this chapter.');
         return;
@@ -84,7 +80,7 @@ export function showIncorrectAnswers(chapterId) {
     let html = `
         <div class="incorrect-answers-section">
             <h3>Incorrect Answers - Chapter ${chapterId}: ${chapterName}</h3>
-            <button class="btn btn-secondary" onclick="window.renderProgressChart()" style="margin-bottom: 15px;">← Back to Progress</button>
+            <button class="btn btn-secondary" onclick="window.DashboardManager.renderProgressChart()" style="margin-bottom: 15px;">← Back to Progress</button>
     `;
 
     progress.incorrectAnswers.forEach((answer, index) => {
@@ -104,7 +100,7 @@ export function showIncorrectAnswers(chapterId) {
 }
 
 // Reset all progress
-export function resetProgress() {
+function resetProgress() {
     if (confirm('Are you sure you want to reset ALL progress? This cannot be undone.')) {
         if (confirm('This will delete all of Jordan\'s progress. Are you REALLY sure?')) {
             const newProgress = {};
@@ -117,31 +113,42 @@ export function resetProgress() {
                     incorrectAnswers: []
                 };
             }
-            setUserProgress(newProgress);
+            window.AppState.setUserProgress(newProgress);
 
-            const progressRef = ref(database, 'science/progress');
-            set(progressRef, userProgress);
+            const progressRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/progress');
+            window.FirebaseDB.set(progressRef, window.AppState.userProgress);
 
-            const streakRef = ref(database, 'science/streak');
-            set(streakRef, 0);
+            const streakRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/streak');
+            window.FirebaseDB.set(streakRef, 0);
 
             alert('All progress has been reset.');
             closeParentDashboard();
-            renderUnits();
-            updateStats();
+            window.PracticeManager.renderUnits();
+            window.PracticeManager.updateStats();
         }
     }
 }
 
 // Change PIN
-export function changePin() {
+function changePin() {
     const newPin = prompt('Enter new 4-digit PIN:');
     if (newPin && newPin.length === 4 && !isNaN(newPin)) {
-        parentSettings.pinHash = hashPin(newPin);
-        const settingsRef = ref(database, 'science/parentSettings');
-        set(settingsRef, parentSettings);
+        window.AppState.parentSettings.pinHash = window.AppState.hashPin(newPin);
+        const settingsRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/parentSettings');
+        window.FirebaseDB.set(settingsRef, window.AppState.parentSettings);
         alert('PIN changed successfully!');
     } else {
         alert('Invalid PIN. Must be 4 digits.');
     }
 }
+
+// Make functions available globally
+window.DashboardManager = {
+    showParentDashboard,
+    verifyPin,
+    closeParentDashboard,
+    renderProgressChart,
+    showIncorrectAnswers,
+    resetProgress,
+    changePin
+};

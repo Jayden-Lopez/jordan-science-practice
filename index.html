@@ -102,7 +102,27 @@
         </div>
     </div>
 
-    <!-- Load main application as ES6 module -->
-    <script type="module" src="js/app.js"></script>
+    <!-- Firebase SDK from CDN (v9 compat mode for easier migration) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <!-- Load application scripts in dependency order -->
+    <!-- Data files (no dependencies) -->
+    <script src="js/data/curriculum.js"></script>
+    <script src="js/data/questions.js"></script>
+
+    <!-- State management (no dependencies) -->
+    <script src="js/modules/state.js"></script>
+
+    <!-- Firebase configuration (depends on Firebase CDN) -->
+    <script src="js/config/firebase.js"></script>
+
+    <!-- Core modules (depend on state and firebase) -->
+    <script src="js/modules/practice.js"></script>
+    <script src="js/modules/progress.js"></script>
+    <script src="js/modules/dashboard.js"></script>
+
+    <!-- Main app initialization (depends on all modules) -->
+    <script src="js/app.js"></script>
 </body>
 </html>

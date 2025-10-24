@@ -1,18 +1,15 @@
 // Progress tracking & Firebase operations
-import { database, ref, set, get } from '../config/firebase.js';
-import { userProgress, setUserProgress, parentSettings, setParentSettings } from './state.js';
-import { renderUnits, updateStats } from './practice.js';
 
 // Load progress from Firebase
-export function loadProgress() {
-    const progressRef = ref(database, 'science/progress');
-    get(progressRef).then((snapshot) => {
+function loadProgress() {
+    const progressRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/progress');
+    window.FirebaseDB.get(progressRef).then((snapshot) => {
         if (snapshot.exists()) {
-            setUserProgress(snapshot.val());
+            window.AppState.setUserProgress(snapshot.val());
             // Ensure all chapters have incorrectAnswers array
             for (let i = 1; i <= 15; i++) {
-                if (userProgress[i] && !userProgress[i].incorrectAnswers) {
-                    userProgress[i].incorrectAnswers = [];
+                if (window.AppState.userProgress[i] && !window.AppState.userProgress[i].incorrectAnswers) {
+                    window.AppState.userProgress[i].incorrectAnswers = [];
                 }
             }
         } else {
@@ -27,58 +24,66 @@ export function loadProgress() {
                     incorrectAnswers: []
                 };
             }
-            setUserProgress(newProgress);
+            window.AppState.setUserProgress(newProgress);
             saveProgress();
         }
-        renderUnits();
-        updateStats();
+        window.PracticeManager.renderUnits();
+        window.PracticeManager.updateStats();
     }).catch((error) => {
         console.error('Error loading progress:', error);
     });
 }
 
 // Save progress to Firebase
-export function saveProgress() {
-    const progressRef = ref(database, 'science/progress');
-    set(progressRef, userProgress);
+function saveProgress() {
+    const progressRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/progress');
+    window.FirebaseDB.set(progressRef, window.AppState.userProgress);
 }
 
 // Load parent settings
-export function loadParentSettings() {
-    const settingsRef = ref(database, 'science/parentSettings');
-    get(settingsRef).then((snapshot) => {
+function loadParentSettings() {
+    const settingsRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/parentSettings');
+    window.FirebaseDB.get(settingsRef).then((snapshot) => {
         if (snapshot.exists()) {
-            setParentSettings(snapshot.val());
+            window.AppState.setParentSettings(snapshot.val());
         } else {
-            set(settingsRef, parentSettings);
+            window.FirebaseDB.set(settingsRef, window.AppState.parentSettings);
         }
     });
 }
 
 // Check daily streak
-export function checkDailyStreak() {
+function checkDailyStreak() {
     const today = new Date().toDateString();
-    const lastVisitRef = ref(database, 'science/lastVisit');
-    get(lastVisitRef).then((snapshot) => {
+    const lastVisitRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/lastVisit');
+    window.FirebaseDB.get(lastVisitRef).then((snapshot) => {
         const lastVisit = snapshot.val();
         if (lastVisit !== today) {
-            set(lastVisitRef, today);
+            window.FirebaseDB.set(lastVisitRef, today);
 
-            const streakRef = ref(database, 'science/streak');
-            get(streakRef).then((streakSnapshot) => {
+            const streakRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/streak');
+            window.FirebaseDB.get(streakRef).then((streakSnapshot) => {
                 const currentStreak = streakSnapshot.val() || 0;
                 if (!lastVisit) {
-                    set(streakRef, 1);
+                    window.FirebaseDB.set(streakRef, 1);
                 } else {
                     const yesterday = new Date();
                     yesterday.setDate(yesterday.getDate() - 1);
                     if (lastVisit === yesterday.toDateString()) {
-                        set(streakRef, currentStreak + 1);
+                        window.FirebaseDB.set(streakRef, currentStreak + 1);
                     } else {
-                        set(streakRef, 1);
+                        window.FirebaseDB.set(streakRef, 1);
                     }
                 }
             });
         }
     });
 }
+
+// Make functions available globally
+window.ProgressManager = {
+    loadProgress,
+    saveProgress,
+    loadParentSettings,
+    checkDailyStreak
+};

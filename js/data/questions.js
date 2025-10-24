@@ -1,5 +1,5 @@
 // Question Bank - Sample questions for each chapter
-export const questionBank = {
+const questionBank = {
     1: [ // Earthquakes and Volcanoes
         {
             type: "multiple",
@@ -751,3 +751,6 @@ export const questionBank = {
         }
     ]
 };
+
+// Make questionBank available globally
+window.questionBank = questionBank;

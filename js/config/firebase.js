@@ -1,8 +1,7 @@
-// Import Firebase modules
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import { getDatabase, ref, set, get, onValue, update } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
-
 // Firebase Configuration
+// Note: Firebase SDK is loaded from CDN in index.html (compat mode)
+// Access via global firebase object
+
 const firebaseConfig = {
     apiKey: "AIzaSyAs7_DlWthyuWVVLbYCo7SQHHt2Siw_DH0",
     authDomain: "jordan-math-practice.firebaseapp.com",
@@ -13,9 +12,37 @@ const firebaseConfig = {
     appId: "1:1011552332362:web:8bc57f83156212d63094b3"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+// Initialize Firebase using global firebase object from CDN (compat mode)
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
-// Export database and functions
-export { database, ref, set, get, onValue, update };
+// Helper functions to match the modular API style
+function ref(db, path) {
+    return firebase.database().ref(path);
+}
+
+function set(reference, data) {
+    return reference.set(data);
+}
+
+function get(reference) {
+    return reference.once('value');
+}
+
+function onValue(reference, callback) {
+    return reference.on('value', callback);
+}
+
+function update(reference, data) {
+    return reference.update(data);
+}
+
+// Make database and functions available globally
+window.FirebaseDB = {
+    database: database,
+    ref: ref,
+    set: set,
+    get: get,
+    onValue: onValue,
+    update: update
+};
