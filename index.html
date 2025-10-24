@@ -524,15 +524,28 @@
     </script>
 
     <script>
-        // Wait for Firebase to initialize
-        window.addEventListener('load', () => {
-            if (!window.firebaseDB) {
-                console.error('Firebase not initialized');
-                return;
+        // Wait for Firebase module to load, then initialize the app
+        let database, ref, set, get, onValue, update;
+        
+        // Check if Firebase is ready
+        function waitForFirebase() {
+            if (window.firebaseDB) {
+                // Destructure Firebase functions
+                ({ database, ref, set, get, onValue, update } = window.firebaseDB);
+                // Initialize the app
+                init();
+            } else {
+                // Wait a bit and try again
+                setTimeout(waitForFirebase, 100);
             }
-        });
-
-        const { database, ref, set, get, onValue, update } = window.firebaseDB || {};
+        }
+        
+        // Start waiting for Firebase when page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', waitForFirebase);
+        } else {
+            waitForFirebase();
+        }
 
         // Curriculum Structure - BJU Science 6
         const curriculum = {
@@ -1693,8 +1706,7 @@
             }
         }
 
-        // Initialize when page loads
-        window.onload = init;
+        // Note: init() is called from waitForFirebase() after Firebase loads
     </script>
 </body>
 </html>
