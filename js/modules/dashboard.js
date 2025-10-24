@@ -116,11 +116,12 @@ function resetProgress() {
             }
             window.AppState.setUserProgress(newProgress);
 
-            const progressRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/progress');
-            window.FirebaseDB.set(progressRef, window.AppState.userProgress);
-
-            const streakRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/streak');
-            window.FirebaseDB.set(streakRef, 0);
+            const userDoc = window.FirebaseDB.doc(window.FirebaseDB.firestore, 'science-users', 'jordan');
+            window.FirebaseDB.setDoc(userDoc, {
+                progress: window.AppState.userProgress,
+                streak: 0,
+                lastVisit: new Date().toDateString()
+            });
 
             alert('All progress has been reset.');
             closeParentDashboard();
@@ -135,8 +136,8 @@ function changePin() {
     const newPin = prompt('Enter new 4-digit PIN:');
     if (newPin && newPin.length === 4 && !isNaN(newPin)) {
         window.AppState.parentSettings.pinHash = window.AppState.hashPin(newPin);
-        const settingsRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/parentSettings');
-        window.FirebaseDB.set(settingsRef, window.AppState.parentSettings);
+        const settingsDoc = window.FirebaseDB.doc(window.FirebaseDB.firestore, 'science-settings', 'parent');
+        window.FirebaseDB.setDoc(settingsDoc, window.AppState.parentSettings);
         alert('PIN changed successfully!');
     } else {
         alert('Invalid PIN. Must be 4 digits.');

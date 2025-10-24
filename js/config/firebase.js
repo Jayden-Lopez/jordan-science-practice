@@ -6,7 +6,6 @@
     const firebaseConfig = {
         apiKey: "AIzaSyAs7_DlWthyuWVVLbYCo7SQHHt2Siw_DH0",
         authDomain: "jordan-math-practice.firebaseapp.com",
-        databaseURL: "https://jordan-math-practice-default-rtdb.firebaseio.com",
         projectId: "jordan-math-practice",
         storageBucket: "jordan-math-practice.firebasestorage.app",
         messagingSenderId: "1011552332362",
@@ -15,36 +14,46 @@
 
     // Initialize Firebase using global firebase object from CDN (compat mode)
     const app = firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
+    const firestore = app.firestore(); // Use app.firestore() for Firestore
 
-    // Helper functions to match the modular API style
-    function ref(db, path) {
-        return firebase.database().ref(path);
+    // Helper functions for Firestore operations
+    function doc(db, collection, docId) {
+        return firestore.collection(collection).doc(docId);
     }
 
-    function set(reference, data) {
-        return reference.set(data);
+    function getDoc(docRef) {
+        return docRef.get().then(snapshot => {
+            return {
+                exists: () => snapshot.exists,
+                data: () => snapshot.data()
+            };
+        });
     }
 
-    function get(reference) {
-        return reference.once('value');
+    function setDoc(docRef, data) {
+        return docRef.set(data);
     }
 
-    function onValue(reference, callback) {
-        return reference.on('value', callback);
+    function updateDoc(docRef, data) {
+        return docRef.update(data);
     }
 
-    function update(reference, data) {
-        return reference.update(data);
+    function onSnapshot(docRef, callback) {
+        return docRef.onSnapshot((snapshot) => {
+            callback({
+                exists: () => snapshot.exists,
+                data: () => snapshot.data()
+            });
+        });
     }
 
-    // Make database and functions available globally
+    // Make Firestore and functions available globally
     window.FirebaseDB = {
-        database: database,
-        ref: ref,
-        set: set,
-        get: get,
-        onValue: onValue,
-        update: update
+        firestore: firestore,
+        doc: doc,
+        getDoc: getDoc,
+        setDoc: setDoc,
+        updateDoc: updateDoc,
+        onSnapshot: onSnapshot
     };
 })();
