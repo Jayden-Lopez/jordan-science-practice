@@ -2,7 +2,6 @@
     // Practice/quiz logic functions
 
     // Access global objects
-    const { database, ref, get } = window.FirebaseDB;
     const {
         currentChapter,
         currentQuestionIndex,
@@ -344,10 +343,14 @@ function updateStats() {
         Math.round((totalCorrect / totalQuestions) * 100) + '%' : '0%';
     document.getElementById('chaptersCompleted').textContent = chaptersCompleted;
 
-    // Update streak
-    const streakRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/streak');
-    window.FirebaseDB.get(streakRef).then((snapshot) => {
-        document.getElementById('currentStreak').textContent = snapshot.val() || 0;
+    // Update streak from Firestore
+    const userDoc = window.FirebaseDB.doc(window.FirebaseDB.firestore, 'science-users', 'jordan');
+    window.FirebaseDB.getDoc(userDoc).then((doc) => {
+        const data = doc.exists() ? doc.data() : {};
+        document.getElementById('currentStreak').textContent = data.streak || 0;
+    }).catch((error) => {
+        console.error('Error loading streak:', error);
+        document.getElementById('currentStreak').textContent = 0;
     });
 }
 
