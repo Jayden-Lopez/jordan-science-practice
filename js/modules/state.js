@@ -1,20 +1,7 @@
 // State Management - Application State
-export let currentChapter = null;
-export let currentQuestionIndex = 0;
-export let currentQuestions = [];
-export let sessionStats = {
-    correct: 0,
-    total: 0
-};
-export let userProgress = {};
-export let parentSettings = {
-    pinHash: hashPin("1234") // Default PIN: 1234
-};
-export let selectedAnswer = null;
-export let hintUsed = false;
 
 // Simple hash function for PIN
-export function hashPin(pin) {
+function hashPin(pin) {
     let hash = 0;
     for (let i = 0; i < pin.length; i++) {
         hash = ((hash << 5) - hash) + pin.charCodeAt(i);
@@ -23,47 +10,89 @@ export function hashPin(pin) {
     return Math.abs(hash).toString();
 }
 
+// State variables
+let currentChapter = null;
+let currentQuestionIndex = 0;
+let currentQuestions = [];
+let sessionStats = {
+    correct: 0,
+    total: 0
+};
+let userProgress = {};
+let parentSettings = {
+    pinHash: hashPin("1234") // Default PIN: 1234
+};
+let selectedAnswer = null;
+let hintUsed = false;
+
 // State setters
-export function setCurrentChapter(chapter) {
+function setCurrentChapter(chapter) {
     currentChapter = chapter;
 }
 
-export function setCurrentQuestionIndex(index) {
+function setCurrentQuestionIndex(index) {
     currentQuestionIndex = index;
 }
 
-export function setCurrentQuestions(questions) {
+function setCurrentQuestions(questions) {
     currentQuestions = questions;
 }
 
-export function setSessionStats(stats) {
+function setSessionStats(stats) {
     sessionStats = stats;
 }
 
-export function setUserProgress(progress) {
+function setUserProgress(progress) {
     userProgress = progress;
 }
 
-export function setParentSettings(settings) {
+function setParentSettings(settings) {
     parentSettings = settings;
 }
 
-export function setSelectedAnswer(answer) {
+function setSelectedAnswer(answer) {
     selectedAnswer = answer;
 }
 
-export function setHintUsed(used) {
+function setHintUsed(used) {
     hintUsed = used;
 }
 
-export function incrementQuestionIndex() {
+function incrementQuestionIndex() {
     currentQuestionIndex++;
 }
 
-export function incrementSessionCorrect() {
+function incrementSessionCorrect() {
     sessionStats.correct++;
 }
 
-export function incrementSessionTotal() {
+function incrementSessionTotal() {
     sessionStats.total++;
 }
+
+// Make state and functions available globally
+window.AppState = {
+    // State variables
+    get currentChapter() { return currentChapter; },
+    get currentQuestionIndex() { return currentQuestionIndex; },
+    get currentQuestions() { return currentQuestions; },
+    get sessionStats() { return sessionStats; },
+    get userProgress() { return userProgress; },
+    get parentSettings() { return parentSettings; },
+    get selectedAnswer() { return selectedAnswer; },
+    get hintUsed() { return hintUsed; },
+
+    // State setters
+    setCurrentChapter,
+    setCurrentQuestionIndex,
+    setCurrentQuestions,
+    setSessionStats,
+    setUserProgress,
+    setParentSettings,
+    setSelectedAnswer,
+    setHintUsed,
+    incrementQuestionIndex,
+    incrementSessionCorrect,
+    incrementSessionTotal,
+    hashPin
+};

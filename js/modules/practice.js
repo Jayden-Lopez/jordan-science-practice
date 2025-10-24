@@ -1,8 +1,8 @@
 // Practice/quiz logic functions
-import { database, ref, get } from '../config/firebase.js';
-import { curriculum } from '../data/curriculum.js';
-import { questionBank } from '../data/questions.js';
-import {
+
+// Access global objects
+const { database, ref, get } = window.FirebaseDB;
+const {
     currentChapter,
     currentQuestionIndex,
     currentQuestions,
@@ -19,11 +19,10 @@ import {
     incrementQuestionIndex,
     incrementSessionCorrect,
     incrementSessionTotal
-} from './state.js';
-import { saveProgress } from './progress.js';
+} = window.AppState;
 
 // Render units and chapters
-export function renderUnits() {
+function renderUnits() {
     const container = document.getElementById('unitsContainer');
     container.innerHTML = '';
 
@@ -52,8 +51,8 @@ export function renderUnits() {
 // Create chapter card
 function createChapterCard(chapter) {
     const card = document.createElement('div');
-    const progress = userProgress[chapter.id] || { correct: 0, total: 0, accuracy: 0, mastered: false };
-    const isLocked = chapter.id > 1 && !userProgress[chapter.id - 1]?.mastered;
+    const progress = window.AppState.userProgress[chapter.id] || { correct: 0, total: 0, accuracy: 0, mastered: false };
+    const isLocked = chapter.id > 1 && !window.AppState.userProgress[chapter.id - 1]?.mastered;
 
     card.className = 'chapter-card';
     if (isLocked) card.classList.add('locked');
@@ -77,11 +76,11 @@ function createChapterCard(chapter) {
 }
 
 // Start chapter practice
-export function startChapter(chapterId) {
-    setCurrentChapter(chapterId);
-    setCurrentQuestions([...questionBank[chapterId]].sort(() => Math.random() - 0.5));
-    setCurrentQuestionIndex(0);
-    setSessionStats({ correct: 0, total: 0 });
+function startChapter(chapterId) {
+    window.AppState.setCurrentChapter(chapterId);
+    window.AppState.setCurrentQuestions([...questionBank[chapterId]].sort(() => Math.random() - 0.5));
+    window.AppState.setCurrentQuestionIndex(0);
+    window.AppState.setSessionStats({ correct: 0, total: 0 });
 
     document.getElementById('mainMenu').style.display = 'none';
     document.getElementById('practiceScreen').style.display = 'block';
@@ -98,15 +97,15 @@ export function startChapter(chapterId) {
 }
 
 // Show current question
-export function showQuestion() {
-    if (currentQuestionIndex >= currentQuestions.length) {
+function showQuestion() {
+    if (window.AppState.currentQuestionIndex >= window.AppState.currentQuestions.length) {
         finishChapter();
         return;
     }
 
-    const question = currentQuestions[currentQuestionIndex];
-    document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1} of ${currentQuestions.length}`;
-    document.getElementById('practiceProgress').textContent = `Progress: ${sessionStats.correct}/${sessionStats.total} correct`;
+    const question = window.AppState.currentQuestions[window.AppState.currentQuestionIndex];
+    document.getElementById('questionNumber').textContent = `Question ${window.AppState.currentQuestionIndex + 1} of ${window.AppState.currentQuestions.length}`;
+    document.getElementById('practiceProgress').textContent = `Progress: ${window.AppState.sessionStats.correct}/${window.AppState.sessionStats.total} correct`;
     document.getElementById('questionText').textContent = question.question;
 
     const answerArea = document.getElementById('answerArea');
@@ -152,12 +151,12 @@ export function showQuestion() {
     document.getElementById('hintDisplay').textContent = '';
     document.getElementById('hintBtn').disabled = false;
     document.getElementById('hintBtn').textContent = '💡 Show Hint';
-    setHintUsed(false);
+    window.AppState.setHintUsed(false);
 }
 
 // Show hint
-export function showHint() {
-    const question = currentQuestions[currentQuestionIndex];
+function showHint() {
+    const question = window.AppState.currentQuestions[window.AppState.currentQuestionIndex];
     const hintDisplay = document.getElementById('hintDisplay');
     const hintBtn = document.getElementById('hintBtn');
 
@@ -166,13 +165,13 @@ export function showHint() {
         hintDisplay.classList.add('show');
         hintBtn.disabled = true;
         hintBtn.textContent = '💡 Hint Shown';
-        setHintUsed(true);
+        window.AppState.setHintUsed(true);
     }
 }
 
 // Select option
-export function selectOption(index) {
-    setSelectedAnswer(index);
+function selectOption(index) {
+    window.AppState.setSelectedAnswer(index);
     document.querySelectorAll('.option-btn').forEach((btn, i) => {
         btn.classList.remove('selected');
         if (i === index) btn.classList.add('selected');
@@ -180,18 +179,18 @@ export function selectOption(index) {
 }
 
 // Submit answer
-export function submitAnswer() {
-    const question = currentQuestions[currentQuestionIndex];
+function submitAnswer() {
+    const question = window.AppState.currentQuestions[window.AppState.currentQuestionIndex];
     let isCorrect = false;
     let userAnswer = null;
 
     if (question.type === 'multiple' || question.type === 'truefalse') {
-        if (selectedAnswer === null) {
+        if (window.AppState.selectedAnswer === null) {
             alert('Please select an answer!');
             return;
         }
-        userAnswer = selectedAnswer;
-        isCorrect = selectedAnswer === question.correct;
+        userAnswer = window.AppState.selectedAnswer;
+        isCorrect = window.AppState.selectedAnswer === question.correct;
     } else if (question.type === 'fillin') {
         userAnswer = document.getElementById('fillInAnswer').value.trim().toLowerCase();
         if (!userAnswer) {
@@ -201,13 +200,13 @@ export function submitAnswer() {
         isCorrect = userAnswer === question.correct.toLowerCase();
     }
 
-    incrementSessionTotal();
-    if (isCorrect) incrementSessionCorrect();
+    window.AppState.incrementSessionTotal();
+    if (isCorrect) window.AppState.incrementSessionCorrect();
 
     // Track incorrect answers
     if (!isCorrect) {
-        if (!userProgress[currentChapter]) {
-            userProgress[currentChapter] = {
+        if (!window.AppState.userProgress[window.AppState.currentChapter]) {
+            window.AppState.userProgress[window.AppState.currentChapter] = {
                 correct: 0,
                 total: 0,
                 accuracy: 0,
@@ -215,8 +214,8 @@ export function submitAnswer() {
                 incorrectAnswers: []
             };
         }
-        if (!userProgress[currentChapter].incorrectAnswers) {
-            userProgress[currentChapter].incorrectAnswers = [];
+        if (!window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers) {
+            window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers = [];
         }
 
         let userAnswerText = '';
@@ -238,14 +237,14 @@ export function submitAnswer() {
             userAnswer: userAnswerText,
             correctAnswer: correctAnswerText,
             date: new Date().toLocaleDateString(),
-            hintUsed: hintUsed
+            hintUsed: window.AppState.hintUsed
         };
 
-        userProgress[currentChapter].incorrectAnswers.unshift(incorrectRecord);
+        window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers.unshift(incorrectRecord);
         // Keep only last 20 incorrect answers per chapter
-        if (userProgress[currentChapter].incorrectAnswers.length > 20) {
-            userProgress[currentChapter].incorrectAnswers =
-                userProgress[currentChapter].incorrectAnswers.slice(0, 20);
+        if (window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers.length > 20) {
+            window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers =
+                window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers.slice(0, 20);
         }
     }
 
@@ -271,7 +270,7 @@ export function submitAnswer() {
             btn.onclick = null;
             if (i === question.correct) {
                 btn.classList.add('correct');
-            } else if (i === selectedAnswer && !isCorrect) {
+            } else if (i === window.AppState.selectedAnswer && !isCorrect) {
                 btn.classList.add('incorrect');
             }
         });
@@ -279,39 +278,39 @@ export function submitAnswer() {
 
     document.getElementById('submitBtn').style.display = 'none';
     document.getElementById('nextBtn').style.display = 'inline-block';
-    setSelectedAnswer(null);
+    window.AppState.setSelectedAnswer(null);
 }
 
 // Next question
-export function nextQuestion() {
-    incrementQuestionIndex();
+function nextQuestion() {
+    window.AppState.incrementQuestionIndex();
     showQuestion();
 }
 
 // Finish chapter
 function finishChapter() {
     // Update progress
-    if (!userProgress[currentChapter]) {
-        userProgress[currentChapter] = { correct: 0, total: 0, accuracy: 0, mastered: false, incorrectAnswers: [] };
+    if (!window.AppState.userProgress[window.AppState.currentChapter]) {
+        window.AppState.userProgress[window.AppState.currentChapter] = { correct: 0, total: 0, accuracy: 0, mastered: false, incorrectAnswers: [] };
     }
-    if (!userProgress[currentChapter].incorrectAnswers) {
-        userProgress[currentChapter].incorrectAnswers = [];
+    if (!window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers) {
+        window.AppState.userProgress[window.AppState.currentChapter].incorrectAnswers = [];
     }
 
-    userProgress[currentChapter].correct += sessionStats.correct;
-    userProgress[currentChapter].total += sessionStats.total;
-    userProgress[currentChapter].accuracy = (userProgress[currentChapter].correct / userProgress[currentChapter].total) * 100;
+    window.AppState.userProgress[window.AppState.currentChapter].correct += window.AppState.sessionStats.correct;
+    window.AppState.userProgress[window.AppState.currentChapter].total += window.AppState.sessionStats.total;
+    window.AppState.userProgress[window.AppState.currentChapter].accuracy = (window.AppState.userProgress[window.AppState.currentChapter].correct / window.AppState.userProgress[window.AppState.currentChapter].total) * 100;
 
     // Check for mastery (80% accuracy and at least 5 questions)
-    if (userProgress[currentChapter].accuracy >= 80 && userProgress[currentChapter].total >= 5) {
-        userProgress[currentChapter].mastered = true;
+    if (window.AppState.userProgress[window.AppState.currentChapter].accuracy >= 80 && window.AppState.userProgress[window.AppState.currentChapter].total >= 5) {
+        window.AppState.userProgress[window.AppState.currentChapter].mastered = true;
     }
 
-    saveProgress();
+    window.ProgressManager.saveProgress();
 
-    const accuracy = Math.round((sessionStats.correct / sessionStats.total) * 100);
-    const message = `Chapter Complete!\n\nYou got ${sessionStats.correct} out of ${sessionStats.total} correct (${accuracy}%)\n\n${
-        userProgress[currentChapter].mastered ? '🎉 Chapter Mastered!' : 'Keep practicing to master this chapter!'
+    const accuracy = Math.round((window.AppState.sessionStats.correct / window.AppState.sessionStats.total) * 100);
+    const message = `Chapter Complete!\n\nYou got ${window.AppState.sessionStats.correct} out of ${window.AppState.sessionStats.total} correct (${accuracy}%)\n\n${
+        window.AppState.userProgress[window.AppState.currentChapter].mastered ? '🎉 Chapter Mastered!' : 'Keep practicing to master this chapter!'
     }`;
 
     alert(message);
@@ -319,7 +318,7 @@ function finishChapter() {
 }
 
 // Exit practice
-export function exitPractice() {
+function exitPractice() {
     document.getElementById('practiceScreen').style.display = 'none';
     document.getElementById('mainMenu').style.display = 'block';
     renderUnits();
@@ -327,12 +326,12 @@ export function exitPractice() {
 }
 
 // Update statistics
-export function updateStats() {
+function updateStats() {
     let totalCorrect = 0;
     let totalQuestions = 0;
     let chaptersCompleted = 0;
 
-    Object.values(userProgress).forEach(progress => {
+    Object.values(window.AppState.userProgress).forEach(progress => {
         totalCorrect += progress.correct || 0;
         totalQuestions += progress.total || 0;
         if (progress.mastered) chaptersCompleted++;
@@ -345,8 +344,19 @@ export function updateStats() {
     document.getElementById('chaptersCompleted').textContent = chaptersCompleted;
 
     // Update streak
-    const streakRef = ref(database, 'science/streak');
-    get(streakRef).then((snapshot) => {
+    const streakRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/streak');
+    window.FirebaseDB.get(streakRef).then((snapshot) => {
         document.getElementById('currentStreak').textContent = snapshot.val() || 0;
     });
 }
+
+// Make functions available globally
+window.PracticeManager = {
+    renderUnits,
+    updateStats,
+    startChapter,
+    exitPractice,
+    showHint,
+    submitAnswer,
+    nextQuestion
+};

@@ -1,5 +1,5 @@
 // Curriculum Structure - BJU Science 6
-export const curriculum = {
+const curriculum = {
     "Unit 1: A Changing Earth": [
         { id: 1, title: "Earthquakes and Volcanoes", page: 3 },
         { id: 2, title: "Weathering and Erosion", page: 25 },
@@ -28,3 +28,6 @@ export const curriculum = {
         { id: 15, title: "Immune System", page: 361 }
     ]
 };
+
+// Make curriculum available globally
+window.curriculum = curriculum;
