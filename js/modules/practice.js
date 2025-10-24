@@ -1,25 +1,26 @@
-// Practice/quiz logic functions
+(function() {
+    // Practice/quiz logic functions
 
-// Access global objects
-const { database, ref, get } = window.FirebaseDB;
-const {
-    currentChapter,
-    currentQuestionIndex,
-    currentQuestions,
-    sessionStats,
-    userProgress,
-    selectedAnswer,
-    hintUsed,
-    setCurrentChapter,
-    setCurrentQuestionIndex,
-    setCurrentQuestions,
-    setSessionStats,
-    setSelectedAnswer,
-    setHintUsed,
-    incrementQuestionIndex,
-    incrementSessionCorrect,
-    incrementSessionTotal
-} = window.AppState;
+    // Access global objects
+    const { database, ref, get } = window.FirebaseDB;
+    const {
+        currentChapter,
+        currentQuestionIndex,
+        currentQuestions,
+        sessionStats,
+        userProgress,
+        selectedAnswer,
+        hintUsed,
+        setCurrentChapter,
+        setCurrentQuestionIndex,
+        setCurrentQuestions,
+        setSessionStats,
+        setSelectedAnswer,
+        setHintUsed,
+        incrementQuestionIndex,
+        incrementSessionCorrect,
+        incrementSessionTotal
+    } = window.AppState;
 
 // Render units and chapters
 function renderUnits() {
@@ -350,13 +351,14 @@ function updateStats() {
     });
 }
 
-// Make functions available globally
-window.PracticeManager = {
-    renderUnits,
-    updateStats,
-    startChapter,
-    exitPractice,
-    showHint,
-    submitAnswer,
-    nextQuestion
-};
+    // Make functions available globally
+    window.PracticeManager = {
+        renderUnits,
+        updateStats,
+        startChapter,
+        exitPractice,
+        showHint,
+        submitAnswer,
+        nextQuestion
+    };
+})();

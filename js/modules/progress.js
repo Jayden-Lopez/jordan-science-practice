@@ -1,7 +1,8 @@
-// Progress tracking & Firebase operations
+(function() {
+    // Progress tracking & Firebase operations
 
-// Load progress from Firebase
-function loadProgress() {
+    // Load progress from Firebase
+    function loadProgress() {
     const progressRef = window.FirebaseDB.ref(window.FirebaseDB.database, 'science/progress');
     window.FirebaseDB.get(progressRef).then((snapshot) => {
         if (snapshot.exists()) {
@@ -80,10 +81,11 @@ function checkDailyStreak() {
     });
 }
 
-// Make functions available globally
-window.ProgressManager = {
-    loadProgress,
-    saveProgress,
-    loadParentSettings,
-    checkDailyStreak
-};
+    // Make functions available globally
+    window.ProgressManager = {
+        loadProgress,
+        saveProgress,
+        loadParentSettings,
+        checkDailyStreak
+    };
+})();
