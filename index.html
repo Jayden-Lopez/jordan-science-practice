@@ -544,7 +544,7 @@
             <div id="pinScreen" class="pin-screen">
                 <h2>Parent Dashboard Access</h2>
                 <p>Enter PIN to view detailed progress</p>
-                <input type="password" class="pin-input" id="pinInput" placeholder="Enter PIN" maxlength="4">
+                <input type="password" class="pin-input" id="pinInput" placeholder="Enter PIN" maxlength="4" onkeypress="if(event.key === 'Enter') verifyPin()">
                 <button class="btn btn-primary" onclick="verifyPin()">Unlock Dashboard</button>
                 <button class="btn btn-secondary" onclick="closeParentDashboard()">Cancel</button>
             </div>
