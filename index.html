@@ -492,24 +492,47 @@
         </div>
     </div>
 
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <!-- Firebase v9+ Modular SDK -->
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getDatabase, ref, set, get, onValue, update } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 
-    <script>
-        // Firebase Configuration - YOU NEED TO ADD YOUR FIREBASE CONFIG HERE
+        // Firebase Configuration - Add your config here
         const firebaseConfig = {
-          apiKey: "AIzaSyAs7_DlWthyuWVVLbYCo7SQHHt2Siw_DH0",
-          authDomain: "jordan-math-practice.firebaseapp.com",
-          projectId: "jordan-math-practice",
-          storageBucket: "jordan-math-practice.firebasestorage.app",
-          messagingSenderId: "1011552332362",
-          appId: "1:1011552332362:web:8bc57f83156212d63094b3"
+            apiKey: "AIzaSyAs7_DlWthyuWVVLbYCo7SQHHt2Siw_DH0",
+            authDomain: "jordan-math-practice.firebaseapp.com",
+            projectId: "jordan-math-practice",
+            storageBucket: "jordan-math-practice.firebasestorage.app",
+            messagingSenderId: "1011552332362",
+            appId: "1:1011552332362:web:8bc57f83156212d63094b3"
         };
 
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        
+        // Make database functions available globally
+        window.firebaseDB = {
+            database,
+            ref,
+            set,
+            get,
+            onValue,
+            update
+        };
+    </script>
+
+    <script>
+        // Wait for Firebase to initialize
+        window.addEventListener('load', () => {
+            if (!window.firebaseDB) {
+                console.error('Firebase not initialized');
+                return;
+            }
+        });
+
+        const { database, ref, set, get, onValue, update } = window.firebaseDB || {};
 
         // Curriculum Structure - BJU Science 6
         const curriculum = {
@@ -1255,7 +1278,8 @@
 
         // Load progress from Firebase
         function loadProgress() {
-            database.ref('science/progress').once('value', (snapshot) => {
+            const progressRef = ref(database, 'science/progress');
+            get(progressRef).then((snapshot) => {
                 if (snapshot.exists()) {
                     userProgress = snapshot.val();
                 } else {
@@ -1272,21 +1296,25 @@
                 }
                 renderUnits();
                 updateStats();
+            }).catch((error) => {
+                console.error('Error loading progress:', error);
             });
         }
 
         // Save progress to Firebase
         function saveProgress() {
-            database.ref('science/progress').set(userProgress);
+            const progressRef = ref(database, 'science/progress');
+            set(progressRef, userProgress);
         }
 
         // Load parent settings
         function loadParentSettings() {
-            database.ref('science/parentSettings').once('value', (snapshot) => {
+            const settingsRef = ref(database, 'science/parentSettings');
+            get(settingsRef).then((snapshot) => {
                 if (snapshot.exists()) {
                     parentSettings = snapshot.val();
                 } else {
-                    database.ref('science/parentSettings').set(parentSettings);
+                    set(settingsRef, parentSettings);
                 }
             });
         }
@@ -1294,15 +1322,26 @@
         // Check daily streak
         function checkDailyStreak() {
             const today = new Date().toDateString();
-            database.ref('science/lastVisit').once('value', (snapshot) => {
+            const lastVisitRef = ref(database, 'science/lastVisit');
+            get(lastVisitRef).then((snapshot) => {
                 const lastVisit = snapshot.val();
                 if (lastVisit !== today) {
-                    database.ref('science/lastVisit').set(today);
-                    database.ref('science/streak').transaction((current) => {
-                        if (!lastVisit) return 1;
-                        const yesterday = new Date();
-                        yesterday.setDate(yesterday.getDate() - 1);
-                        return lastVisit === yesterday.toDateString() ? (current || 0) + 1 : 1;
+                    set(lastVisitRef, today);
+                    
+                    const streakRef = ref(database, 'science/streak');
+                    get(streakRef).then((streakSnapshot) => {
+                        const currentStreak = streakSnapshot.val() || 0;
+                        if (!lastVisit) {
+                            set(streakRef, 1);
+                        } else {
+                            const yesterday = new Date();
+                            yesterday.setDate(yesterday.getDate() - 1);
+                            if (lastVisit === yesterday.toDateString()) {
+                                set(streakRef, currentStreak + 1);
+                            } else {
+                                set(streakRef, 1);
+                            }
+                        }
                     });
                 }
             });
@@ -1557,7 +1596,8 @@
             document.getElementById('chaptersCompleted').textContent = chaptersCompleted;
 
             // Update streak
-            database.ref('science/streak').once('value', (snapshot) => {
+            const streakRef = ref(database, 'science/streak');
+            get(streakRef).then((snapshot) => {
                 document.getElementById('currentStreak').textContent = snapshot.val() || 0;
             });
         }
@@ -1631,7 +1671,8 @@
                         };
                     }
                     saveProgress();
-                    database.ref('science/streak').set(0);
+                    const streakRef = ref(database, 'science/streak');
+                    set(streakRef, 0);
                     alert('All progress has been reset.');
                     closeParentDashboard();
                     renderUnits();
@@ -1644,7 +1685,8 @@
             const newPin = prompt('Enter new 4-digit PIN:');
             if (newPin && newPin.length === 4 && !isNaN(newPin)) {
                 parentSettings.pinHash = hashPin(newPin);
-                database.ref('science/parentSettings').set(parentSettings);
+                const settingsRef = ref(database, 'science/parentSettings');
+                set(settingsRef, parentSettings);
                 alert('PIN changed successfully!');
             } else {
                 alert('Invalid PIN. Must be 4 digits.');
