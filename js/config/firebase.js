@@ -15,11 +15,11 @@
 
     // Initialize Firebase using global firebase object from CDN (compat mode)
     const app = firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
+    const database = app.database(); // Use app.database() instead of firebase.database()
 
     // Helper functions to match the modular API style
     function ref(db, path) {
-        return firebase.database().ref(path);
+        return database.ref(path); // Use the database instance directly
     }
 
     function set(reference, data) {
