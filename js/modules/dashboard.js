@@ -1,7 +1,8 @@
-// Parent dashboard functions
+(function() {
+    // Parent dashboard functions
 
-// Show parent dashboard
-function showParentDashboard() {
+    // Show parent dashboard
+    function showParentDashboard() {
     document.getElementById('mainMenu').style.display = 'none';
     document.getElementById('practiceScreen').style.display = 'none';
     document.getElementById('parentDashboard').style.display = 'block';
@@ -142,13 +143,14 @@ function changePin() {
     }
 }
 
-// Make functions available globally
-window.DashboardManager = {
-    showParentDashboard,
-    verifyPin,
-    closeParentDashboard,
-    renderProgressChart,
-    showIncorrectAnswers,
-    resetProgress,
-    changePin
-};
+    // Make functions available globally
+    window.DashboardManager = {
+        showParentDashboard,
+        verifyPin,
+        closeParentDashboard,
+        renderProgressChart,
+        showIncorrectAnswers,
+        resetProgress,
+        changePin
+    };
+})();
