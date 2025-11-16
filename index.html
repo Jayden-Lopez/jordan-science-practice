@@ -530,7 +530,7 @@
     <script type="module">
         // Import Firebase modules
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-        import { getDatabase, ref, set, get, onValue, update } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+        import { getFirestore, doc, getDoc, setDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
         // Firebase Configuration - Add your config here
         const firebaseConfig = {
@@ -545,28 +545,27 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-        
+        const firestore = getFirestore(app);
+
         // Make database functions available globally
         window.firebaseDB = {
-            database,
-            ref,
-            set,
-            get,
-            onValue,
-            update
+            firestore,
+            doc,
+            getDoc,
+            setDoc,
+            updateDoc
         };
     </script>
 
     <script>
         // Wait for Firebase module to load, then initialize the app
-        let database, ref, set, get, onValue, update;
-        
+        let firestore, doc, getDoc, setDoc, updateDoc;
+
         // Check if Firebase is ready
         function waitForFirebase() {
             if (window.firebaseDB) {
                 // Destructure Firebase functions
-                ({ database, ref, set, get, onValue, update } = window.firebaseDB);
+                ({ firestore, doc, getDoc, setDoc, updateDoc } = window.firebaseDB);
                 // Initialize the app
                 init();
             } else {
@@ -574,7 +573,7 @@
                 setTimeout(waitForFirebase, 100);
             }
         }
-        
+
         // Start waiting for Firebase when page loads
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', waitForFirebase);
@@ -1469,10 +1468,24 @@
 
         // Load progress from Firebase
         function loadProgress() {
-            const progressRef = ref(database, 'science/progress');
-            get(progressRef).then((snapshot) => {
+            const userDoc = doc(firestore, 'science-users', 'jordan');
+            getDoc(userDoc).then((snapshot) => {
                 if (snapshot.exists()) {
-                    userProgress = snapshot.val();
+                    const data = snapshot.data();
+                    if (data.progress) {
+                        userProgress = data.progress;
+                    } else {
+                        // Initialize progress for all chapters
+                        for (let i = 1; i <= 15; i++) {
+                            userProgress[i] = {
+                                correct: 0,
+                                total: 0,
+                                accuracy: 0,
+                                mastered: false
+                            };
+                        }
+                        saveProgress();
+                    }
                 } else {
                     // Initialize progress for all chapters
                     for (let i = 1; i <= 15; i++) {
@@ -1494,47 +1507,75 @@
 
         // Save progress to Firebase
         function saveProgress() {
-            const progressRef = ref(database, 'science/progress');
-            set(progressRef, userProgress);
+            const userDoc = doc(firestore, 'science-users', 'jordan');
+            updateDoc(userDoc, {
+                progress: userProgress
+            }).catch((error) => {
+                // If document doesn't exist, create it
+                if (error.code === 'not-found') {
+                    setDoc(userDoc, {
+                        progress: userProgress,
+                        streak: 0,
+                        lastVisit: new Date().toDateString()
+                    });
+                } else {
+                    console.error('Error saving progress:', error);
+                }
+            });
         }
 
         // Load parent settings
         function loadParentSettings() {
-            const settingsRef = ref(database, 'science/parentSettings');
-            get(settingsRef).then((snapshot) => {
+            const settingsDoc = doc(firestore, 'science-settings', 'parent');
+            getDoc(settingsDoc).then((snapshot) => {
                 if (snapshot.exists()) {
-                    parentSettings = snapshot.val();
+                    parentSettings = snapshot.data();
                 } else {
-                    set(settingsRef, parentSettings);
+                    setDoc(settingsDoc, parentSettings);
                 }
+            }).catch((error) => {
+                console.error('Error loading parent settings:', error);
             });
         }
 
         // Check daily streak
         function checkDailyStreak() {
             const today = new Date().toDateString();
-            const lastVisitRef = ref(database, 'science/lastVisit');
-            get(lastVisitRef).then((snapshot) => {
-                const lastVisit = snapshot.val();
+            const userDoc = doc(firestore, 'science-users', 'jordan');
+
+            getDoc(userDoc).then((snapshot) => {
+                const data = snapshot.exists() ? snapshot.data() : {};
+                const lastVisit = data.lastVisit;
+                const currentStreak = data.streak || 0;
+
                 if (lastVisit !== today) {
-                    set(lastVisitRef, today);
-                    
-                    const streakRef = ref(database, 'science/streak');
-                    get(streakRef).then((streakSnapshot) => {
-                        const currentStreak = streakSnapshot.val() || 0;
-                        if (!lastVisit) {
-                            set(streakRef, 1);
-                        } else {
-                            const yesterday = new Date();
-                            yesterday.setDate(yesterday.getDate() - 1);
-                            if (lastVisit === yesterday.toDateString()) {
-                                set(streakRef, currentStreak + 1);
-                            } else {
-                                set(streakRef, 1);
-                            }
+                    let newStreak = 1;
+
+                    if (lastVisit) {
+                        const yesterday = new Date();
+                        yesterday.setDate(yesterday.getDate() - 1);
+
+                        if (lastVisit === yesterday.toDateString()) {
+                            newStreak = currentStreak + 1;
                         }
-                    });
+                    }
+
+                    // Update lastVisit and streak
+                    if (snapshot.exists()) {
+                        updateDoc(userDoc, {
+                            lastVisit: today,
+                            streak: newStreak
+                        });
+                    } else {
+                        setDoc(userDoc, {
+                            lastVisit: today,
+                            streak: newStreak,
+                            progress: {}
+                        });
+                    }
                 }
+            }).catch((error) => {
+                console.error('Error checking daily streak:', error);
             });
         }
 
@@ -1872,14 +1913,18 @@
 
             document.getElementById('totalCorrect').textContent = totalCorrect;
             document.getElementById('totalQuestions').textContent = totalQuestions;
-            document.getElementById('accuracy').textContent = totalQuestions > 0 ? 
+            document.getElementById('accuracy').textContent = totalQuestions > 0 ?
                 Math.round((totalCorrect / totalQuestions) * 100) + '%' : '0%';
             document.getElementById('chaptersCompleted').textContent = chaptersCompleted;
 
-            // Update streak
-            const streakRef = ref(database, 'science/streak');
-            get(streakRef).then((snapshot) => {
-                document.getElementById('currentStreak').textContent = snapshot.val() || 0;
+            // Update streak from Firestore
+            const userDoc = doc(firestore, 'science-users', 'jordan');
+            getDoc(userDoc).then((snapshot) => {
+                const data = snapshot.exists() ? snapshot.data() : {};
+                document.getElementById('currentStreak').textContent = data.streak || 0;
+            }).catch((error) => {
+                console.error('Error loading streak:', error);
+                document.getElementById('currentStreak').textContent = 0;
             });
         }
 
@@ -1951,9 +1996,14 @@
                             mastered: false
                         };
                     }
-                    saveProgress();
-                    const streakRef = ref(database, 'science/streak');
-                    set(streakRef, 0);
+
+                    const userDoc = doc(firestore, 'science-users', 'jordan');
+                    setDoc(userDoc, {
+                        progress: userProgress,
+                        streak: 0,
+                        lastVisit: new Date().toDateString()
+                    });
+
                     alert('All progress has been reset.');
                     closeParentDashboard();
                     renderUnits();
@@ -1966,8 +2016,8 @@
             const newPin = prompt('Enter new 4-digit PIN:');
             if (newPin && newPin.length === 4 && !isNaN(newPin)) {
                 parentSettings.pinHash = hashPin(newPin);
-                const settingsRef = ref(database, 'science/parentSettings');
-                set(settingsRef, parentSettings);
+                const settingsDoc = doc(firestore, 'science-settings', 'parent');
+                setDoc(settingsDoc, parentSettings);
                 alert('PIN changed successfully!');
             } else {
                 alert('Invalid PIN. Must be 4 digits.');
