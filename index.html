@@ -326,6 +326,36 @@
             display: block;
         }
 
+        /* Lesson content styles */
+        .question-text h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .question-text h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .question-text ul, .question-text ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .question-text li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .question-text p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .question-text table {
+            margin: 15px 0;
+        }
+
         .feedback {
             margin-top: 20px;
             padding: 20px;
@@ -1082,51 +1112,780 @@
                     hint: "This is how long an organism typically lives from birth to death."
                 }
             ],
-            5: [ // Animal Classification
-                {
-                    type: "multiple",
-                    question: "Animals with backbones are called:",
-                    options: [
-                        "Invertebrates",
-                        "Vertebrates",
-                        "Amphibians",
-                        "Mammals"
-                    ],
-                    correct: 1
-                },
-                {
-                    type: "truefalse",
-                    question: "Insects are vertebrates.",
-                    correct: false
-                },
-                {
-                    type: "multiple",
-                    question: "Which group of animals has feathers?",
-                    options: [
-                        "Mammals",
-                        "Reptiles",
-                        "Birds",
-                        "Fish"
-                    ],
-                    correct: 2
-                },
-                {
-                    type: "fillin",
-                    question: "Animals that can live both on land and in water are called _______.",
-                    correct: "amphibians"
-                },
-                {
-                    type: "multiple",
-                    question: "Which characteristic do all mammals share?",
-                    options: [
-                        "Lay eggs",
-                        "Have scales",
-                        "Feed milk to young",
-                        "Live in water"
-                    ],
-                    correct: 2
-                }
-            ],
+            5: { // Animal Classification - BJU Science 6 Chapter 5
+                // This chapter uses a special learning format with lessons followed by questions
+                hasLessons: true,
+                sections: [
+                    // SECTION 1: VERTEBRATES VS INVERTEBRATES
+                    {
+                        title: "Vertebrates vs. Invertebrates",
+                        lesson: `<h3>🦴 Vertebrates vs. Invertebrates</h3>
+                            <p>Scientists divide the animal kingdom into two main groups based on whether they have a <strong>backbone</strong> or not.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦴 VERTEBRATES</h4>
+                                <p>Animals WITH a backbone (also called a <strong>spinal column</strong>)</p>
+                                <p><strong>Examples:</strong> Fish, frogs, snakes, birds, dogs, humans</p>
+                                <p><strong>Remember:</strong> "Vertebra" = bones in your spine!</p>
+                            </div>
+
+                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐛 INVERTEBRATES</h4>
+                                <p>Animals WITHOUT a backbone</p>
+                                <p><strong>Examples:</strong> Insects, spiders, worms, jellyfish, snails</p>
+                                <p><strong>Fun Fact:</strong> About 97% of all animals are invertebrates!</p>
+                            </div>
+
+                            <p><strong>The Five Groups of Vertebrates:</strong></p>
+                            <ol>
+                                <li>Fish</li>
+                                <li>Amphibians</li>
+                                <li>Reptiles</li>
+                                <li>Birds</li>
+                                <li>Mammals</li>
+                            </ol>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Animals with backbones are called:",
+                                options: ["Invertebrates", "Vertebrates", "Amphibians", "Mammals"],
+                                correct: 1,
+                                hint: "The word 'vertebra' refers to the bones in your spine."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Animals WITHOUT backbones are called:",
+                                options: ["Vertebrates", "Invertebrates", "Reptiles", "Mammals"],
+                                correct: 1,
+                                hint: "The prefix 'in-' means 'not' or 'without'."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Most animals on Earth are invertebrates.",
+                                correct: true,
+                                hint: "About 97% of animals don't have backbones!"
+                            },
+                            {
+                                type: "fillin",
+                                question: "The backbone is also called the _______ column.",
+                                correct: "spinal",
+                                hint: "This word relates to your spine."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which of these is an invertebrate?",
+                                options: ["Dog", "Eagle", "Jellyfish", "Salmon"],
+                                correct: 2,
+                                hint: "Which of these animals has no bones at all?"
+                            },
+                            {
+                                type: "fillin",
+                                question: "The five main groups of vertebrates are mammals, birds, reptiles, amphibians, and _______.",
+                                correct: "fish",
+                                hint: "This group lives entirely in water and breathes through gills."
+                            }
+                        ]
+                    },
+
+                    // SECTION 2: WARM-BLOODED VS COLD-BLOODED
+                    {
+                        title: "Warm-Blooded vs. Cold-Blooded",
+                        lesson: `<h3>🌡️ Warm-Blooded vs. Cold-Blooded Animals</h3>
+                            <p>Animals are also classified by how they control their body temperature.</p>
+
+                            <div style="background: #ffebee; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔥 WARM-BLOODED (Endothermic)</h4>
+                                <p>These animals maintain a <strong>constant body temperature</strong> no matter how hot or cold it is outside.</p>
+                                <p><strong>Only TWO vertebrate groups are warm-blooded:</strong></p>
+                                <ul>
+                                    <li><strong>Mammals</strong> (like you!)</li>
+                                    <li><strong>Birds</strong></li>
+                                </ul>
+                                <p>Your body stays around 98.6°F whether you're in the snow or at the beach!</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>❄️ COLD-BLOODED (Ectothermic)</h4>
+                                <p>These animals' body temperature <strong>changes with their environment</strong>.</p>
+                                <p><strong>THREE vertebrate groups are cold-blooded:</strong></p>
+                                <ul>
+                                    <li><strong>Fish</strong></li>
+                                    <li><strong>Amphibians</strong></li>
+                                    <li><strong>Reptiles</strong></li>
+                                </ul>
+                                <p>That's why you see lizards basking in the sun - they need external heat!</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which two groups of vertebrates are warm-blooded?",
+                                options: ["Fish and amphibians", "Reptiles and amphibians", "Birds and mammals", "Fish and reptiles"],
+                                correct: 2,
+                                hint: "These are the only vertebrate groups that maintain constant body temperature."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Cold-blooded animals can regulate their own body temperature.",
+                                correct: false,
+                                hint: "Cold-blooded animals depend on their environment for heat."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Animals that maintain a constant body temperature are called _______-blooded.",
+                                correct: "warm",
+                                hint: "Mammals and birds are this type."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which characteristic do fish, amphibians, and reptiles share?",
+                                options: ["They are warm-blooded", "They are cold-blooded", "They all have fur", "They all breathe with lungs"],
+                                correct: 1,
+                                hint: "All three groups cannot regulate their own body temperature."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "A snake needs to bask in the sun to warm up because it is cold-blooded.",
+                                correct: true,
+                                hint: "Reptiles like snakes cannot generate their own body heat."
+                            }
+                        ]
+                    },
+
+                    // SECTION 3: MAMMALS
+                    {
+                        title: "Mammals",
+                        lesson: `<h3>🐕 Mammals</h3>
+                            <p>Mammals are warm-blooded vertebrates with some very special characteristics!</p>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Key Characteristics of Mammals:</h4>
+                                <ul>
+                                    <li>🔥 <strong>Warm-blooded</strong> - maintain constant body temperature</li>
+                                    <li>🍼 <strong>Produce milk</strong> - females feed babies with milk from mammary glands</li>
+                                    <li>🦁 <strong>Have hair or fur</strong> - at some point in their lives (even whales have some hair!)</li>
+                                    <li>👶 <strong>Most give live birth</strong> - babies develop inside the mother</li>
+                                    <li>🫁 <strong>Breathe with lungs</strong></li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #e8eaf6; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🤔 Tricky Mammals:</h4>
+                                <p><strong>Whales & Dolphins</strong> - Live in water but are mammals! They breathe air, are warm-blooded, and nurse their young.</p>
+                                <p><strong>Bats</strong> - The ONLY mammals that can truly fly!</p>
+                                <p><strong>Platypus</strong> - A very unusual mammal that lays eggs! (But it still has fur and produces milk)</p>
+                            </div>
+
+                            <p><strong>Examples:</strong> Dogs, cats, horses, elephants, humans, whales, bats</p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which characteristic do ALL mammals share?",
+                                options: ["Lay eggs", "Have scales", "Feed milk to young", "Live in water"],
+                                correct: 2,
+                                hint: "Think about what makes a mammal a mammal - what do mother mammals give their babies?"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "All mammals have hair or fur at some point in their lives.",
+                                correct: true,
+                                hint: "Even whales and dolphins have some hair!"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Mammals are cold-blooded animals.",
+                                correct: false,
+                                hint: "Think about your own body - do you maintain a constant temperature?"
+                            },
+                            {
+                                type: "fillin",
+                                question: "Female mammals feed their young with _______ from mammary glands.",
+                                correct: "milk",
+                                hint: "This is a nutritious white liquid that baby mammals drink."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which of these is NOT a mammal?",
+                                options: ["Whale", "Bat", "Penguin", "Platypus"],
+                                correct: 2,
+                                hint: "One of these has feathers instead of hair or fur."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Bats are the only mammals that can truly fly.",
+                                correct: true,
+                                hint: "Flying squirrels glide, but bats actually flap their wings!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "A platypus is unusual because it:",
+                                options: ["Has feathers", "Lays eggs but is still a mammal", "Is cold-blooded", "Lives only in water"],
+                                correct: 1,
+                                hint: "The platypus is one of very few mammals that doesn't give live birth."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "A whale is a fish because it lives in water.",
+                                correct: false,
+                                hint: "Think about how whales breathe and feed their young."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why is a whale classified as a mammal and not a fish?",
+                                options: ["Whales have scales", "Whales breathe air with lungs and nurse their young with milk", "Whales are cold-blooded", "Whales lay eggs"],
+                                correct: 1,
+                                hint: "Think about the characteristics that define mammals."
+                            }
+                        ]
+                    },
+
+                    // SECTION 4: BIRDS
+                    {
+                        title: "Birds",
+                        lesson: `<h3>🦅 Birds</h3>
+                            <p>Birds are warm-blooded vertebrates that are perfectly designed for flight - though not all birds fly!</p>
+
+                            <div style="background: #e0f7fa; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Key Characteristics of Birds:</h4>
+                                <ul>
+                                    <li>🪶 <strong>Have feathers</strong> - Birds are the ONLY animals with feathers!</li>
+                                    <li>🔥 <strong>Warm-blooded</strong> - maintain constant body temperature</li>
+                                    <li>🥚 <strong>ALL lay eggs</strong> - with hard shells</li>
+                                    <li>🦴 <strong>Hollow bones</strong> - makes them light enough to fly</li>
+                                    <li>🫁 <strong>Breathe with lungs</strong></li>
+                                    <li>🦷 <strong>Have beaks</strong> - no teeth!</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff8e1; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐧 Birds That Can't Fly:</h4>
+                                <p>Not all birds fly! <strong>Penguins, ostriches, emus, and kiwis</strong> are all flightless birds.</p>
+                                <p>But they still have feathers, lay eggs, and are warm-blooded!</p>
+                            </div>
+
+                            <p><strong>Examples:</strong> Eagles, robins, penguins, chickens, ostriches, hummingbirds</p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which group of animals has feathers?",
+                                options: ["Mammals", "Reptiles", "Birds", "Fish"],
+                                correct: 2,
+                                hint: "These animals are the ONLY ones with feathers."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "All birds can fly.",
+                                correct: false,
+                                hint: "Think about penguins, ostriches, and emus."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Birds are:",
+                                options: ["Cold-blooded", "Warm-blooded", "Neither", "Depends on the species"],
+                                correct: 1,
+                                hint: "Like mammals, birds maintain a constant body temperature."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Birds have hollow _______ which help make them light enough to fly.",
+                                correct: "bones",
+                                hint: "These parts of the skeleton are not solid in birds."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "All birds lay eggs.",
+                                correct: true,
+                                hint: "This is one characteristic ALL birds share - no bird gives live birth."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What covers a bird's body?",
+                                options: ["Fur", "Scales", "Feathers", "Skin only"],
+                                correct: 2,
+                                hint: "This covering helps birds stay warm and fly."
+                            }
+                        ]
+                    },
+
+                    // SECTION 5: REPTILES
+                    {
+                        title: "Reptiles",
+                        lesson: `<h3>🦎 Reptiles</h3>
+                            <p>Reptiles are cold-blooded vertebrates with dry, scaly skin!</p>
+
+                            <div style="background: #dcedc8; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Key Characteristics of Reptiles:</h4>
+                                <ul>
+                                    <li>❄️ <strong>Cold-blooded</strong> - body temperature changes with environment</li>
+                                    <li>🔶 <strong>Dry, scaly skin</strong> - scales protect and prevent water loss</li>
+                                    <li>🥚 <strong>Most lay eggs ON LAND</strong> - eggs have tough, leathery shells</li>
+                                    <li>🫁 <strong>Breathe with lungs</strong> - even as babies!</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #f0f4c3; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Types of Reptiles:</h4>
+                                <ul>
+                                    <li>🐍 <strong>Snakes</strong> - no legs!</li>
+                                    <li>🦎 <strong>Lizards</strong> - geckos, iguanas, chameleons</li>
+                                    <li>🐢 <strong>Turtles & Tortoises</strong> - have shells</li>
+                                    <li>🐊 <strong>Crocodilians</strong> - crocodiles, alligators</li>
+                                </ul>
+                            </div>
+
+                            <p><strong>Remember:</strong> Reptiles need to bask in the sun to warm up because they can't make their own body heat!</p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Reptiles are:",
+                                options: ["Warm-blooded", "Cold-blooded", "Neither", "Half warm, half cold"],
+                                correct: 1,
+                                hint: "Reptiles need to bask in the sun to warm up their bodies."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Reptiles have dry skin covered with _______.",
+                                correct: "scales",
+                                hint: "These are hard, overlapping plates that protect reptiles."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Snakes are reptiles.",
+                                correct: true,
+                                hint: "Snakes have scales and are cold-blooded."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which of these is a reptile?",
+                                options: ["Frog", "Salamander", "Turtle", "Toad"],
+                                correct: 2,
+                                hint: "This animal has a hard shell and scaly skin."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Crocodiles and alligators are reptiles.",
+                                correct: true,
+                                hint: "These large animals have scales and are cold-blooded."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Most reptiles reproduce by:",
+                                options: ["Giving live birth", "Laying eggs on land", "Laying eggs in water", "Budding"],
+                                correct: 1,
+                                hint: "Unlike amphibians, reptile eggs have tough shells and are laid on dry land."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which animals lay eggs with hard or leathery shells?",
+                                options: ["Fish and amphibians", "Birds and most reptiles", "Mammals only", "Invertebrates only"],
+                                correct: 1,
+                                hint: "These eggs can survive on dry land because of their protective shells."
+                            }
+                        ]
+                    },
+
+                    // SECTION 6: AMPHIBIANS
+                    {
+                        title: "Amphibians",
+                        lesson: `<h3>🐸 Amphibians</h3>
+                            <p>The word "amphibian" means <strong>"double life"</strong> - these animals live part of their life in water and part on land!</p>
+
+                            <div style="background: #b2dfdb; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Key Characteristics of Amphibians:</h4>
+                                <ul>
+                                    <li>❄️ <strong>Cold-blooded</strong> - body temperature changes with environment</li>
+                                    <li>💧 <strong>Moist, smooth skin</strong> - they can breathe through their skin!</li>
+                                    <li>🥚 <strong>Lay eggs IN WATER</strong> - eggs don't have shells</li>
+                                    <li>🔄 <strong>Go through metamorphosis</strong> - change form as they grow</li>
+                                    <li>👶 <strong>Start life with gills, develop lungs</strong></li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔄 Metamorphosis Example - The Frog:</h4>
+                                <ol>
+                                    <li><strong>Egg</strong> - laid in water, no shell</li>
+                                    <li><strong>Tadpole</strong> - has tail, breathes with gills, lives in water</li>
+                                    <li><strong>Adult Frog</strong> - has legs, breathes with lungs, lives on land</li>
+                                </ol>
+                            </div>
+
+                            <p><strong>Examples:</strong> Frogs, toads, salamanders, newts</p>
+
+                            <div style="background: #ffecb3; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🆚 Reptiles vs. Amphibians:</h4>
+                                <p><strong>Reptiles:</strong> Dry, scaly skin | Eggs on LAND with shells</p>
+                                <p><strong>Amphibians:</strong> Moist, smooth skin | Eggs in WATER without shells</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "Animals that can live both on land and in water are called _______.",
+                                correct: "amphibians",
+                                hint: "The prefix 'amphi-' means 'both' or 'double'."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Amphibians are:",
+                                options: ["Warm-blooded", "Cold-blooded", "Neither", "Warm in water, cold on land"],
+                                correct: 1,
+                                hint: "Like reptiles, amphibians cannot regulate their own body temperature."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Frogs are amphibians.",
+                                correct: true,
+                                hint: "Frogs start life as tadpoles in water and later live on land."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What kind of skin do amphibians have?",
+                                options: ["Dry and scaly", "Moist and smooth", "Covered with feathers", "Covered with fur"],
+                                correct: 1,
+                                hint: "Amphibians can actually breathe through their skin, so it needs to stay wet."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Most amphibians go through a process called _______ where they change form as they grow.",
+                                correct: "metamorphosis",
+                                hint: "Think of how a tadpole changes into a frog."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Where do amphibians lay their eggs?",
+                                options: ["On dry land", "In water", "In trees", "Underground"],
+                                correct: 1,
+                                hint: "Amphibian eggs don't have hard shells, so they need to stay moist."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Salamanders are amphibians.",
+                                correct: true,
+                                hint: "Salamanders have moist skin and live near water."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the main difference between reptiles and amphibians?",
+                                options: ["Reptiles are warm-blooded", "Amphibians have scales", "Reptiles have dry, scaly skin; amphibians have moist skin", "Amphibians live only on land"],
+                                correct: 2,
+                                hint: "Think about the texture of their skin."
+                            }
+                        ]
+                    },
+
+                    // SECTION 7: FISH
+                    {
+                        title: "Fish",
+                        lesson: `<h3>🐟 Fish</h3>
+                            <p>Fish are cold-blooded vertebrates that live their entire lives in water!</p>
+
+                            <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Key Characteristics of Fish:</h4>
+                                <ul>
+                                    <li>❄️ <strong>Cold-blooded</strong> - body temperature matches the water</li>
+                                    <li>🫧 <strong>Breathe with GILLS</strong> - extract oxygen from water</li>
+                                    <li>🔶 <strong>Have scales</strong> - overlapping plates covering body</li>
+                                    <li>🏊 <strong>Have fins</strong> - for swimming and steering</li>
+                                    <li>🥚 <strong>Most lay eggs in water</strong></li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #e1f5fe; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦈 Types of Fish:</h4>
+                                <p><strong>Bony Fish:</strong> Most fish have skeletons made of bone (salmon, goldfish, tuna)</p>
+                                <p><strong>Cartilaginous Fish:</strong> Sharks and rays have skeletons made of <strong>cartilage</strong> (the flexible material in your ears and nose) instead of bone!</p>
+                            </div>
+
+                            <p><strong>Examples:</strong> Goldfish, salmon, tuna, sharks, rays, seahorses</p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Fish breathe using:",
+                                options: ["Lungs", "Skin", "Gills", "Spiracles"],
+                                correct: 2,
+                                hint: "These organs extract oxygen from water."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "All fish are cold-blooded.",
+                                correct: true,
+                                hint: "Fish body temperature matches the water temperature around them."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Fish use _______ to help them swim and steer through water.",
+                                correct: "fins",
+                                hint: "These are the flat, wing-like parts on a fish's body."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What covers most fish bodies?",
+                                options: ["Feathers", "Fur", "Scales", "Shells"],
+                                correct: 2,
+                                hint: "These overlapping plates protect the fish and help it swim smoothly."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Sharks are fish.",
+                                correct: true,
+                                hint: "Sharks breathe with gills and live in water their whole lives."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the main difference between a shark's skeleton and most other fish?",
+                                options: ["Sharks have no skeleton", "Sharks have cartilage instead of bone", "Sharks have feathers", "Sharks are warm-blooded"],
+                                correct: 1,
+                                hint: "Cartilage is the flexible material in your ears and nose."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "All vertebrates have lungs.",
+                                correct: false,
+                                hint: "Think about how fish breathe!"
+                            }
+                        ]
+                    },
+
+                    // SECTION 8: ARTHROPODS (INVERTEBRATES)
+                    {
+                        title: "Arthropods",
+                        lesson: `<h3>🦗 Arthropods - The Largest Invertebrate Group!</h3>
+                            <p>Arthropods make up the largest group of animals on Earth! They include insects, spiders, crabs, and more.</p>
+
+                            <div style="background: #ffe0b2; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>Key Characteristics of ALL Arthropods:</h4>
+                                <ul>
+                                    <li>🦴 <strong>Exoskeleton</strong> - hard outer skeleton on the OUTSIDE of body</li>
+                                    <li>🦵 <strong>Jointed legs</strong> - legs bend at joints</li>
+                                    <li>📦 <strong>Segmented body</strong> - body divided into sections</li>
+                                    <li>❄️ <strong>Cold-blooded</strong></li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐜 INSECTS (6 legs)</h4>
+                                <p><strong>Body parts:</strong> Head, Thorax, Abdomen (3 parts)</p>
+                                <p><strong>Examples:</strong> Ants, bees, butterflies, beetles, flies</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🕷️ ARACHNIDS (8 legs)</h4>
+                                <p><strong>Body parts:</strong> Cephalothorax, Abdomen (2 parts)</p>
+                                <p><strong>Examples:</strong> Spiders, scorpions, ticks</p>
+                                <p><strong>⚠️ Spiders are NOT insects!</strong></p>
+                            </div>
+
+                            <div style="background: #e0f2f1; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦀 CRUSTACEANS (10+ legs)</h4>
+                                <p><strong>Examples:</strong> Crabs, lobsters, shrimp, crayfish</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Insects, spiders, and crabs all belong to which group?",
+                                options: ["Vertebrates", "Arthropods", "Mollusks", "Mammals"],
+                                correct: 1,
+                                hint: "These animals all have jointed legs and an exoskeleton."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Arthropods have a hard outer covering called an _______.",
+                                correct: "exoskeleton",
+                                hint: "'Exo' means outside - this is a skeleton on the outside of the body."
+                            },
+                            {
+                                type: "multiple",
+                                question: "How many legs do insects have?",
+                                options: ["4", "6", "8", "10"],
+                                correct: 1,
+                                hint: "Count the legs on an ant, fly, or beetle!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "How many legs do spiders have?",
+                                options: ["4", "6", "8", "10"],
+                                correct: 2,
+                                hint: "Spiders are arachnids, not insects, and have more legs."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Spiders are insects.",
+                                correct: false,
+                                hint: "Spiders have 8 legs; insects have 6. They're in different groups!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "An insect's body is divided into how many main parts?",
+                                options: ["2", "3", "4", "5"],
+                                correct: 1,
+                                hint: "Head, thorax, and abdomen."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The three body parts of an insect are the head, thorax, and _______.",
+                                correct: "abdomen",
+                                hint: "This is the back section of an insect's body."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Insects are vertebrates.",
+                                correct: false,
+                                hint: "Do insects have backbones? Think about a fly or ant."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which type of animal goes through metamorphosis?",
+                                options: ["Most mammals", "All birds", "Amphibians and many insects", "Reptiles only"],
+                                correct: 2,
+                                hint: "Think about tadpoles becoming frogs and caterpillars becoming butterflies."
+                            }
+                        ]
+                    },
+
+                    // SECTION 9: OTHER INVERTEBRATES
+                    {
+                        title: "Other Invertebrates",
+                        lesson: `<h3>🐙 Other Invertebrates</h3>
+                            <p>Besides arthropods, there are many other groups of invertebrates!</p>
+
+                            <div style="background: #f8bbd9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐌 MOLLUSKS</h4>
+                                <p><strong>Characteristics:</strong> Soft bodies, many have shells</p>
+                                <p><strong>Examples:</strong> Snails, slugs, clams, oysters, octopus, squid</p>
+                                <p>Fun fact: Octopus and squid are mollusks without external shells!</p>
+                            </div>
+
+                            <div style="background: #d7ccc8; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🪱 ANNELIDS (Segmented Worms)</h4>
+                                <p><strong>Characteristics:</strong> Long bodies divided into ring-like segments</p>
+                                <p><strong>Examples:</strong> Earthworms, leeches</p>
+                            </div>
+
+                            <div style="background: #b3e5fc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🎐 CNIDARIANS</h4>
+                                <p><strong>Characteristics:</strong> Simple body, stinging tentacles</p>
+                                <p><strong>Examples:</strong> Jellyfish, coral, sea anemones</p>
+                            </div>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⭐ ECHINODERMS</h4>
+                                <p><strong>Characteristics:</strong> Spiny skin, radial symmetry (body arranged in circle)</p>
+                                <p><strong>Examples:</strong> Starfish, sea urchins, sand dollars</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which of these is a mollusk?",
+                                options: ["Crab", "Spider", "Snail", "Ant"],
+                                correct: 2,
+                                hint: "Mollusks have soft bodies, and many have shells."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Jellyfish have backbones.",
+                                correct: false,
+                                hint: "Jellyfish are invertebrates - they have no bones at all!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "Earthworms belong to which group of invertebrates?",
+                                options: ["Arthropods", "Mollusks", "Annelids (segmented worms)", "Cnidarians"],
+                                correct: 2,
+                                hint: "These worms have bodies divided into many ring-like segments."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Animals like octopus, squid, clams, and snails are called _______.",
+                                correct: "mollusks",
+                                hint: "These soft-bodied animals often have shells (though not always)."
+                            }
+                        ]
+                    },
+
+                    // SECTION 10: CHAPTER REVIEW
+                    {
+                        title: "Chapter Review",
+                        lesson: `<h3>📚 Chapter 5 Review: Animal Classification</h3>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦴 Vertebrates (WITH Backbone):</h4>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr style="background: #c8e6c9;">
+                                        <th style="padding: 8px; border: 1px solid #a5d6a7;">Group</th>
+                                        <th style="padding: 8px; border: 1px solid #a5d6a7;">Blood</th>
+                                        <th style="padding: 8px; border: 1px solid #a5d6a7;">Covering</th>
+                                        <th style="padding: 8px; border: 1px solid #a5d6a7;">Eggs/Birth</th>
+                                    </tr>
+                                    <tr><td style="padding: 8px; border: 1px solid #a5d6a7;">Mammals</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Warm</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Hair/Fur</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Live birth (mostly)</td></tr>
+                                    <tr><td style="padding: 8px; border: 1px solid #a5d6a7;">Birds</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Warm</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Feathers</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Eggs (on land)</td></tr>
+                                    <tr><td style="padding: 8px; border: 1px solid #a5d6a7;">Reptiles</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Cold</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Dry scales</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Eggs (on land)</td></tr>
+                                    <tr><td style="padding: 8px; border: 1px solid #a5d6a7;">Amphibians</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Cold</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Moist skin</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Eggs (in water)</td></tr>
+                                    <tr><td style="padding: 8px; border: 1px solid #a5d6a7;">Fish</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Cold</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Scales</td><td style="padding: 8px; border: 1px solid #a5d6a7;">Eggs (in water)</td></tr>
+                                </table>
+                            </div>
+
+                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐛 Invertebrates (WITHOUT Backbone):</h4>
+                                <ul>
+                                    <li><strong>Arthropods</strong> - exoskeleton, jointed legs (insects, spiders, crabs)</li>
+                                    <li><strong>Mollusks</strong> - soft body, often with shells (snails, octopus)</li>
+                                    <li><strong>Annelids</strong> - segmented worms (earthworms)</li>
+                                    <li><strong>Cnidarians</strong> - stinging tentacles (jellyfish)</li>
+                                </ul>
+                            </div>
+
+                            <p><strong>You're ready for the final review questions!</strong></p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which of the following is a warm-blooded vertebrate with feathers?",
+                                options: ["Mammal", "Bird", "Reptile", "Fish"],
+                                correct: 1,
+                                hint: "Only one group has feathers!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "A cold-blooded vertebrate with moist skin that goes through metamorphosis is a:",
+                                options: ["Fish", "Reptile", "Amphibian", "Bird"],
+                                correct: 2,
+                                hint: "Think: moist skin + metamorphosis"
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which animal is correctly matched with its group?",
+                                options: ["Spider - Insect", "Whale - Fish", "Turtle - Amphibian", "Bat - Mammal"],
+                                correct: 3,
+                                hint: "Bats have fur and nurse their young with milk!"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "A penguin is a mammal because it cannot fly.",
+                                correct: false,
+                                hint: "What covering does a penguin have? Feathers!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which of these animals lays eggs in water, has no scales, and goes through metamorphosis?",
+                                options: ["Snake", "Frog", "Turtle", "Goldfish"],
+                                correct: 1,
+                                hint: "This animal starts as a tadpole!"
+                            },
+                            {
+                                type: "fillin",
+                                question: "Insects have 6 legs, but spiders have _______ legs.",
+                                correct: "8",
+                                hint: "Spiders are arachnids, not insects!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "What do mammals, birds, reptiles, amphibians, and fish all have in common?",
+                                options: ["They are all warm-blooded", "They all have backbones", "They all lay eggs", "They all live on land"],
+                                correct: 1,
+                                hint: "These are all vertebrates - what defines a vertebrate?"
+                            }
+                        ]
+                    }
+                ]
+            },
             6: [ // Plant Classification
                 {
                     type: "multiple",
@@ -1790,10 +2549,42 @@
             return card;
         }
 
+        // State for lesson-based chapters
+        let currentSectionIndex = 0;
+        let currentSectionQuestionIndex = 0;
+        let isShowingLesson = false;
+        let chapterHasLessons = false;
+
         // Start chapter practice
         function startChapter(chapterId, isTestMode = false) {
             currentChapter = chapterId;
-            currentQuestions = [...questionBank[chapterId]].sort(() => Math.random() - 0.5);
+            const chapterData = questionBank[chapterId];
+
+            // Check if this chapter has lessons (new format) or is just questions (old format)
+            if (chapterData && chapterData.hasLessons) {
+                chapterHasLessons = true;
+                currentSectionIndex = 0;
+                currentSectionQuestionIndex = 0;
+
+                if (isTestMode) {
+                    // Test mode: extract all questions, shuffle them
+                    currentQuestions = [];
+                    chapterData.sections.forEach(section => {
+                        currentQuestions.push(...section.questions);
+                    });
+                    currentQuestions.sort(() => Math.random() - 0.5);
+                    isShowingLesson = false;
+                } else {
+                    // Practice mode: go through lessons then questions in order
+                    isShowingLesson = true;
+                }
+            } else {
+                // Old format - just an array of questions
+                chapterHasLessons = false;
+                currentQuestions = [...chapterData].sort(() => Math.random() - 0.5);
+                isShowingLesson = false;
+            }
+
             currentQuestionIndex = 0;
             sessionStats = { correct: 0, total: 0, isTestMode: isTestMode, answers: [] };
 
@@ -1807,20 +2598,97 @@
                 if (chapter) chapterName = chapter.title;
             });
 
-            const modeText = isTestMode ? ' - 📝 TEST MODE (No feedback until end!)' : ' - Practice Mode';
+            const modeText = isTestMode ? ' - 📝 TEST MODE (No feedback until end!)' : ' - 📖 Study Mode';
             document.getElementById('practiceChapterTitle').textContent = `Chapter ${chapterId}: ${chapterName}${modeText}`;
-            showQuestion();
+
+            if (chapterHasLessons && !isTestMode) {
+                showLesson();
+            } else {
+                showQuestion();
+            }
+        }
+
+        // Show lesson content for study mode
+        function showLesson() {
+            const chapterData = questionBank[currentChapter];
+            const section = chapterData.sections[currentSectionIndex];
+
+            document.getElementById('questionNumber').textContent = `Section ${currentSectionIndex + 1} of ${chapterData.sections.length}: ${section.title}`;
+            document.getElementById('practiceProgress').textContent = `Progress: ${sessionStats.correct}/${sessionStats.total} correct`;
+
+            // Show lesson content instead of question
+            document.getElementById('questionText').innerHTML = section.lesson;
+
+            const answerArea = document.getElementById('answerArea');
+            answerArea.innerHTML = `
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: #667eea; font-weight: bold; margin-bottom: 15px;">
+                        📚 Read the lesson above, then click "Start Questions" when you're ready!
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('submitBtn').style.display = 'none';
+            document.getElementById('nextBtn').textContent = '▶️ Start Questions';
+            document.getElementById('nextBtn').style.display = 'inline-block';
+            document.getElementById('nextBtn').onclick = () => {
+                isShowingLesson = false;
+                currentSectionQuestionIndex = 0;
+                document.getElementById('nextBtn').textContent = 'Next Question';
+                document.getElementById('nextBtn').onclick = nextQuestion;
+                showQuestion();
+            };
         }
 
         // Show current question
         function showQuestion() {
-            if (currentQuestionIndex >= currentQuestions.length) {
-                finishChapter();
-                return;
+            let question;
+            let totalQuestions;
+            let questionNum;
+
+            // Handle lesson-based chapters in practice mode
+            if (chapterHasLessons && !sessionStats.isTestMode) {
+                const chapterData = questionBank[currentChapter];
+                const section = chapterData.sections[currentSectionIndex];
+
+                // Check if we've finished this section's questions
+                if (currentSectionQuestionIndex >= section.questions.length) {
+                    // Move to next section
+                    currentSectionIndex++;
+                    currentSectionQuestionIndex = 0;
+
+                    // Check if we've finished all sections
+                    if (currentSectionIndex >= chapterData.sections.length) {
+                        finishChapter();
+                        return;
+                    }
+
+                    // Show next lesson
+                    isShowingLesson = true;
+                    showLesson();
+                    return;
+                }
+
+                question = section.questions[currentSectionQuestionIndex];
+                questionNum = currentSectionQuestionIndex + 1;
+                totalQuestions = section.questions.length;
+
+                document.getElementById('questionNumber').textContent = `${section.title} - Question ${questionNum} of ${totalQuestions}`;
+            } else {
+                // Test mode or old format - use currentQuestions array
+                if (currentQuestionIndex >= currentQuestions.length) {
+                    finishChapter();
+                    return;
+                }
+
+                question = currentQuestions[currentQuestionIndex];
+                questionNum = currentQuestionIndex + 1;
+                totalQuestions = currentQuestions.length;
+
+                document.getElementById('questionNumber').textContent = `Question ${questionNum} of ${totalQuestions}`;
             }
 
-            const question = currentQuestions[currentQuestionIndex];
-            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1} of ${currentQuestions.length}`;
             document.getElementById('practiceProgress').textContent = `Progress: ${sessionStats.correct}/${sessionStats.total} correct`;
             document.getElementById('questionText').textContent = question.question;
             
@@ -1892,7 +2760,16 @@
         }
 
         function submitAnswer() {
-            const question = currentQuestions[currentQuestionIndex];
+            // Get the current question based on mode
+            let question;
+            if (chapterHasLessons && !sessionStats.isTestMode) {
+                const chapterData = questionBank[currentChapter];
+                const section = chapterData.sections[currentSectionIndex];
+                question = section.questions[currentSectionQuestionIndex];
+            } else {
+                question = currentQuestions[currentQuestionIndex];
+            }
+
             let isCorrect = false;
             let userAnswer = null;
 
@@ -1968,7 +2845,12 @@
         }
 
         function nextQuestion() {
-            currentQuestionIndex++;
+            // Handle lesson-based chapters in practice mode
+            if (chapterHasLessons && !sessionStats.isTestMode) {
+                currentSectionQuestionIndex++;
+            } else {
+                currentQuestionIndex++;
+            }
             showQuestion();
         }
 
