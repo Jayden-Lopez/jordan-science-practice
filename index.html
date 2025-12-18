@@ -1056,474 +1056,1364 @@
 
         // Question Bank - Sample questions for each chapter
         const questionBank = {
-            1: [ // Earthquakes and Volcanoes
-                {
-                    type: "multiple",
-                    question: "What causes earthquakes?",
-                    options: [
-                        "Movement of tectonic plates",
-                        "Wind erosion",
-                        "Ocean currents",
-                        "Volcanic ash"
-                    ],
-                    correct: 0
-                },
-                {
-                    type: "multiple",
-                    question: "Which type of volcano has steep sides and explosive eruptions?",
-                    options: [
-                        "Shield volcano",
-                        "Composite volcano",
-                        "Cinder cone",
-                        "Dormant volcano"
-                    ],
-                    correct: 1
-                },
-                {
-                    type: "truefalse",
-                    question: "The Ring of Fire is an area with many earthquakes and volcanoes.",
-                    correct: true
-                },
-                {
-                    type: "fillin",
-                    question: "The point on Earth's surface directly above an earthquake's focus is called the _______.",
-                    correct: "epicenter"
-                },
-                {
-                    type: "multiple",
-                    question: "What instrument measures the strength of earthquakes?",
-                    options: [
-                        "Thermometer",
-                        "Barometer",
-                        "Seismograph",
-                        "Anemometer"
-                    ],
-                    correct: 2
-                }
-            ],
-            2: [ // Weathering and Erosion
-                {
-                    type: "multiple",
-                    question: "What is weathering?",
-                    options: [
-                        "The movement of rock and soil",
-                        "The breaking down of rocks",
-                        "The formation of mountains",
-                        "The creation of volcanoes"
-                    ],
-                    correct: 1
-                },
-                {
-                    type: "truefalse",
-                    question: "Chemical weathering occurs when water freezes in cracks in rocks.",
-                    correct: false
-                },
-                {
-                    type: "multiple",
-                    question: "Which is an agent of erosion?",
-                    options: [
-                        "Sunlight",
-                        "Oxygen",
-                        "Wind",
-                        "Temperature"
-                    ],
-                    correct: 2
-                },
-                {
-                    type: "fillin",
-                    question: "The process of moving weathered rock and soil from one place to another is called _______.",
-                    correct: "erosion"
-                },
-                {
-                    type: "multiple",
-                    question: "What type of weathering occurs when rocks are broken down by chemicals?",
-                    options: [
-                        "Physical weathering",
-                        "Mechanical weathering",
-                        "Chemical weathering",
-                        "Thermal weathering"
-                    ],
-                    correct: 2
-                }
-            ],
-            3: [ // Natural Resources
-                {
-                    type: "multiple",
-                    question: "Which of these is a renewable resource?",
-                    options: [
-                        "Coal",
-                        "Oil",
-                        "Solar energy",
-                        "Natural gas"
-                    ],
-                    correct: 2
-                },
-                {
-                    type: "truefalse",
-                    question: "Fossil fuels are formed from ancient plants and animals.",
-                    correct: true
-                },
-                {
-                    type: "multiple",
-                    question: "What is conservation?",
-                    options: [
-                        "Using resources wastefully",
-                        "Protecting and preserving natural resources",
-                        "Creating new resources",
-                        "Destroying old resources"
-                    ],
-                    correct: 1
-                },
-                {
-                    type: "fillin",
-                    question: "Resources that cannot be replaced in a human lifetime are called _______ resources.",
-                    correct: "nonrenewable"
-                },
-                {
-                    type: "multiple",
-                    question: "Which is NOT a fossil fuel?",
-                    options: [
-                        "Coal",
-                        "Oil",
-                        "Wind",
-                        "Natural gas"
-                    ],
-                    correct: 2
-                }
-            ],
-            4: [ // Cells and Classification - BJU Science 6 Chapter 4
-                // CELL THEORY & MICROSCOPE
-                {
-                    type: "multiple",
-                    question: "What is the basic unit of life?",
-                    options: [
-                        "Organ",
-                        "Tissue",
-                        "Cell",
-                        "Organism"
-                    ],
-                    correct: 2,
-                    hint: "According to cell theory, this is the smallest unit that can carry out all life processes."
-                },
-                {
-                    type: "truefalse",
-                    question: "The cell theory states that all living things are made of cells.",
-                    correct: true,
-                    hint: "This is one of the three main parts of cell theory!"
-                },
-                {
-                    type: "multiple",
-                    question: "What tool do scientists use to see cells?",
-                    options: [
-                        "Telescope",
-                        "Microscope",
-                        "Magnifying glass",
-                        "Binoculars"
-                    ],
-                    correct: 1,
-                    hint: "This tool uses lenses to magnify tiny objects like cells."
-                },
-                {
-                    type: "fillin",
-                    question: "An _______ is any living thing.",
-                    correct: "organism",
-                    hint: "This word describes any individual living creature - plants, animals, bacteria, etc."
-                },
+            1: { // Earthquakes and Volcanoes - BJU Science 6 Chapter 1
+                hasLessons: true,
+                sections: [
+                    {
+                        title: "Earth's Interior",
+                        lesson: `<h3>🌍 Earth's Interior</h3>
+                            <p>Earth is made up of layers, like an onion!</p>
 
-                // CELL STRUCTURE - ORGANELLES
-                {
-                    type: "fillin",
-                    question: "The jelly-like substance that fills a cell is called _______.",
-                    correct: "cytoplasm",
-                    hint: "It holds all the organelles in place and is mostly water."
-                },
-                {
-                    type: "multiple",
-                    question: "What is the control center of the cell that contains DNA?",
-                    options: [
-                        "Mitochondria",
-                        "Nucleus",
-                        "Cell membrane",
-                        "Vacuole"
-                    ],
-                    correct: 1,
-                    hint: "This organelle is like the brain of the cell."
-                },
-                {
-                    type: "multiple",
-                    question: "Which organelle is known as the 'powerhouse of the cell'?",
-                    options: [
-                        "Nucleus",
-                        "Chloroplast",
-                        "Mitochondria",
-                        "Vacuole"
-                    ],
-                    correct: 2,
-                    hint: "This organelle produces energy (ATP) for the cell."
-                },
-                {
-                    type: "fillin",
-                    question: "Mitochondria produce _______ for the cell.",
-                    correct: "energy",
-                    hint: "This is what powers all the cell's activities."
-                },
-                {
-                    type: "multiple",
-                    question: "What controls what enters and leaves the cell?",
-                    options: [
-                        "Cell wall",
-                        "Nucleus",
-                        "Cell membrane",
-                        "Cytoplasm"
-                    ],
-                    correct: 2,
-                    hint: "This flexible outer boundary surrounds ALL cells (both plant and animal)."
-                },
-                {
-                    type: "truefalse",
-                    question: "Plant cells have a rigid cell wall, but animal cells do not.",
-                    correct: true,
-                    hint: "The cell wall gives plants their rigid structure."
-                },
-                {
-                    type: "multiple",
-                    question: "Which organelle stores water and nutrients in plant cells?",
-                    options: [
-                        "Nucleus",
-                        "Mitochondria",
-                        "Vacuole",
-                        "Chloroplast"
-                    ],
-                    correct: 2,
-                    hint: "This storage organelle is much larger in plant cells than animal cells."
-                },
-                {
-                    type: "fillin",
-                    question: "The green pigment in chloroplasts is called _______.",
-                    correct: "chlorophyll",
-                    hint: "This green substance captures light energy for photosynthesis."
-                },
-                {
-                    type: "multiple",
-                    question: "Where does photosynthesis occur in plant cells?",
-                    options: [
-                        "Mitochondria",
-                        "Nucleus",
-                        "Chloroplast",
-                        "Vacuole"
-                    ],
-                    correct: 2,
-                    hint: "This organelle contains chlorophyll and is only found in plant cells."
-                },
-                {
-                    type: "truefalse",
-                    question: "Animal cells contain chloroplasts.",
-                    correct: false,
-                    hint: "Only plant cells have chloroplasts because only plants do photosynthesis!"
-                },
-                {
-                    type: "fillin",
-                    question: "The process by which plants make food using sunlight is called _______.",
-                    correct: "photosynthesis",
-                    hint: "Photo means light, and synthesis means to make or build."
-                },
-                {
-                    type: "multiple",
-                    question: "Small structures inside a cell that perform specific jobs are called:",
-                    options: [
-                        "Organisms",
-                        "Tissues",
-                        "Organelles",
-                        "Organs"
-                    ],
-                    correct: 2,
-                    hint: "Think 'organs' but smaller - these are the 'organs' of a cell."
-                },
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔴 The Layers of Earth</h4>
+                                <ul>
+                                    <li><strong>Crust</strong> - The thin, rocky outer layer we live on</li>
+                                    <li><strong>Mantle</strong> - Thick layer of hot rock that can flow slowly</li>
+                                    <li><strong>Outer Core</strong> - Liquid iron and nickel</li>
+                                    <li><strong>Inner Core</strong> - Solid iron and nickel (hottest part!)</li>
+                                </ul>
+                            </div>
 
-                // CELLS, TISSUES, ORGANS, SYSTEMS
-                {
-                    type: "fillin",
-                    question: "A group of similar cells working together is called a _______.",
-                    correct: "tissue",
-                    hint: "Cell → ? → Organ → System"
-                },
-                {
-                    type: "truefalse",
-                    question: "An organ is made up of different tissues working together.",
-                    correct: true,
-                    hint: "Your heart is an organ made of muscle tissue, nerve tissue, etc."
-                },
-                {
-                    type: "multiple",
-                    question: "What is the correct order from smallest to largest?",
-                    options: [
-                        "Cell, organ, tissue, organism",
-                        "Cell, tissue, organ, organism",
-                        "Tissue, cell, organ, organism",
-                        "Organ, tissue, cell, organism"
-                    ],
-                    correct: 1,
-                    hint: "Start with the building block (cell) and work up to the whole living thing!"
-                },
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧩 Tectonic Plates</h4>
+                                <p>The crust is broken into large pieces called <strong>tectonic plates</strong></p>
+                                <p>These plates float on the mantle and move very slowly</p>
+                                <p>Most earthquakes and volcanoes happen where plates meet!</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is the thin, rocky outer layer of Earth called?",
+                                options: ["Mantle", "Core", "Crust", "Magma"],
+                                correct: 2,
+                                hint: "This is the layer we live on - it's relatively thin compared to other layers."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What are the large pieces of Earth's crust called?",
+                                options: ["Continents", "Tectonic plates", "Layers", "Rocks"],
+                                correct: 1,
+                                hint: "These 'plates' float on the mantle and move slowly."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The thick layer of hot rock below the crust is called the _______.",
+                                correct: "mantle",
+                                hint: "This layer is between the crust and the core."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "The inner core of Earth is liquid.",
+                                correct: false,
+                                hint: "Despite being the hottest part, the inner core is solid due to extreme pressure."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Earthquakes",
+                        lesson: `<h3>🌋 Earthquakes</h3>
+                            <p>An <strong>earthquake</strong> is a sudden shaking of the ground caused by movement of tectonic plates!</p>
 
-                // CELL DIVISION - MITOSIS & MEIOSIS
-                {
-                    type: "fillin",
-                    question: "The type of cell division that produces two identical cells is called _______.",
-                    correct: "mitosis",
-                    hint: "This is how your body grows and repairs tissues."
-                },
-                {
-                    type: "multiple",
-                    question: "What type of cell division produces sex cells (egg and sperm)?",
-                    options: [
-                        "Mitosis",
-                        "Meiosis",
-                        "Photosynthesis",
-                        "Binary fission"
-                    ],
-                    correct: 1,
-                    hint: "This type of division produces cells with half the chromosomes."
-                },
-                {
-                    type: "truefalse",
-                    question: "Mitosis produces two identical daughter cells.",
-                    correct: true,
-                    hint: "The two new cells are exact copies of the original cell."
-                },
-                {
-                    type: "multiple",
-                    question: "Which produces four cells instead of two?",
-                    options: [
-                        "Mitosis",
-                        "Meiosis",
-                        "Both produce four cells",
-                        "Neither produces four cells"
-                    ],
-                    correct: 1,
-                    hint: "This special division for sex cells produces four daughter cells."
-                },
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📍 Key Terms</h4>
+                                <p><strong>Focus</strong> = The point underground where the earthquake starts</p>
+                                <p><strong>Epicenter</strong> = The point on Earth's surface directly above the focus</p>
+                                <p><strong>Fault</strong> = A crack in Earth's crust where plates meet and move</p>
+                            </div>
 
-                // SIX KINGDOMS
-                {
-                    type: "fillin",
-                    question: "Single-celled organisms without a nucleus are called _______.",
-                    correct: "bacteria",
-                    hint: "These are the simplest and most numerous organisms on Earth."
-                },
-                {
-                    type: "multiple",
-                    question: "Which kingdom includes single-celled organisms like amoebas?",
-                    options: [
-                        "Animal Kingdom",
-                        "Plant Kingdom",
-                        "Protist Kingdom",
-                        "Fungi Kingdom"
-                    ],
-                    correct: 2,
-                    hint: "This kingdom includes protozoa (animal-like) and algae (plant-like)."
-                },
-                {
-                    type: "fillin",
-                    question: "Single-celled organisms that can move and are animal-like are called _______.",
-                    correct: "protozoan",
-                    hint: "Examples include amoebas and paramecium. Proto means 'first' and zoa means 'animal'."
-                },
-                {
-                    type: "multiple",
-                    question: "Plant-like organisms that live in water and make their own food are called:",
-                    options: [
-                        "Bacteria",
-                        "Fungi",
-                        "Algae",
-                        "Protozoa"
-                    ],
-                    correct: 2,
-                    hint: "Seaweed is an example of this type of organism."
-                },
-                {
-                    type: "truefalse",
-                    question: "Bacteria can live in groups called colonies.",
-                    correct: true,
-                    hint: "A colony is a group of bacteria living together."
-                },
-                {
-                    type: "multiple",
-                    question: "How many kingdoms are used to classify all living things?",
-                    options: [
-                        "Three",
-                        "Four",
-                        "Five",
-                        "Six"
-                    ],
-                    correct: 3,
-                    hint: "The six kingdoms are: Bacteria, Archaea, Protists, Fungi, Plants, and Animals."
-                },
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 Measuring Earthquakes</h4>
+                                <p><strong>Seismograph</strong> = Instrument that records earthquake waves</p>
+                                <p><strong>Richter Scale</strong> = Measures the magnitude (strength) of earthquakes</p>
+                                <p>Each whole number increase means 10 times more shaking!</p>
+                            </div>
 
-                // LINNAEAN CLASSIFICATION
-                {
-                    type: "multiple",
-                    question: "The largest group in the Linnaean classification system is:",
-                    options: [
-                        "Species",
-                        "Genus",
-                        "Family",
-                        "Kingdom"
-                    ],
-                    correct: 3,
-                    hint: "This is the broadest category - like Animal Kingdom or Plant Kingdom."
-                },
-                {
-                    type: "multiple",
-                    question: "The smallest group in the Linnaean classification system is:",
-                    options: [
-                        "Kingdom",
-                        "Genus",
-                        "Species",
-                        "Family"
-                    ],
-                    correct: 2,
-                    hint: "This is the most specific group - organisms in this group can reproduce together."
-                },
-                {
-                    type: "truefalse",
-                    question: "A scientific name is made up of the genus and species names.",
-                    correct: true,
-                    hint: "This two-part naming system is called binomial nomenclature."
-                },
-                {
-                    type: "multiple",
-                    question: "What is the correct order of classification from largest to smallest?",
-                    options: [
-                        "Kingdom, Phylum, Class, Order, Family, Genus, Species",
-                        "Species, Genus, Family, Order, Class, Phylum, Kingdom",
-                        "Kingdom, Class, Phylum, Order, Family, Genus, Species",
-                        "Kingdom, Order, Class, Phylum, Family, Genus, Species"
-                    ],
-                    correct: 0,
-                    hint: "Remember: King Philip Came Over For Good Soup!"
-                },
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌊 Seismic Waves</h4>
+                                <p>Energy from earthquakes travels in waves:</p>
+                                <ul>
+                                    <li><strong>P waves</strong> (Primary) - Fastest, arrive first</li>
+                                    <li><strong>S waves</strong> (Secondary) - Slower, arrive second</li>
+                                    <li><strong>Surface waves</strong> - Cause the most damage</li>
+                                </ul>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What causes earthquakes?",
+                                options: ["Movement of tectonic plates", "Wind erosion", "Ocean currents", "Volcanic ash"],
+                                correct: 0,
+                                hint: "Earthquakes happen when the large pieces of Earth's crust shift and move."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The point on Earth's surface directly above an earthquake's focus is called the _______.",
+                                correct: "epicenter",
+                                hint: "This is where shaking is usually felt most strongly."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What instrument measures the strength of earthquakes?",
+                                options: ["Thermometer", "Barometer", "Seismograph", "Anemometer"],
+                                correct: 2,
+                                hint: "This instrument records the waves produced by earthquakes."
+                            },
+                            {
+                                type: "fillin",
+                                question: "A crack in Earth's crust where plates meet and move is called a _______.",
+                                correct: "fault",
+                                hint: "The San Andreas in California is a famous example."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which seismic waves arrive first after an earthquake?",
+                                options: ["S waves", "P waves", "Surface waves", "All arrive at the same time"],
+                                correct: 1,
+                                hint: "P stands for Primary - they're the fastest waves."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Volcanoes",
+                        lesson: `<h3>🌋 Volcanoes</h3>
+                            <p>A <strong>volcano</strong> is an opening in Earth's crust where molten rock, ash, and gases escape!</p>
 
-                // LIFE CYCLE & LIFE SPAN
-                {
-                    type: "fillin",
-                    question: "The series of changes an organism goes through during its life is called its life _______.",
-                    correct: "cycle",
-                    hint: "Think of a circle - birth, growth, reproduction, death, and repeat."
-                },
-                {
-                    type: "multiple",
-                    question: "The length of time an organism lives is called its:",
-                    options: [
-                        "Life cycle",
-                        "Life span",
-                        "Generation",
-                        "Period"
-                    ],
-                    correct: 1,
-                    hint: "This is how long an organism typically lives from birth to death."
-                }
-            ],
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔥 Volcano Vocabulary</h4>
+                                <p><strong>Magma</strong> = Molten rock BELOW Earth's surface</p>
+                                <p><strong>Lava</strong> = Molten rock ABOVE Earth's surface (after eruption)</p>
+                                <p><strong>Crater</strong> = Bowl-shaped opening at the top of a volcano</p>
+                                <p><strong>Vent</strong> = Opening where lava and gases escape</p>
+                            </div>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🏔️ Types of Volcanoes</h4>
+                                <ul>
+                                    <li><strong>Shield Volcano</strong> - Wide, gently sloping sides (like a warrior's shield)</li>
+                                    <li><strong>Cinder Cone</strong> - Small, steep sides, made of rock fragments</li>
+                                    <li><strong>Composite (Stratovolcano)</strong> - Tall with steep sides, most explosive!</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💤 Volcano Status</h4>
+                                <p><strong>Active</strong> = Currently erupting or likely to erupt</p>
+                                <p><strong>Dormant</strong> = "Sleeping" - hasn't erupted recently but could</p>
+                                <p><strong>Extinct</strong> = Hasn't erupted in thousands of years, unlikely to again</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which type of volcano has steep sides and explosive eruptions?",
+                                options: ["Shield volcano", "Composite volcano", "Cinder cone", "Dormant volcano"],
+                                correct: 1,
+                                hint: "Also called stratovolcanoes, these are the most dangerous type."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Molten rock below Earth's surface is called _______.",
+                                correct: "magma",
+                                hint: "Once this reaches the surface, it's called lava."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Molten rock that flows out of a volcano is called _______.",
+                                correct: "lava",
+                                hint: "This is what magma is called after it erupts."
+                            },
+                            {
+                                type: "multiple",
+                                question: "A volcano that is 'sleeping' and hasn't erupted recently is called:",
+                                options: ["Active", "Dormant", "Extinct", "Explosive"],
+                                correct: 1,
+                                hint: "Like someone taking a long nap - it could wake up!"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Shield volcanoes have gentle slopes and are less explosive.",
+                                correct: true,
+                                hint: "Their lava flows easily, creating wide, flat shapes."
+                            }
+                        ]
+                    },
+                    {
+                        title: "The Ring of Fire",
+                        lesson: `<h3>🔥 The Ring of Fire</h3>
+                            <p>The <strong>Ring of Fire</strong> is a horseshoe-shaped zone around the Pacific Ocean with lots of earthquakes and volcanoes!</p>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📍 Ring of Fire Facts</h4>
+                                <ul>
+                                    <li>About 75% of the world's volcanoes are here</li>
+                                    <li>About 90% of earthquakes occur here</li>
+                                    <li>It's about 25,000 miles long!</li>
+                                    <li>Includes countries like Japan, Philippines, Chile, and the US west coast</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>❓ Why So Active?</h4>
+                                <p>Many tectonic plates meet along the Ring of Fire</p>
+                                <p>Plates colliding, separating, or sliding past each other</p>
+                                <p>This plate movement causes earthquakes and volcanic eruptions</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "truefalse",
+                                question: "The Ring of Fire is an area with many earthquakes and volcanoes.",
+                                correct: true,
+                                hint: "This zone surrounds the Pacific Ocean."
+                            },
+                            {
+                                type: "multiple",
+                                question: "About what percentage of the world's volcanoes are in the Ring of Fire?",
+                                options: ["25%", "50%", "75%", "100%"],
+                                correct: 2,
+                                hint: "More than half, but not all - about three-quarters."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why does the Ring of Fire have so many earthquakes and volcanoes?",
+                                options: ["It's near the equator", "Many tectonic plates meet there", "It's the hottest area", "It has the most water"],
+                                correct: 1,
+                                hint: "Plate boundaries are where most geological activity occurs."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The Ring of Fire surrounds the _______ Ocean.",
+                                correct: "Pacific",
+                                hint: "This is the largest ocean on Earth."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Chapter 1 Review",
+                        lesson: `<h3>📚 Chapter 1 Review: Earthquakes and Volcanoes</h3>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌍 Earth's Layers</h4>
+                                <p>Crust → Mantle → Outer Core → Inner Core</p>
+                                <p><strong>Tectonic plates</strong> = pieces of crust that move</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌋 Key Vocabulary</h4>
+                                <p><strong>Earthquake</strong> = Shaking from plate movement</p>
+                                <p><strong>Epicenter</strong> = Point on surface above focus</p>
+                                <p><strong>Seismograph</strong> = Measures earthquakes</p>
+                                <p><strong>Magma</strong> = Molten rock underground</p>
+                                <p><strong>Lava</strong> = Molten rock on surface</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🏔️ Volcano Types</h4>
+                                <p><strong>Shield</strong> = Gentle slopes, less explosive</p>
+                                <p><strong>Cinder Cone</strong> = Small, steep</p>
+                                <p><strong>Composite</strong> = Tall, steep, most explosive</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What layer of Earth do we live on?",
+                                options: ["Mantle", "Core", "Crust", "Magma"],
+                                correct: 2,
+                                hint: "This is the thin, rocky outer layer."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Magma and lava are the same thing.",
+                                correct: false,
+                                hint: "Location matters! One is underground, one is on the surface."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The _______ Scale measures earthquake strength.",
+                                correct: "Richter",
+                                hint: "Named after Charles Richter who developed it."
+                            }
+                        ]
+                    }
+                ]
+            },
+            2: { // Weathering and Erosion - BJU Science 6 Chapter 2
+                hasLessons: true,
+                sections: [
+                    {
+                        title: "What is Weathering?",
+                        lesson: `<h3>🪨 What is Weathering?</h3>
+                            <p><strong>Weathering</strong> is the breaking down of rocks into smaller pieces.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Important!</h4>
+                                <p>Weathering breaks rocks DOWN but doesn't move them</p>
+                                <p>The broken pieces stay in the same place</p>
+                                <p>Moving the pieces is called EROSION (we'll learn that next!)</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📝 Two Types of Weathering</h4>
+                                <ol>
+                                    <li><strong>Mechanical (Physical) Weathering</strong> - Breaks rocks without changing what they're made of</li>
+                                    <li><strong>Chemical Weathering</strong> - Changes the chemical makeup of rocks</li>
+                                </ol>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is weathering?",
+                                options: ["The movement of rock and soil", "The breaking down of rocks", "The formation of mountains", "The creation of volcanoes"],
+                                correct: 1,
+                                hint: "Weathering breaks rocks into smaller pieces."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Weathering moves rocks from one place to another.",
+                                correct: false,
+                                hint: "Weathering only breaks rocks down - erosion moves them."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What are the two main types of weathering?",
+                                options: ["Fast and slow", "Mechanical and chemical", "Hot and cold", "Wet and dry"],
+                                correct: 1,
+                                hint: "One type is physical, the other changes the rock's chemistry."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Mechanical Weathering",
+                        lesson: `<h3>🔨 Mechanical (Physical) Weathering</h3>
+                            <p>Rocks are broken into smaller pieces WITHOUT changing what they're made of.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>❄️ Ice Wedging (Frost Wedging)</h4>
+                                <p>Water seeps into cracks in rocks</p>
+                                <p>Water freezes and EXPANDS</p>
+                                <p>Ice pushes the crack wider</p>
+                                <p>Repeated freezing/thawing breaks rock apart</p>
+                            </div>
+
+                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 Plant Roots</h4>
+                                <p>Roots grow into cracks in rocks</p>
+                                <p>As roots grow bigger, they push rocks apart</p>
+                                <p>Even small plants can break large rocks over time!</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐿️ Animals</h4>
+                                <p>Burrowing animals (gophers, ants, earthworms)</p>
+                                <p>They dig through soil and break apart rocks</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "truefalse",
+                                question: "Chemical weathering occurs when water freezes in cracks in rocks.",
+                                correct: false,
+                                hint: "Ice wedging is a type of MECHANICAL (physical) weathering."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What happens when water freezes in cracks in rocks?",
+                                options: ["The rock melts", "The water disappears", "The ice expands and breaks the rock", "Nothing happens"],
+                                correct: 2,
+                                hint: "Water expands when it freezes, pushing against the rock."
+                            },
+                            {
+                                type: "fillin",
+                                question: "When water freezes in rock cracks and breaks the rock apart, it's called ice _______.",
+                                correct: "wedging",
+                                hint: "The ice acts like a wedge, pushing the crack wider."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Plant roots can break apart rocks.",
+                                correct: true,
+                                hint: "As roots grow, they push into cracks and widen them."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Chemical Weathering",
+                        lesson: `<h3>🧪 Chemical Weathering</h3>
+                            <p>Rocks are broken down by chemical reactions that CHANGE what the rock is made of.</p>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💧 Water and Acids</h4>
+                                <p><strong>Water</strong> dissolves some minerals in rocks</p>
+                                <p><strong>Carbonic acid</strong> forms when CO₂ mixes with rainwater</p>
+                                <p>Acid rain (from pollution) speeds up chemical weathering</p>
+                            </div>
+
+                            <div style="background: #ffcdd2; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔴 Oxidation (Rusting)</h4>
+                                <p>Oxygen combines with iron in rocks</p>
+                                <p>Creates iron oxide (rust)</p>
+                                <p>Rust weakens the rock structure</p>
+                            </div>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🏔️ Examples</h4>
+                                <ul>
+                                    <li>Caves form when acid dissolves limestone</li>
+                                    <li>Statues and buildings wear away over time</li>
+                                    <li>Rusty red color in rocks = oxidation</li>
+                                </ul>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What type of weathering occurs when rocks are broken down by chemicals?",
+                                options: ["Physical weathering", "Mechanical weathering", "Chemical weathering", "Thermal weathering"],
+                                correct: 2,
+                                hint: "This type changes the chemical makeup of the rock."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What forms when oxygen combines with iron in rocks?",
+                                options: ["Water", "Rust", "Salt", "Sand"],
+                                correct: 1,
+                                hint: "This is called oxidation - it makes rocks look reddish."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Acid rain speeds up chemical weathering.",
+                                correct: true,
+                                hint: "Acids dissolve and react with minerals in rocks faster."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Caves form when acid dissolves _______ rock.",
+                                correct: "limestone",
+                                hint: "This type of rock is easily dissolved by carbonic acid."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Erosion",
+                        lesson: `<h3>🌊 Erosion</h3>
+                            <p><strong>Erosion</strong> is the moving of weathered rock and soil from one place to another.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🚚 Agents of Erosion</h4>
+                                <p>An "agent" is something that causes erosion:</p>
+                                <ul>
+                                    <li>💧 <strong>Water</strong> - Rivers, streams, waves, rain</li>
+                                    <li>💨 <strong>Wind</strong> - Blows sand and soil</li>
+                                    <li>❄️ <strong>Ice (Glaciers)</strong> - Slowly moving rivers of ice</li>
+                                    <li>⬇️ <strong>Gravity</strong> - Landslides, rockfalls</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💧 Water Erosion</h4>
+                                <p>Most powerful agent of erosion!</p>
+                                <p>Rivers carve valleys and canyons</p>
+                                <p>Waves shape coastlines</p>
+                                <p>The Grand Canyon was carved by water erosion!</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "The process of moving weathered rock and soil from one place to another is called _______.",
+                                correct: "erosion",
+                                hint: "This is different from weathering, which only breaks rocks down."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is an agent of erosion?",
+                                options: ["Sunlight", "Oxygen", "Wind", "Temperature"],
+                                correct: 2,
+                                hint: "This agent blows sand and soil from place to place."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the most powerful agent of erosion?",
+                                options: ["Wind", "Gravity", "Water", "Ice"],
+                                correct: 2,
+                                hint: "This carved the Grand Canyon over millions of years."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Glaciers are agents of erosion.",
+                                correct: true,
+                                hint: "These slow-moving rivers of ice carve valleys."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Deposition",
+                        lesson: `<h3>📍 Deposition</h3>
+                            <p><strong>Deposition</strong> is when eroded material is dropped or deposited in a new location.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔄 The Cycle</h4>
+                                <p>Weathering → Erosion → Deposition</p>
+                                <ol>
+                                    <li>Weathering breaks rocks down</li>
+                                    <li>Erosion moves the pieces</li>
+                                    <li>Deposition drops them somewhere new</li>
+                                </ol>
+                            </div>
+
+                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📍 Examples of Deposition</h4>
+                                <ul>
+                                    <li><strong>Deltas</strong> - Where rivers meet oceans</li>
+                                    <li><strong>Beaches</strong> - Sand deposited by waves</li>
+                                    <li><strong>Sand dunes</strong> - Wind deposits sand</li>
+                                    <li><strong>Moraines</strong> - Glaciers drop rocks and soil</li>
+                                </ul>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "When eroded material is dropped in a new location, it's called _______.",
+                                correct: "deposition",
+                                hint: "This is the final step after weathering and erosion."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is a delta?",
+                                options: ["A type of mountain", "Where a river meets the ocean and drops sediment", "A deep valley", "A type of volcano"],
+                                correct: 1,
+                                hint: "Rivers slow down when they reach the ocean and deposit their sediment."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the correct order of the processes?",
+                                options: ["Erosion, Weathering, Deposition", "Deposition, Erosion, Weathering", "Weathering, Erosion, Deposition", "Erosion, Deposition, Weathering"],
+                                correct: 2,
+                                hint: "First rocks break down, then move, then get dropped off."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Chapter 2 Review",
+                        lesson: `<h3>📚 Chapter 2 Review: Weathering and Erosion</h3>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📝 Key Definitions</h4>
+                                <p><strong>Weathering</strong> = Breaking down rocks (doesn't move them)</p>
+                                <p><strong>Erosion</strong> = Moving weathered material</p>
+                                <p><strong>Deposition</strong> = Dropping material in a new place</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔨 Mechanical vs Chemical</h4>
+                                <p><strong>Mechanical:</strong> Ice wedging, plant roots, animals</p>
+                                <p><strong>Chemical:</strong> Acid, oxidation (rust), water dissolving</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🚚 Agents of Erosion</h4>
+                                <p>Water, Wind, Ice (glaciers), Gravity</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is the difference between weathering and erosion?",
+                                options: ["They are the same thing", "Weathering moves rocks, erosion breaks them", "Weathering breaks rocks, erosion moves them", "Neither involves rocks"],
+                                correct: 2,
+                                hint: "Remember: weathering breaks DOWN, erosion MOVES."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The four agents of erosion are water, wind, ice, and _______.",
+                                correct: "gravity",
+                                hint: "This force pulls rocks and soil downhill."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Oxidation is a type of mechanical weathering.",
+                                correct: false,
+                                hint: "Oxidation (rusting) is a chemical change, so it's chemical weathering."
+                            }
+                        ]
+                    }
+                ]
+            },
+            3: { // Natural Resources - BJU Science 6 Chapter 3
+                hasLessons: true,
+                sections: [
+                    {
+                        title: "What are Natural Resources?",
+                        lesson: `<h3>🌍 What are Natural Resources?</h3>
+                            <p><strong>Natural resources</strong> are materials from Earth that people use.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌎 Examples of Natural Resources</h4>
+                                <ul>
+                                    <li>Water</li>
+                                    <li>Air</li>
+                                    <li>Soil</li>
+                                    <li>Minerals and rocks</li>
+                                    <li>Plants and animals</li>
+                                    <li>Sunlight</li>
+                                    <li>Fossil fuels (oil, coal, natural gas)</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 Two Types of Resources</h4>
+                                <p><strong>Renewable</strong> = Can be replaced in a short time</p>
+                                <p><strong>Nonrenewable</strong> = Cannot be replaced in a human lifetime</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What are natural resources?",
+                                options: ["Things made in factories", "Materials from Earth that people use", "Only things underground", "Man-made objects"],
+                                correct: 1,
+                                hint: "These are materials that come from nature."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Water is a natural resource.",
+                                correct: true,
+                                hint: "Water comes from nature and people use it every day."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What are the two main types of natural resources?",
+                                options: ["Good and bad", "Renewable and nonrenewable", "Solid and liquid", "Hot and cold"],
+                                correct: 1,
+                                hint: "One type can be replaced quickly, the other cannot."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Renewable Resources",
+                        lesson: `<h3>♻️ Renewable Resources</h3>
+                            <p><strong>Renewable resources</strong> can be replaced in a relatively short time.</p>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>✅ Examples of Renewable Resources</h4>
+                                <ul>
+                                    <li>☀️ <strong>Solar energy</strong> - Energy from the sun</li>
+                                    <li>💨 <strong>Wind energy</strong> - Wind never runs out</li>
+                                    <li>💧 <strong>Water</strong> - Water cycle renews it</li>
+                                    <li>🌲 <strong>Trees/Wood</strong> - Can grow new trees</li>
+                                    <li>🌾 <strong>Plants/Crops</strong> - Can plant more</li>
+                                    <li>🐟 <strong>Animals</strong> - Can reproduce</li>
+                                    <li>🌊 <strong>Hydropower</strong> - Energy from moving water</li>
+                                    <li>🌋 <strong>Geothermal</strong> - Heat from inside Earth</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Key Point</h4>
+                                <p>Even renewable resources can run out if we use them faster than they can be replaced!</p>
+                                <p>Example: Overfishing can make fish populations disappear</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which of these is a renewable resource?",
+                                options: ["Coal", "Oil", "Solar energy", "Natural gas"],
+                                correct: 2,
+                                hint: "The sun provides this energy and won't run out."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Wind is a renewable resource.",
+                                correct: true,
+                                hint: "Wind will keep blowing - it's constantly renewed."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why are trees considered a renewable resource?",
+                                options: ["They never die", "We can plant new ones", "They grow underground", "They don't need water"],
+                                correct: 1,
+                                hint: "We can grow new trees to replace ones we cut down."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Energy from the sun is called _______ energy.",
+                                correct: "solar",
+                                hint: "This word comes from 'sol,' the Latin word for sun."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Nonrenewable Resources",
+                        lesson: `<h3>⛽ Nonrenewable Resources</h3>
+                            <p><strong>Nonrenewable resources</strong> cannot be replaced in a human lifetime.</p>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>❌ Examples of Nonrenewable Resources</h4>
+                                <ul>
+                                    <li>⛽ <strong>Oil (Petroleum)</strong> - Used for gasoline, plastics</li>
+                                    <li>🪨 <strong>Coal</strong> - Burned for electricity</li>
+                                    <li>🔥 <strong>Natural gas</strong> - Used for heating, cooking</li>
+                                    <li>💎 <strong>Minerals</strong> - Metals like iron, copper, gold</li>
+                                    <li>☢️ <strong>Uranium</strong> - Used for nuclear power</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⏰ Why Nonrenewable?</h4>
+                                <p>Fossil fuels took MILLIONS of years to form</p>
+                                <p>Once we use them, they're gone</p>
+                                <p>Earth can't make more fast enough to replace what we use</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "Resources that cannot be replaced in a human lifetime are called _______ resources.",
+                                correct: "nonrenewable",
+                                hint: "These resources take millions of years to form."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is a nonrenewable resource?",
+                                options: ["Sunlight", "Wind", "Coal", "Trees"],
+                                correct: 2,
+                                hint: "This black rock took millions of years to form underground."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Minerals like iron and copper are nonrenewable.",
+                                correct: true,
+                                hint: "Earth can't make more minerals quickly - what's there is what we have."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why are fossil fuels nonrenewable?",
+                                options: ["They're too expensive", "They took millions of years to form", "They're found in space", "They can be made in factories"],
+                                correct: 1,
+                                hint: "We're using them much faster than Earth can make more."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Fossil Fuels",
+                        lesson: `<h3>🦖 Fossil Fuels</h3>
+                            <p><strong>Fossil fuels</strong> formed from the remains of ancient plants and animals!</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔥 The Three Fossil Fuels</h4>
+                                <ol>
+                                    <li><strong>Coal</strong> - Formed from ancient swamp plants</li>
+                                    <li><strong>Oil (Petroleum)</strong> - Formed from ancient sea organisms</li>
+                                    <li><strong>Natural Gas</strong> - Formed along with oil</li>
+                                </ol>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⏱️ How They Formed</h4>
+                                <ol>
+                                    <li>Ancient plants and animals died</li>
+                                    <li>They were buried under layers of sediment</li>
+                                    <li>Heat and pressure over millions of years changed them</li>
+                                    <li>They became coal, oil, or natural gas</li>
+                                </ol>
+                            </div>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⚠️ Problems with Fossil Fuels</h4>
+                                <ul>
+                                    <li>They will eventually run out</li>
+                                    <li>Burning them causes air pollution</li>
+                                    <li>Releases carbon dioxide (greenhouse gas)</li>
+                                </ul>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "truefalse",
+                                question: "Fossil fuels are formed from ancient plants and animals.",
+                                correct: true,
+                                hint: "That's why they're called 'fossil' fuels!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is NOT a fossil fuel?",
+                                options: ["Coal", "Oil", "Wind", "Natural gas"],
+                                correct: 2,
+                                hint: "Three of these formed from ancient organisms. One is renewable energy."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Coal formed mainly from ancient:",
+                                options: ["Fish", "Dinosaurs", "Swamp plants", "Rocks"],
+                                correct: 2,
+                                hint: "Ancient forests and swamps were buried and compressed."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Oil is also called _______.",
+                                correct: "petroleum",
+                                hint: "This word comes from Latin meaning 'rock oil'."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Conservation",
+                        lesson: `<h3>🌱 Conservation</h3>
+                            <p><strong>Conservation</strong> means protecting and wisely using natural resources.</p>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>♻️ The Three R's</h4>
+                                <ul>
+                                    <li><strong>Reduce</strong> - Use less</li>
+                                    <li><strong>Reuse</strong> - Use again</li>
+                                    <li><strong>Recycle</strong> - Make into something new</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Ways to Conserve</h4>
+                                <ul>
+                                    <li>Turn off lights when leaving a room</li>
+                                    <li>Take shorter showers</li>
+                                    <li>Walk or bike instead of driving</li>
+                                    <li>Recycle paper, plastic, and metal</li>
+                                    <li>Use reusable bags and water bottles</li>
+                                    <li>Plant trees</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌍 Why Conserve?</h4>
+                                <p>To make resources last longer</p>
+                                <p>To protect the environment</p>
+                                <p>To leave resources for future generations</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is conservation?",
+                                options: ["Using resources wastefully", "Protecting and preserving natural resources", "Creating new resources", "Destroying old resources"],
+                                correct: 1,
+                                hint: "Conservation means using resources wisely and protecting them."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What are the three R's of conservation?",
+                                options: ["Run, Rest, Repeat", "Reduce, Reuse, Recycle", "Read, Write, Remember", "Rock, River, Rain"],
+                                correct: 1,
+                                hint: "These three actions help us use fewer resources."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Using an item again instead of throwing it away is called _______.",
+                                correct: "reuse",
+                                hint: "This is the second R - using something more than once."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Turning off lights when you leave a room helps conserve resources.",
+                                correct: true,
+                                hint: "Using less electricity means using fewer resources to make that electricity."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Chapter 3 Review",
+                        lesson: `<h3>📚 Chapter 3 Review: Natural Resources</h3>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>♻️ Renewable Resources</h4>
+                                <p>Can be replaced: Sun, wind, water, trees, animals</p>
+                            </div>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⛽ Nonrenewable Resources</h4>
+                                <p>Cannot be replaced quickly: Coal, oil, natural gas, minerals</p>
+                                <p><strong>Fossil fuels</strong> = formed from ancient life</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 Conservation</h4>
+                                <p>Protecting resources: Reduce, Reuse, Recycle</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Which resource will eventually run out if we keep using it?",
+                                options: ["Sunlight", "Wind", "Oil", "Water"],
+                                correct: 2,
+                                hint: "This fossil fuel is nonrenewable."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Recycling is a way to conserve natural resources.",
+                                correct: true,
+                                hint: "Recycling is one of the three R's of conservation."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Coal, oil, and natural gas are called _______ fuels.",
+                                correct: "fossil",
+                                hint: "They formed from the remains of ancient organisms."
+                            }
+                        ]
+                    }
+                ]
+            },
+            4: { // Cells and Classification - BJU Science 6 Chapter 4
+                hasLessons: true,
+                sections: [
+                    {
+                        title: "Cell Theory and Microscopes",
+                        lesson: `<h3>🔬 Cell Theory and Microscopes</h3>
+                            <p>All living things are made of <strong>cells</strong> - the basic unit of life!</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📜 The Three Parts of Cell Theory</h4>
+                                <ol>
+                                    <li>All living things are made of <strong>cells</strong></li>
+                                    <li>Cells are the basic unit of <strong>structure and function</strong></li>
+                                    <li>All cells come from <strong>other cells</strong></li>
+                                </ol>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔬 The Microscope</h4>
+                                <p>Cells are too small to see with our eyes!</p>
+                                <p>A <strong>microscope</strong> uses lenses to magnify tiny objects</p>
+                                <p>Scientists use microscopes to study cells</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📝 Key Vocabulary</h4>
+                                <p><strong>Cell</strong> = Basic unit of life</p>
+                                <p><strong>Organism</strong> = Any living thing</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is the basic unit of life?",
+                                options: ["Organ", "Tissue", "Cell", "Organism"],
+                                correct: 2,
+                                hint: "According to cell theory, this is the smallest unit that can carry out all life processes."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "The cell theory states that all living things are made of cells.",
+                                correct: true,
+                                hint: "This is one of the three main parts of cell theory!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "What tool do scientists use to see cells?",
+                                options: ["Telescope", "Microscope", "Magnifying glass", "Binoculars"],
+                                correct: 1,
+                                hint: "This tool uses lenses to magnify tiny objects like cells."
+                            },
+                            {
+                                type: "fillin",
+                                question: "An _______ is any living thing.",
+                                correct: "organism",
+                                hint: "This word describes any individual living creature - plants, animals, bacteria, etc."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Cell Structure and Organelles",
+                        lesson: `<h3>🧫 Cell Structure and Organelles</h3>
+                            <p><strong>Organelles</strong> are small structures inside a cell that perform specific jobs.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🏠 Parts of ALL Cells</h4>
+                                <ul>
+                                    <li><strong>Cell Membrane</strong> - Controls what enters and leaves (like a gatekeeper)</li>
+                                    <li><strong>Cytoplasm</strong> - Jelly-like substance that fills the cell</li>
+                                    <li><strong>Nucleus</strong> - Control center containing DNA (the "brain")</li>
+                                    <li><strong>Mitochondria</strong> - "Powerhouse" that produces energy</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 Plant Cells ONLY Have:</h4>
+                                <ul>
+                                    <li><strong>Cell Wall</strong> - Rigid outer layer for support</li>
+                                    <li><strong>Chloroplasts</strong> - Where photosynthesis happens (contain chlorophyll)</li>
+                                    <li><strong>Large Vacuole</strong> - Stores water and nutrients</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Remember!</h4>
+                                <p><strong>Chlorophyll</strong> = Green pigment in chloroplasts</p>
+                                <p><strong>Photosynthesis</strong> = Plants making food using sunlight</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "The jelly-like substance that fills a cell is called _______.",
+                                correct: "cytoplasm",
+                                hint: "It holds all the organelles in place and is mostly water."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the control center of the cell that contains DNA?",
+                                options: ["Mitochondria", "Nucleus", "Cell membrane", "Vacuole"],
+                                correct: 1,
+                                hint: "This organelle is like the brain of the cell."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which organelle is known as the 'powerhouse of the cell'?",
+                                options: ["Nucleus", "Chloroplast", "Mitochondria", "Vacuole"],
+                                correct: 2,
+                                hint: "This organelle produces energy (ATP) for the cell."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Mitochondria produce _______ for the cell.",
+                                correct: "energy",
+                                hint: "This is what powers all the cell's activities."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What controls what enters and leaves the cell?",
+                                options: ["Cell wall", "Nucleus", "Cell membrane", "Cytoplasm"],
+                                correct: 2,
+                                hint: "This flexible outer boundary surrounds ALL cells (both plant and animal)."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Plant cells have a rigid cell wall, but animal cells do not.",
+                                correct: true,
+                                hint: "The cell wall gives plants their rigid structure."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which organelle stores water and nutrients in plant cells?",
+                                options: ["Nucleus", "Mitochondria", "Vacuole", "Chloroplast"],
+                                correct: 2,
+                                hint: "This storage organelle is much larger in plant cells than animal cells."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The green pigment in chloroplasts is called _______.",
+                                correct: "chlorophyll",
+                                hint: "This green substance captures light energy for photosynthesis."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Where does photosynthesis occur in plant cells?",
+                                options: ["Mitochondria", "Nucleus", "Chloroplast", "Vacuole"],
+                                correct: 2,
+                                hint: "This organelle contains chlorophyll and is only found in plant cells."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Animal cells contain chloroplasts.",
+                                correct: false,
+                                hint: "Only plant cells have chloroplasts because only plants do photosynthesis!"
+                            },
+                            {
+                                type: "fillin",
+                                question: "The process by which plants make food using sunlight is called _______.",
+                                correct: "photosynthesis",
+                                hint: "Photo means light, and synthesis means to make or build."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Small structures inside a cell that perform specific jobs are called:",
+                                options: ["Organisms", "Tissues", "Organelles", "Organs"],
+                                correct: 2,
+                                hint: "Think 'organs' but smaller - these are the 'organs' of a cell."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Cells, Tissues, Organs, and Systems",
+                        lesson: `<h3>🏗️ Organization of Living Things</h3>
+                            <p>Living things are organized from small to large!</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 Levels of Organization (Smallest to Largest)</h4>
+                                <ol>
+                                    <li><strong>Cell</strong> → Basic unit of life</li>
+                                    <li><strong>Tissue</strong> → Group of similar cells working together</li>
+                                    <li><strong>Organ</strong> → Different tissues working together</li>
+                                    <li><strong>Organ System</strong> → Organs working together</li>
+                                    <li><strong>Organism</strong> → Complete living thing</li>
+                                </ol>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Examples</h4>
+                                <p><strong>Tissue:</strong> Muscle tissue, nerve tissue</p>
+                                <p><strong>Organ:</strong> Heart (made of muscle, nerve, and other tissues)</p>
+                                <p><strong>System:</strong> Circulatory system (heart + blood vessels)</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "A group of similar cells working together is called a _______.",
+                                correct: "tissue",
+                                hint: "Cell → ? → Organ → System"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "An organ is made up of different tissues working together.",
+                                correct: true,
+                                hint: "Your heart is an organ made of muscle tissue, nerve tissue, etc."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the correct order from smallest to largest?",
+                                options: ["Cell, organ, tissue, organism", "Cell, tissue, organ, organism", "Tissue, cell, organ, organism", "Organ, tissue, cell, organism"],
+                                correct: 1,
+                                hint: "Start with the building block (cell) and work up to the whole living thing!"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Cell Division: Mitosis and Meiosis",
+                        lesson: `<h3>🔄 Cell Division</h3>
+                            <p>Cells reproduce by dividing! There are two main types of cell division.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔄 MITOSIS</h4>
+                                <p>Produces <strong>2 identical</strong> daughter cells</p>
+                                <p><strong>Purpose:</strong> Growth and repair</p>
+                                <p>Used by body cells (skin, muscle, etc.)</p>
+                                <p>New cells have the SAME number of chromosomes as parent</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧬 MEIOSIS</h4>
+                                <p>Produces <strong>4 different</strong> daughter cells</p>
+                                <p><strong>Purpose:</strong> Making sex cells (egg and sperm)</p>
+                                <p>New cells have HALF the chromosomes of parent</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 Quick Comparison</h4>
+                                <table style="width:100%">
+                                    <tr><td></td><td><strong>Mitosis</strong></td><td><strong>Meiosis</strong></td></tr>
+                                    <tr><td>Cells produced</td><td>2</td><td>4</td></tr>
+                                    <tr><td>Identical?</td><td>Yes</td><td>No</td></tr>
+                                    <tr><td>Purpose</td><td>Growth/repair</td><td>Sex cells</td></tr>
+                                </table>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "The type of cell division that produces two identical cells is called _______.",
+                                correct: "mitosis",
+                                hint: "This is how your body grows and repairs tissues."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What type of cell division produces sex cells (egg and sperm)?",
+                                options: ["Mitosis", "Meiosis", "Photosynthesis", "Binary fission"],
+                                correct: 1,
+                                hint: "This type of division produces cells with half the chromosomes."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Mitosis produces two identical daughter cells.",
+                                correct: true,
+                                hint: "The two new cells are exact copies of the original cell."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which produces four cells instead of two?",
+                                options: ["Mitosis", "Meiosis", "Both produce four cells", "Neither produces four cells"],
+                                correct: 1,
+                                hint: "This special division for sex cells produces four daughter cells."
+                            }
+                        ]
+                    },
+                    {
+                        title: "The Six Kingdoms",
+                        lesson: `<h3>👑 The Six Kingdoms</h3>
+                            <p>Scientists classify all living things into <strong>six kingdoms</strong>!</p>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦠 1. Bacteria (Eubacteria)</h4>
+                                <p>Single-celled, NO nucleus</p>
+                                <p>Found everywhere! Some helpful, some harmful</p>
+                            </div>
+
+                            <div style="background: #ffe0b2; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦠 2. Archaea (Archaebacteria)</h4>
+                                <p>Single-celled, NO nucleus</p>
+                                <p>Live in extreme places (hot springs, salt lakes)</p>
+                            </div>
+
+                            <div style="background: #c5e1a5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🦠 3. Protists</h4>
+                                <p>Mostly single-celled, HAVE a nucleus</p>
+                                <p><strong>Protozoa</strong> = animal-like (amoeba)</p>
+                                <p><strong>Algae</strong> = plant-like (seaweed)</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🍄 4. Fungi</h4>
+                                <p>Mushrooms, mold, yeast</p>
+                                <p>Break down dead matter</p>
+                            </div>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 5. Plants</h4>
+                                <p>Make their own food (photosynthesis)</p>
+                                <p>Have cell walls and chloroplasts</p>
+                            </div>
+
+                            <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐕 6. Animals</h4>
+                                <p>Eat other organisms for food</p>
+                                <p>Can move on their own</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "Single-celled organisms without a nucleus are called _______.",
+                                correct: "bacteria",
+                                hint: "These are the simplest and most numerous organisms on Earth."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which kingdom includes single-celled organisms like amoebas?",
+                                options: ["Animal Kingdom", "Plant Kingdom", "Protist Kingdom", "Fungi Kingdom"],
+                                correct: 2,
+                                hint: "This kingdom includes protozoa (animal-like) and algae (plant-like)."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Single-celled organisms that can move and are animal-like are called _______.",
+                                correct: "protozoa",
+                                hint: "Examples include amoebas and paramecium. Proto means 'first' and zoa means 'animal'."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Plant-like organisms that live in water and make their own food are called:",
+                                options: ["Bacteria", "Fungi", "Algae", "Protozoa"],
+                                correct: 2,
+                                hint: "Seaweed is an example of this type of organism."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Bacteria can live in groups called colonies.",
+                                correct: true,
+                                hint: "A colony is a group of bacteria living together."
+                            },
+                            {
+                                type: "multiple",
+                                question: "How many kingdoms are used to classify all living things?",
+                                options: ["Three", "Four", "Five", "Six"],
+                                correct: 3,
+                                hint: "The six kingdoms are: Bacteria, Archaea, Protists, Fungi, Plants, and Animals."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Linnaean Classification",
+                        lesson: `<h3>📊 Linnaean Classification</h3>
+                            <p>Carolus Linnaeus created a system to organize all living things!</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 The Seven Levels (Largest to Smallest)</h4>
+                                <ol>
+                                    <li><strong>Kingdom</strong> - Largest group (Animals, Plants, etc.)</li>
+                                    <li><strong>Phylum</strong></li>
+                                    <li><strong>Class</strong></li>
+                                    <li><strong>Order</strong></li>
+                                    <li><strong>Family</strong></li>
+                                    <li><strong>Genus</strong></li>
+                                    <li><strong>Species</strong> - Smallest, most specific group</li>
+                                </ol>
+                                <p><strong>Memory trick:</strong> King Philip Came Over For Good Soup!</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📝 Scientific Names</h4>
+                                <p>Every organism has a two-part scientific name:</p>
+                                <p><strong>Genus + Species</strong></p>
+                                <p>Example: Humans = <em>Homo sapiens</em></p>
+                                <p>This system is called <strong>binomial nomenclature</strong></p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "The largest group in the Linnaean classification system is:",
+                                options: ["Species", "Genus", "Family", "Kingdom"],
+                                correct: 3,
+                                hint: "This is the broadest category - like Animal Kingdom or Plant Kingdom."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The smallest group in the Linnaean classification system is:",
+                                options: ["Kingdom", "Genus", "Species", "Family"],
+                                correct: 2,
+                                hint: "This is the most specific group - organisms in this group can reproduce together."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "A scientific name is made up of the genus and species names.",
+                                correct: true,
+                                hint: "This two-part naming system is called binomial nomenclature."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the correct order of classification from largest to smallest?",
+                                options: ["Kingdom, Phylum, Class, Order, Family, Genus, Species", "Species, Genus, Family, Order, Class, Phylum, Kingdom", "Kingdom, Class, Phylum, Order, Family, Genus, Species", "Kingdom, Order, Class, Phylum, Family, Genus, Species"],
+                                correct: 0,
+                                hint: "Remember: King Philip Came Over For Good Soup!"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Chapter 4 Review",
+                        lesson: `<h3>📚 Chapter 4 Review: Cells and Classification</h3>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧫 Cell Parts</h4>
+                                <p><strong>Nucleus</strong> = Control center (DNA)</p>
+                                <p><strong>Mitochondria</strong> = Powerhouse (energy)</p>
+                                <p><strong>Cell membrane</strong> = Gatekeeper</p>
+                                <p><strong>Chloroplast</strong> = Photosynthesis (plants only)</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔄 Cell Division</h4>
+                                <p><strong>Mitosis</strong> = 2 identical cells (growth/repair)</p>
+                                <p><strong>Meiosis</strong> = 4 different cells (sex cells)</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>👑 Classification</h4>
+                                <p><strong>Six Kingdoms:</strong> Bacteria, Archaea, Protists, Fungi, Plants, Animals</p>
+                                <p><strong>Seven Levels:</strong> King Philip Came Over For Good Soup</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "The series of changes an organism goes through during its life is called its life _______.",
+                                correct: "cycle",
+                                hint: "Think of a circle - birth, growth, reproduction, death, and repeat."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The length of time an organism lives is called its:",
+                                options: ["Life cycle", "Life span", "Generation", "Period"],
+                                correct: 1,
+                                hint: "This is how long an organism typically lives from birth to death."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which organelle is called the 'powerhouse of the cell'?",
+                                options: ["Nucleus", "Chloroplast", "Mitochondria", "Vacuole"],
+                                correct: 2,
+                                hint: "This organelle produces energy for all cell activities."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Plant cells have chloroplasts but animal cells do not.",
+                                correct: true,
+                                hint: "Plants need chloroplasts for photosynthesis - animals don't make their own food."
+                            }
+                        ]
+                    }
+                ]
+            },
             5: { // Animal Classification - BJU Science 6 Chapter 5
                 // This chapter uses a special learning format with lessons followed by questions
                 hasLessons: true,
