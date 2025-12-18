@@ -1886,51 +1886,851 @@
                     }
                 ]
             },
-            6: [ // Plant Classification
-                {
-                    type: "multiple",
-                    question: "What do plants need to make their own food?",
-                    options: [
-                        "Soil, air, and water",
-                        "Sunlight, water, and carbon dioxide",
-                        "Oxygen, nitrogen, and minerals",
-                        "Heat, shade, and wind"
-                    ],
-                    correct: 1
-                },
-                {
-                    type: "truefalse",
-                    question: "All plants have flowers.",
-                    correct: false
-                },
-                {
-                    type: "multiple",
-                    question: "The process by which plants make food is called:",
-                    options: [
-                        "Respiration",
-                        "Photosynthesis",
-                        "Digestion",
-                        "Fermentation"
-                    ],
-                    correct: 1
-                },
-                {
-                    type: "fillin",
-                    question: "The green pigment in plants that captures sunlight is called _______.",
-                    correct: "chlorophyll"
-                },
-                {
-                    type: "multiple",
-                    question: "Which plant group produces seeds in cones?",
-                    options: [
-                        "Flowering plants",
-                        "Ferns",
-                        "Mosses",
-                        "Conifers"
-                    ],
-                    correct: 3
-                }
-            ],
+            6: { // Plant Classification - BJU Science 6 Chapter 6
+                // This chapter uses a special learning format with lessons followed by questions
+                hasLessons: true,
+                sections: [
+                    // SECTION 1: VASCULAR VS NONVASCULAR PLANTS
+                    {
+                        title: "Vascular vs. Nonvascular Plants",
+                        lesson: `<h3>🌿 Vascular vs. Nonvascular Plants</h3>
+                            <p>Scientists divide plants into two main groups based on whether they have a <strong>transport system</strong> or not.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌳 VASCULAR PLANTS</h4>
+                                <p>Plants WITH tubes to transport water and nutrients</p>
+                                <p><strong>Two types of tubes:</strong></p>
+                                <ul>
+                                    <li><strong>Xylem</strong> - carries water UP from roots to leaves</li>
+                                    <li><strong>Phloem</strong> - carries sugar DOWN from leaves to rest of plant</li>
+                                </ul>
+                                <p><strong>Examples:</strong> Trees, ferns, flowers, grasses</p>
+                                <p><strong>Remember:</strong> Think of xylem and phloem like the plant's "blood vessels"!</p>
+                            </div>
+
+                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 NONVASCULAR PLANTS</h4>
+                                <p>Plants WITHOUT a transport system</p>
+                                <p>They absorb water directly through their cells</p>
+                                <p><strong>Must stay small</strong> - no tubes to move water to tall heights!</p>
+                                <p><strong>Examples:</strong> Mosses, liverworts, hornworts</p>
+                                <p><strong>Fun Fact:</strong> Nonvascular plants usually grow in moist, shady places!</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What do vascular plants have that nonvascular plants do not?",
+                                options: ["Leaves", "Tubes to transport water and nutrients", "Green color", "The ability to reproduce"],
+                                correct: 1,
+                                hint: "Vascular plants have a system of tubes (like xylem and phloem) to move materials."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Mosses are vascular plants.",
+                                correct: false,
+                                hint: "Mosses are small and grow close to the ground because they lack tubes to transport water."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which of these is a nonvascular plant?",
+                                options: ["Oak tree", "Fern", "Moss", "Pine tree"],
+                                correct: 2,
+                                hint: "Nonvascular plants are small and usually grow in moist places close to the ground."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The tissue that carries water UP from the roots to the leaves is called _______.",
+                                correct: "xylem",
+                                hint: "This tube system moves water and minerals upward through the plant."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The tissue that carries sugar DOWN from the leaves to other parts of the plant is called _______.",
+                                correct: "phloem",
+                                hint: "This tube system moves food (sugar) made in the leaves to the rest of the plant."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Nonvascular plants can grow very tall like trees.",
+                                correct: false,
+                                hint: "Without tubes to transport water, nonvascular plants must stay small."
+                            }
+                        ]
+                    },
+
+                    // SECTION 2: GYMNOSPERMS AND ANGIOSPERMS
+                    {
+                        title: "Seed Plants: Gymnosperms and Angiosperms",
+                        lesson: `<h3>🌲 Seed Plants: Gymnosperms and Angiosperms</h3>
+                            <p>Vascular plants that make seeds are divided into two groups.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌲 GYMNOSPERMS (Naked Seeds)</h4>
+                                <p><strong>"Gymnosperm"</strong> means "naked seed" in Greek</p>
+                                <p>Seeds are NOT protected inside a fruit - they sit on cones!</p>
+                                <p><strong>Characteristics:</strong></p>
+                                <ul>
+                                    <li>Produce CONES instead of flowers</li>
+                                    <li>Most have needle-like or scale-like leaves</li>
+                                    <li>Most are EVERGREEN (keep leaves year-round)</li>
+                                </ul>
+                                <p><strong>Examples:</strong> Pine trees, spruce, fir, cedar, redwood</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌸 ANGIOSPERMS (Covered Seeds)</h4>
+                                <p><strong>"Angiosperm"</strong> means "covered seed" in Greek</p>
+                                <p>Seeds are protected INSIDE a fruit!</p>
+                                <p><strong>Characteristics:</strong></p>
+                                <ul>
+                                    <li>Produce FLOWERS</li>
+                                    <li>Seeds develop inside fruits</li>
+                                    <li>Most diverse group of plants on Earth!</li>
+                                </ul>
+                                <p><strong>Examples:</strong> Apple trees, roses, grass, oak trees, tulips</p>
+                            </div>
+
+                            <p><strong>Remember:</strong> Gymnosperms = Cones, Angiosperms = Flowers!</p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What are the two main groups of seed plants?",
+                                options: ["Mosses and ferns", "Gymnosperms and angiosperms", "Vascular and nonvascular", "Monocots and dicots"],
+                                correct: 1,
+                                hint: "One group has naked seeds in cones, the other has seeds inside fruits."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which plant group produces seeds in cones?",
+                                options: ["Angiosperms", "Ferns", "Gymnosperms", "Mosses"],
+                                correct: 2,
+                                hint: "Pine trees, spruces, and firs are examples. 'Gymnosperm' means 'naked seed.'"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Gymnosperms produce flowers.",
+                                correct: false,
+                                hint: "Gymnosperms produce cones, not flowers. Angiosperms are the flowering plants."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What does the word 'angiosperm' mean?",
+                                options: ["Naked seed", "Covered seed", "No seed", "Cone seed"],
+                                correct: 1,
+                                hint: "Angiosperms have seeds protected inside a fruit - they are 'covered.'"
+                            },
+                            {
+                                type: "fillin",
+                                question: "Plants that produce flowers and fruits are called _______.",
+                                correct: "angiosperms",
+                                hint: "This word means 'covered seed' - the seeds are protected inside fruits."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is an example of a gymnosperm?",
+                                options: ["Apple tree", "Rose bush", "Pine tree", "Sunflower"],
+                                correct: 2,
+                                hint: "Gymnosperms have cones instead of flowers. Think of evergreen trees."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Most gymnosperms are evergreen and keep their leaves year-round.",
+                                correct: true,
+                                hint: "Pine trees and other conifers stay green all year!"
+                            }
+                        ]
+                    },
+
+                    // SECTION 3: MONOCOTS AND DICOTS
+                    {
+                        title: "Monocots and Dicots",
+                        lesson: `<h3>🌾 Monocots and Dicots</h3>
+                            <p>Angiosperms (flowering plants) are divided into two groups based on their seeds!</p>
+
+                            <div style="background: #fff8e1; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌾 MONOCOTS (One Seed Leaf)</h4>
+                                <p><strong>"Mono"</strong> = ONE</p>
+                                <p>Seeds have ONE cotyledon (seed leaf)</p>
+                                <p><strong>Characteristics:</strong></p>
+                                <ul>
+                                    <li>Leaves have <strong>PARALLEL veins</strong> (lines run side by side)</li>
+                                    <li>Flower parts in multiples of <strong>3</strong></li>
+                                    <li>Scattered vascular bundles in stem</li>
+                                </ul>
+                                <p><strong>Examples:</strong> Grass, corn, wheat, rice, lilies, tulips, orchids</p>
+                            </div>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌳 DICOTS (Two Seed Leaves)</h4>
+                                <p><strong>"Di"</strong> = TWO</p>
+                                <p>Seeds have TWO cotyledons (seed leaves)</p>
+                                <p><strong>Characteristics:</strong></p>
+                                <ul>
+                                    <li>Leaves have <strong>BRANCHING veins</strong> (like a net)</li>
+                                    <li>Flower parts in multiples of <strong>4 or 5</strong></li>
+                                    <li>Vascular bundles arranged in a ring in stem</li>
+                                </ul>
+                                <p><strong>Examples:</strong> Oak trees, roses, beans, sunflowers, apples, tomatoes</p>
+                            </div>
+
+                            <p><strong>Easy Way to Remember:</strong> Look at the leaf! Parallel veins = Monocot, Branching veins = Dicot</p>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What are the two groups of angiosperms (flowering plants)?",
+                                options: ["Gymnosperms and ferns", "Monocots and dicots", "Vascular and nonvascular", "Mosses and liverworts"],
+                                correct: 1,
+                                hint: "These groups are based on the number of seed leaves (cotyledons)."
+                            },
+                            {
+                                type: "multiple",
+                                question: "How many seed leaves (cotyledons) does a monocot have?",
+                                options: ["None", "One", "Two", "Three"],
+                                correct: 1,
+                                hint: "'Mono' means one. Monocots have ONE seed leaf."
+                            },
+                            {
+                                type: "multiple",
+                                question: "How many seed leaves (cotyledons) does a dicot have?",
+                                options: ["None", "One", "Two", "Four"],
+                                correct: 2,
+                                hint: "'Di' means two. Dicots have TWO seed leaves."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is a characteristic of monocot leaves?",
+                                options: ["Branching veins", "Parallel veins", "No veins", "Circular veins"],
+                                correct: 1,
+                                hint: "Monocot leaves have veins that run parallel to each other, like grass blades."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is an example of a monocot?",
+                                options: ["Oak tree", "Rose", "Corn", "Bean plant"],
+                                correct: 2,
+                                hint: "Grasses, corn, lilies, and tulips are monocots with parallel leaf veins."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is an example of a dicot?",
+                                options: ["Grass", "Corn", "Lily", "Oak tree"],
+                                correct: 3,
+                                hint: "Dicots include most trees, roses, beans, and plants with branching leaf veins."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Dicot leaves have branching veins that look like a net.",
+                                correct: true,
+                                hint: "Dicot leaf veins branch out in many directions, unlike parallel monocot veins."
+                            },
+                            {
+                                type: "fillin",
+                                question: "A seed leaf is also called a _______.",
+                                correct: "cotyledon",
+                                hint: "This scientific term describes the first leaf that emerges from a seed."
+                            }
+                        ]
+                    },
+
+                    // SECTION 4: PHOTOSYNTHESIS
+                    {
+                        title: "Photosynthesis",
+                        lesson: `<h3>☀️ Photosynthesis</h3>
+                            <p>Plants are amazing because they can make their own food! This process is called <strong>photosynthesis</strong>.</p>
+
+                            <div style="background: #fffde7; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📝 The Word "Photosynthesis"</h4>
+                                <p><strong>Photo</strong> = Light</p>
+                                <p><strong>Synthesis</strong> = To make or put together</p>
+                                <p>Photosynthesis = "Making with light"!</p>
+                            </div>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧪 The Recipe for Photosynthesis</h4>
+                                <p><strong>Ingredients needed:</strong></p>
+                                <ul>
+                                    <li>☀️ <strong>Sunlight</strong> (energy source)</li>
+                                    <li>💧 <strong>Water</strong> (from roots)</li>
+                                    <li>💨 <strong>Carbon dioxide</strong> (from air through stomata)</li>
+                                </ul>
+                                <p><strong>What plants make:</strong></p>
+                                <ul>
+                                    <li>🍬 <strong>Glucose</strong> (sugar for food/energy)</li>
+                                    <li>🌬️ <strong>Oxygen</strong> (released into air - what we breathe!)</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🟢 Chlorophyll and Chloroplasts</h4>
+                                <p><strong>Chlorophyll</strong> = The green pigment that captures sunlight</p>
+                                <p><strong>Chloroplasts</strong> = The organelles (tiny organs) where photosynthesis happens</p>
+                                <p>Chlorophyll is found INSIDE chloroplasts!</p>
+                                <p><strong>This is why leaves are green!</strong></p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What do plants need to make their own food through photosynthesis?",
+                                options: ["Soil, air, and water", "Sunlight, water, and carbon dioxide", "Oxygen, nitrogen, and minerals", "Heat, shade, and wind"],
+                                correct: 1,
+                                hint: "Plants use energy from the sun along with water and a gas from the air."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The process by which plants make food is called:",
+                                options: ["Respiration", "Photosynthesis", "Digestion", "Germination"],
+                                correct: 1,
+                                hint: "'Photo' means light and 'synthesis' means to make or put together."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The green pigment in plants that captures sunlight is called _______.",
+                                correct: "chlorophyll",
+                                hint: "This green substance is found in chloroplasts and captures light energy."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Where does photosynthesis mainly take place in a plant?",
+                                options: ["Roots", "Stem", "Leaves", "Flowers"],
+                                correct: 2,
+                                hint: "This part of the plant is green and has the most chloroplasts."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What gas do plants release during photosynthesis?",
+                                options: ["Carbon dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+                                correct: 2,
+                                hint: "This is the gas that humans and animals need to breathe."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The organelles where photosynthesis occurs are called _______.",
+                                correct: "chloroplasts",
+                                hint: "These contain chlorophyll and are found mainly in leaf cells."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What gas do plants take IN during photosynthesis?",
+                                options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+                                correct: 1,
+                                hint: "This is the gas that animals breathe out!"
+                            }
+                        ]
+                    },
+
+                    // SECTION 5: PLANT PARTS AND FUNCTIONS
+                    {
+                        title: "Plant Parts and Their Functions",
+                        lesson: `<h3>🌱 Plant Parts and Their Functions</h3>
+                            <p>Each part of a plant has an important job to do!</p>
+
+                            <div style="background: #8d6e63; color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 ROOTS</h4>
+                                <p><strong>Functions:</strong></p>
+                                <ul>
+                                    <li>Absorb water and minerals from soil</li>
+                                    <li>Anchor the plant in the ground</li>
+                                    <li>Store food (like carrots and potatoes!)</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #689f38; color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌿 STEMS</h4>
+                                <p><strong>Functions:</strong></p>
+                                <ul>
+                                    <li>Support the plant and hold up leaves</li>
+                                    <li>Transport water and nutrients (through xylem and phloem)</li>
+                                    <li>Store food and water</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #4caf50; color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🍃 LEAVES</h4>
+                                <p><strong>Functions:</strong></p>
+                                <ul>
+                                    <li>Make food through photosynthesis</li>
+                                    <li>Exchange gases through stomata</li>
+                                    <li>Release extra water (transpiration)</li>
+                                </ul>
+                                <p><strong>Stomata</strong> = tiny openings on leaf undersides that let gases in and out</p>
+                            </div>
+
+                            <div style="background: #e91e63; color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌸 FLOWERS</h4>
+                                <p><strong>Functions:</strong></p>
+                                <ul>
+                                    <li>Reproduction - making seeds</li>
+                                    <li>Attract pollinators with color and scent</li>
+                                </ul>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is the main function of roots?",
+                                options: ["Make food for the plant", "Absorb water and minerals from soil", "Produce seeds", "Attract pollinators"],
+                                correct: 1,
+                                hint: "Roots grow underground and take in what the plant needs from the soil."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the main function of the stem?",
+                                options: ["Absorb sunlight", "Produce seeds", "Support the plant and transport materials", "Store food only"],
+                                correct: 2,
+                                hint: "The stem holds up the plant and moves water and food through it."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the main function of leaves?",
+                                options: ["Absorb water from soil", "Produce seeds", "Make food through photosynthesis", "Anchor the plant"],
+                                correct: 2,
+                                hint: "Leaves are green because they contain chlorophyll for making food."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Tiny openings on the underside of leaves that allow gases to enter and exit are called _______.",
+                                correct: "stomata",
+                                hint: "These small pores let carbon dioxide in and oxygen out during photosynthesis."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Roots can store food for the plant.",
+                                correct: true,
+                                hint: "Think about carrots, potatoes, and beets - these are roots that store food!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the main function of flowers?",
+                                options: ["Make food", "Absorb water", "Reproduction", "Transport nutrients"],
+                                correct: 2,
+                                hint: "Flowers help plants make seeds for the next generation."
+                            }
+                        ]
+                    },
+
+                    // SECTION 6: SEEDLESS PLANTS
+                    {
+                        title: "Seedless Plants: Ferns and Mosses",
+                        lesson: `<h3>🌿 Seedless Plants</h3>
+                            <p>Not all plants make seeds! Some plants reproduce using tiny <strong>spores</strong> instead.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌿 FERNS (Vascular Seedless Plants)</h4>
+                                <p>Ferns have xylem and phloem but NO seeds!</p>
+                                <p><strong>Characteristics:</strong></p>
+                                <ul>
+                                    <li>Have roots, stems, and leaves (called fronds)</li>
+                                    <li>Reproduce with SPORES (not seeds)</li>
+                                    <li>Spores are found in clusters on the underside of fronds</li>
+                                    <li>Can grow quite large because they ARE vascular</li>
+                                </ul>
+                                <p><strong>Where they grow:</strong> Moist, shady forests</p>
+                            </div>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 MOSSES (Nonvascular Seedless Plants)</h4>
+                                <p>Mosses have NO vascular tissue and NO seeds!</p>
+                                <p><strong>Characteristics:</strong></p>
+                                <ul>
+                                    <li>Very small - just a few inches tall</li>
+                                    <li>No true roots, stems, or leaves</li>
+                                    <li>Reproduce with SPORES</li>
+                                    <li>Absorb water directly through their cells</li>
+                                </ul>
+                                <p><strong>Where they grow:</strong> Moist rocks, tree bark, forest floors</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔬 What are Spores?</h4>
+                                <p>Spores are tiny, dust-like cells that can grow into new plants.</p>
+                                <p>They're much smaller than seeds and travel easily in the wind!</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "How do ferns reproduce without seeds?",
+                                options: ["By flowers", "By cones", "By spores", "By fruits"],
+                                correct: 2,
+                                hint: "Ferns produce tiny dust-like particles on the underside of their fronds."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Ferns are vascular plants even though they don't produce seeds.",
+                                correct: true,
+                                hint: "Ferns have tubes (xylem and phloem) to transport water, but reproduce with spores."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which plants reproduce using spores instead of seeds?",
+                                options: ["Pine trees and oaks", "Roses and tulips", "Ferns and mosses", "Apple trees and corn"],
+                                correct: 2,
+                                hint: "These plants don't have flowers or cones - they use tiny spores instead."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Mosses are vascular plants.",
+                                correct: false,
+                                hint: "Mosses are nonvascular - they have no tubes to transport water."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why do mosses stay so small?",
+                                options: ["They don't get enough sun", "They have no vascular tissue to transport water", "They don't have chlorophyll", "They grow too slowly"],
+                                correct: 1,
+                                hint: "Without tubes to move water, mosses can't grow tall."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Fern leaves are called _______.",
+                                correct: "fronds",
+                                hint: "This is the special name for the feathery leaves of a fern."
+                            }
+                        ]
+                    },
+
+                    // SECTION 7: PLANT REPRODUCTION
+                    {
+                        title: "Plant Reproduction",
+                        lesson: `<h3>🌺 Plant Reproduction</h3>
+                            <p>Flowers are the reproductive parts of angiosperms (flowering plants).</p>
+
+                            <div style="background: #fce4ec; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌸 Parts of a Flower</h4>
+                                <p><strong>Male Part - STAMEN:</strong></p>
+                                <ul>
+                                    <li><strong>Anther</strong> - produces pollen</li>
+                                    <li><strong>Filament</strong> - holds up the anther</li>
+                                </ul>
+                                <p><strong>Female Part - PISTIL:</strong></p>
+                                <ul>
+                                    <li><strong>Stigma</strong> - sticky top that catches pollen</li>
+                                    <li><strong>Style</strong> - tube connecting stigma to ovary</li>
+                                    <li><strong>Ovary</strong> - contains ovules that become seeds</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🐝 Pollination</h4>
+                                <p><strong>Pollination</strong> = Transfer of pollen from stamen to pistil</p>
+                                <p><strong>Pollinators include:</strong></p>
+                                <ul>
+                                    <li>🐝 Bees</li>
+                                    <li>🦋 Butterflies</li>
+                                    <li>🐦 Hummingbirds</li>
+                                    <li>💨 Wind</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 From Flower to Fruit</h4>
+                                <p>After pollination:</p>
+                                <ol>
+                                    <li>Pollen travels down the style to the ovary</li>
+                                    <li>Fertilization occurs</li>
+                                    <li>Ovules become SEEDS</li>
+                                    <li>Ovary becomes FRUIT</li>
+                                </ol>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is the female reproductive part of a flower?",
+                                options: ["Stamen", "Pistil", "Petal", "Sepal"],
+                                correct: 1,
+                                hint: "This part contains the ovary where seeds develop after pollination."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the male reproductive part of a flower?",
+                                options: ["Pistil", "Petal", "Stamen", "Sepal"],
+                                correct: 2,
+                                hint: "This part produces pollen and includes the anther and filament."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The transfer of pollen from the stamen to the pistil is called _______.",
+                                correct: "pollination",
+                                hint: "Bees, wind, and other animals help move pollen between flowers."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What develops from a fertilized ovule?",
+                                options: ["Pollen", "A seed", "A spore", "A cone"],
+                                correct: 1,
+                                hint: "After pollination and fertilization, this forms inside the ovary."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What part of the flower produces pollen?",
+                                options: ["Pistil", "Ovary", "Anther", "Stigma"],
+                                correct: 2,
+                                hint: "This is part of the stamen (male part) of the flower."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "The ovary of a flower becomes the fruit after fertilization.",
+                                correct: true,
+                                hint: "Fruits develop from the ovary and protect the seeds inside."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is NOT a pollinator?",
+                                options: ["Bee", "Butterfly", "Fish", "Hummingbird"],
+                                correct: 2,
+                                hint: "Pollinators need to visit flowers - which animal doesn't do that?"
+                            }
+                        ]
+                    },
+
+                    // SECTION 8: SEED DISPERSAL
+                    {
+                        title: "Seed Dispersal",
+                        lesson: `<h3>🌬️ Seed Dispersal</h3>
+                            <p>After seeds form, they need to travel AWAY from the parent plant. This is called <strong>seed dispersal</strong>.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>❓ Why Disperse Seeds?</h4>
+                                <p>If all seeds fell right under the parent plant:</p>
+                                <ul>
+                                    <li>They would compete for sunlight</li>
+                                    <li>They would compete for water</li>
+                                    <li>They would compete for nutrients</li>
+                                </ul>
+                                <p>Spreading out gives new plants a better chance to survive!</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📦 Methods of Seed Dispersal</h4>
+                                <p><strong>💨 Wind:</strong> Light seeds with "wings" or "parachutes"</p>
+                                <ul><li>Examples: Dandelions, maple seeds, milkweed</li></ul>
+
+                                <p><strong>🐿️ Animals:</strong> Seeds eaten in fruit or stuck to fur</p>
+                                <ul><li>Examples: Berries, burrs, acorns (squirrels!)</li></ul>
+
+                                <p><strong>💧 Water:</strong> Seeds that float</p>
+                                <ul><li>Examples: Coconuts, water lilies</li></ul>
+
+                                <p><strong>💥 Explosion:</strong> Seed pods that pop open!</p>
+                                <ul><li>Examples: Touch-me-nots, peas, beans</li></ul>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "Why is seed dispersal important for plants?",
+                                options: ["To make seeds heavier", "To spread seeds away from the parent plant", "To make seeds smaller", "To change seed color"],
+                                correct: 1,
+                                hint: "Seeds need to travel away so new plants don't compete with the parent for resources."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which is NOT a method of seed dispersal?",
+                                options: ["Wind", "Animals eating fruit", "Photosynthesis", "Water"],
+                                correct: 2,
+                                hint: "Photosynthesis is how plants make food, not how seeds travel."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Dandelion seeds are dispersed by wind.",
+                                correct: true,
+                                hint: "Dandelion seeds have fluffy parachutes that help them float on the wind."
+                            },
+                            {
+                                type: "multiple",
+                                question: "How are coconut seeds dispersed?",
+                                options: ["Wind", "Animals", "Water", "Explosion"],
+                                correct: 2,
+                                hint: "Coconuts can float across oceans to reach new islands!"
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Some seeds are dispersed when animals eat fruit and later deposit the seeds.",
+                                correct: true,
+                                hint: "Birds and other animals eat berries and spread the seeds in their droppings."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Maple seeds have 'wings' that help them disperse by:",
+                                options: ["Water", "Animals", "Wind", "Explosion"],
+                                correct: 2,
+                                hint: "The wings help maple seeds spin and float through the air."
+                            }
+                        ]
+                    },
+
+                    // SECTION 9: PLANT TROPISMS
+                    {
+                        title: "Plant Tropisms",
+                        lesson: `<h3>🌻 Plant Tropisms</h3>
+                            <p>Plants can't walk around, but they CAN grow toward or away from things! These growth responses are called <strong>tropisms</strong>.</p>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>☀️ PHOTOTROPISM (Response to Light)</h4>
+                                <p><strong>Photo</strong> = Light</p>
+                                <p>Plants grow TOWARD light!</p>
+                                <p>Have you ever seen a plant lean toward a window? That's phototropism!</p>
+                                <p><strong>Why?</strong> Plants need light for photosynthesis.</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⬇️ GRAVITROPISM (Response to Gravity)</h4>
+                                <p><strong>Gravi</strong> = Gravity</p>
+                                <p>Roots grow DOWN (toward gravity) = <strong>positive gravitropism</strong></p>
+                                <p>Stems grow UP (against gravity) = <strong>negative gravitropism</strong></p>
+                                <p><strong>Why?</strong> Roots need to reach water in soil; stems need to reach light.</p>
+                            </div>
+
+                            <div style="background: #e0f7fa; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💧 HYDROTROPISM (Response to Water)</h4>
+                                <p><strong>Hydro</strong> = Water</p>
+                                <p>Roots grow TOWARD water sources!</p>
+                                <p><strong>Why?</strong> Plants need water to survive.</p>
+                            </div>
+
+                            <div style="background: #fce4ec; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>👆 THIGMOTROPISM (Response to Touch)</h4>
+                                <p><strong>Thigmo</strong> = Touch</p>
+                                <p>Some plants grow in response to touch!</p>
+                                <p><strong>Examples:</strong> Vines wrapping around poles, Venus flytraps closing</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "What is a tropism?",
+                                options: ["A type of plant", "A plant's growth response to a stimulus", "A part of a flower", "A type of seed"],
+                                correct: 1,
+                                hint: "Tropisms are how plants grow or move in response to light, gravity, or water."
+                            },
+                            {
+                                type: "fillin",
+                                question: "A plant's growth response toward or away from light is called _______.",
+                                correct: "phototropism",
+                                hint: "'Photo' means light. Plants bend toward light sources."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is gravitropism?",
+                                options: ["Growth response to light", "Growth response to water", "Growth response to gravity", "Growth response to touch"],
+                                correct: 2,
+                                hint: "This is why roots grow down and stems grow up."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Roots show positive gravitropism by growing downward toward gravity.",
+                                correct: true,
+                                hint: "Roots grow in the direction of gravity to reach water and nutrients in soil."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why do stems grow upward, against gravity?",
+                                options: ["To reach water", "To reach light", "To avoid animals", "To find soil"],
+                                correct: 1,
+                                hint: "Stems need to grow up so leaves can reach sunlight for photosynthesis."
+                            },
+                            {
+                                type: "fillin",
+                                question: "A plant's growth response to water is called _______.",
+                                correct: "hydrotropism",
+                                hint: "'Hydro' means water. Roots grow toward water sources."
+                            },
+                            {
+                                type: "multiple",
+                                question: "A vine wrapping around a pole is an example of:",
+                                options: ["Phototropism", "Gravitropism", "Hydrotropism", "Thigmotropism"],
+                                correct: 3,
+                                hint: "This is a response to touch - 'thigmo' means touch."
+                            }
+                        ]
+                    },
+
+                    // SECTION 10: CHAPTER REVIEW
+                    {
+                        title: "Chapter 6 Review",
+                        lesson: `<h3>📚 Chapter 6 Review: Plant Classification</h3>
+                            <p>Let's review everything we learned about plants!</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌿 Plant Groups</h4>
+                                <p><strong>Vascular</strong> = Has tubes (xylem & phloem) to transport materials</p>
+                                <p><strong>Nonvascular</strong> = No tubes (mosses, liverworts)</p>
+                                <p><strong>Gymnosperms</strong> = Naked seeds in cones (pines, spruces)</p>
+                                <p><strong>Angiosperms</strong> = Covered seeds in fruits (flowering plants)</p>
+                                <p><strong>Monocots</strong> = 1 seed leaf, parallel veins (grass, corn)</p>
+                                <p><strong>Dicots</strong> = 2 seed leaves, branching veins (oak, rose)</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>☀️ Key Processes</h4>
+                                <p><strong>Photosynthesis</strong> = Making food from sunlight, water, and CO₂</p>
+                                <p><strong>Pollination</strong> = Transfer of pollen from stamen to pistil</p>
+                                <p><strong>Seed Dispersal</strong> = Spreading seeds away from parent plant</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌱 Important Vocabulary</h4>
+                                <p><strong>Xylem</strong> = Carries water UP</p>
+                                <p><strong>Phloem</strong> = Carries sugar DOWN</p>
+                                <p><strong>Chlorophyll</strong> = Green pigment for photosynthesis</p>
+                                <p><strong>Chloroplasts</strong> = Organelles where photosynthesis occurs</p>
+                                <p><strong>Stomata</strong> = Pores in leaves for gas exchange</p>
+                                <p><strong>Stamen</strong> = Male flower part (makes pollen)</p>
+                                <p><strong>Pistil</strong> = Female flower part (contains ovary)</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "truefalse",
+                                question: "All plants have flowers.",
+                                correct: false,
+                                hint: "Think about pine trees, ferns, and mosses - do they have flowers?"
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which classification level is most specific?",
+                                options: ["Kingdom", "Phylum", "Genus", "Species"],
+                                correct: 3,
+                                hint: "This is the most specific level - organisms in the same one can breed together."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What kingdom do all plants belong to?",
+                                options: ["Animal Kingdom", "Plant Kingdom", "Fungi Kingdom", "Protist Kingdom"],
+                                correct: 1,
+                                hint: "All plants, from mosses to oak trees, belong to this kingdom."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Plants that have tubes for transporting water and nutrients are called _______ plants.",
+                                correct: "vascular",
+                                hint: "Xylem and phloem are the tubes that make plants vascular."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which would you find on a monocot leaf?",
+                                options: ["Branching veins", "Parallel veins", "No veins", "Circular veins"],
+                                correct: 1,
+                                hint: "Monocot = Mono = One. Think of grass blades with lines running parallel."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Angiosperms produce seeds inside fruits.",
+                                correct: true,
+                                hint: "Angiosperm means 'covered seed' - fruits cover and protect the seeds."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What three things do plants need for photosynthesis?",
+                                options: ["Oxygen, water, and soil", "Sunlight, water, and carbon dioxide", "Nitrogen, oxygen, and heat", "Minerals, air, and shade"],
+                                correct: 1,
+                                hint: "Plants use light energy to combine water and carbon dioxide to make food."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The growth of a plant toward light is called _______.",
+                                correct: "phototropism",
+                                hint: "Photo = light, tropism = growth response."
+                            }
+                        ]
+                    }
+                ]
+            },
             7: [ // Atoms and Molecules
                 {
                     type: "multiple",
