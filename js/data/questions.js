@@ -251,9 +251,193 @@ const questionBank = {
         }
     ],
     6: [ // Plant Classification
+        // Vascular vs Nonvascular Plants
         {
             type: "multiple",
-            question: "What do plants need to make their own food?",
+            question: "What do vascular plants have that nonvascular plants do not?",
+            options: [
+                "Leaves",
+                "Tubes to transport water and nutrients",
+                "Green color",
+                "The ability to reproduce"
+            ],
+            correct: 1,
+            hint: "Vascular plants have a system of tubes (like xylem and phloem) to move materials."
+        },
+        {
+            type: "truefalse",
+            question: "Mosses are vascular plants.",
+            correct: false,
+            hint: "Mosses are small and grow close to the ground because they lack tubes to transport water."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is a nonvascular plant?",
+            options: [
+                "Oak tree",
+                "Fern",
+                "Moss",
+                "Pine tree"
+            ],
+            correct: 2,
+            hint: "Nonvascular plants are small and usually grow in moist places close to the ground."
+        },
+        {
+            type: "fillin",
+            question: "The tissue that carries water UP from the roots to the leaves is called _______.",
+            correct: "xylem",
+            hint: "This tube system moves water and minerals upward through the plant."
+        },
+        {
+            type: "fillin",
+            question: "The tissue that carries sugar DOWN from the leaves to other parts of the plant is called _______.",
+            correct: "phloem",
+            hint: "This tube system moves food (sugar) made in the leaves to the rest of the plant."
+        },
+        // Seed Plants: Gymnosperms and Angiosperms
+        {
+            type: "multiple",
+            question: "What are the two main groups of seed plants?",
+            options: [
+                "Mosses and ferns",
+                "Gymnosperms and angiosperms",
+                "Vascular and nonvascular",
+                "Monocots and dicots"
+            ],
+            correct: 1,
+            hint: "One group has naked seeds in cones, the other has seeds inside fruits."
+        },
+        {
+            type: "multiple",
+            question: "Which plant group produces seeds in cones?",
+            options: [
+                "Angiosperms",
+                "Ferns",
+                "Gymnosperms",
+                "Mosses"
+            ],
+            correct: 2,
+            hint: "Pine trees, spruces, and firs are examples. 'Gymnosperm' means 'naked seed.'"
+        },
+        {
+            type: "truefalse",
+            question: "Gymnosperms produce flowers.",
+            correct: false,
+            hint: "Gymnosperms produce cones, not flowers. Angiosperms are the flowering plants."
+        },
+        {
+            type: "multiple",
+            question: "What does the word 'angiosperm' mean?",
+            options: [
+                "Naked seed",
+                "Covered seed",
+                "No seed",
+                "Cone seed"
+            ],
+            correct: 1,
+            hint: "Angiosperms have seeds protected inside a fruit - they are 'covered.'"
+        },
+        {
+            type: "fillin",
+            question: "Plants that produce flowers and fruits are called _______.",
+            correct: "angiosperms",
+            hint: "This word means 'covered seed' - the seeds are protected inside fruits."
+        },
+        {
+            type: "multiple",
+            question: "Which is an example of a gymnosperm?",
+            options: [
+                "Apple tree",
+                "Rose bush",
+                "Pine tree",
+                "Sunflower"
+            ],
+            correct: 2,
+            hint: "Gymnosperms have cones instead of flowers. Think of evergreen trees."
+        },
+        // Monocots and Dicots
+        {
+            type: "multiple",
+            question: "What are the two groups of angiosperms (flowering plants)?",
+            options: [
+                "Gymnosperms and ferns",
+                "Monocots and dicots",
+                "Vascular and nonvascular",
+                "Mosses and liverworts"
+            ],
+            correct: 1,
+            hint: "These groups are based on the number of seed leaves (cotyledons)."
+        },
+        {
+            type: "multiple",
+            question: "How many seed leaves (cotyledons) does a monocot have?",
+            options: [
+                "None",
+                "One",
+                "Two",
+                "Three"
+            ],
+            correct: 1,
+            hint: "'Mono' means one. Monocots have ONE seed leaf."
+        },
+        {
+            type: "multiple",
+            question: "How many seed leaves (cotyledons) does a dicot have?",
+            options: [
+                "None",
+                "One",
+                "Two",
+                "Four"
+            ],
+            correct: 2,
+            hint: "'Di' means two. Dicots have TWO seed leaves."
+        },
+        {
+            type: "multiple",
+            question: "Which is a characteristic of monocot leaves?",
+            options: [
+                "Branching veins",
+                "Parallel veins",
+                "No veins",
+                "Circular veins"
+            ],
+            correct: 1,
+            hint: "Monocot leaves have veins that run parallel to each other, like grass blades."
+        },
+        {
+            type: "multiple",
+            question: "Which is an example of a monocot?",
+            options: [
+                "Oak tree",
+                "Rose",
+                "Corn",
+                "Bean plant"
+            ],
+            correct: 2,
+            hint: "Grasses, corn, lilies, and tulips are monocots with parallel leaf veins."
+        },
+        {
+            type: "multiple",
+            question: "Which is an example of a dicot?",
+            options: [
+                "Grass",
+                "Corn",
+                "Lily",
+                "Oak tree"
+            ],
+            correct: 3,
+            hint: "Dicots include most trees, roses, beans, and plants with branching leaf veins."
+        },
+        {
+            type: "truefalse",
+            question: "Dicot leaves have branching veins that look like a net.",
+            correct: true,
+            hint: "Dicot leaf veins branch out in many directions, unlike parallel monocot veins."
+        },
+        // Photosynthesis
+        {
+            type: "multiple",
+            question: "What do plants need to make their own food through photosynthesis?",
             options: [
                 "Soil, air, and water",
                 "Sunlight, water, and carbon dioxide",
@@ -264,40 +448,262 @@ const questionBank = {
             hint: "Plants use energy from the sun along with water and a gas from the air."
         },
         {
-            type: "truefalse",
-            question: "All plants have flowers.",
-            correct: false,
-            hint: "Think about pine trees and ferns - do they have flowers?"
-        },
-        {
             type: "multiple",
             question: "The process by which plants make food is called:",
             options: [
                 "Respiration",
                 "Photosynthesis",
                 "Digestion",
-                "Fermentation"
+                "Germination"
             ],
             correct: 1,
-            hint: "'Photo' means light and 'synthesis' means to make or create."
+            hint: "'Photo' means light and 'synthesis' means to make or put together."
         },
         {
             type: "fillin",
             question: "The green pigment in plants that captures sunlight is called _______.",
             correct: "chlorophyll",
-            hint: "This green substance is what makes leaves green and helps capture sunlight."
+            hint: "This green substance is found in chloroplasts and captures light energy."
         },
         {
             type: "multiple",
-            question: "Which plant group produces seeds in cones?",
+            question: "Where does photosynthesis mainly take place in a plant?",
             options: [
-                "Flowering plants",
-                "Ferns",
-                "Mosses",
-                "Conifers"
+                "Roots",
+                "Stem",
+                "Leaves",
+                "Flowers"
+            ],
+            correct: 2,
+            hint: "This part of the plant is green and has the most chloroplasts."
+        },
+        {
+            type: "multiple",
+            question: "What gas do plants release during photosynthesis?",
+            options: [
+                "Carbon dioxide",
+                "Nitrogen",
+                "Oxygen",
+                "Hydrogen"
+            ],
+            correct: 2,
+            hint: "This is the gas that humans and animals need to breathe."
+        },
+        {
+            type: "fillin",
+            question: "The organelles where photosynthesis occurs are called _______.",
+            correct: "chloroplasts",
+            hint: "These contain chlorophyll and are found mainly in leaf cells."
+        },
+        // Plant Parts and Functions
+        {
+            type: "multiple",
+            question: "What is the main function of roots?",
+            options: [
+                "Make food for the plant",
+                "Absorb water and minerals from soil",
+                "Produce seeds",
+                "Attract pollinators"
+            ],
+            correct: 1,
+            hint: "Roots grow underground and take in what the plant needs from the soil."
+        },
+        {
+            type: "multiple",
+            question: "What is the main function of the stem?",
+            options: [
+                "Absorb sunlight",
+                "Produce seeds",
+                "Support the plant and transport materials",
+                "Store food only"
+            ],
+            correct: 2,
+            hint: "The stem holds up the plant and moves water and food through it."
+        },
+        {
+            type: "multiple",
+            question: "What is the main function of leaves?",
+            options: [
+                "Absorb water from soil",
+                "Produce seeds",
+                "Make food through photosynthesis",
+                "Anchor the plant"
+            ],
+            correct: 2,
+            hint: "Leaves are green because they contain chlorophyll for making food."
+        },
+        {
+            type: "fillin",
+            question: "Tiny openings on the underside of leaves that allow gases to enter and exit are called _______.",
+            correct: "stomata",
+            hint: "These small pores let carbon dioxide in and oxygen out during photosynthesis."
+        },
+        // Seedless Plants
+        {
+            type: "multiple",
+            question: "How do ferns reproduce without seeds?",
+            options: [
+                "By flowers",
+                "By cones",
+                "By spores",
+                "By fruits"
+            ],
+            correct: 2,
+            hint: "Ferns produce tiny dust-like particles on the underside of their fronds."
+        },
+        {
+            type: "truefalse",
+            question: "Ferns are vascular plants even though they don't produce seeds.",
+            correct: true,
+            hint: "Ferns have tubes (xylem and phloem) to transport water, but reproduce with spores."
+        },
+        {
+            type: "multiple",
+            question: "Which plants reproduce using spores instead of seeds?",
+            options: [
+                "Pine trees and oaks",
+                "Roses and tulips",
+                "Ferns and mosses",
+                "Apple trees and corn"
+            ],
+            correct: 2,
+            hint: "These plants don't have flowers or cones - they use tiny spores instead."
+        },
+        // Plant Reproduction
+        {
+            type: "multiple",
+            question: "What is the female reproductive part of a flower?",
+            options: [
+                "Stamen",
+                "Pistil",
+                "Petal",
+                "Sepal"
+            ],
+            correct: 1,
+            hint: "This part contains the ovary where seeds develop after pollination."
+        },
+        {
+            type: "multiple",
+            question: "What is the male reproductive part of a flower?",
+            options: [
+                "Pistil",
+                "Petal",
+                "Stamen",
+                "Sepal"
+            ],
+            correct: 2,
+            hint: "This part produces pollen and includes the anther and filament."
+        },
+        {
+            type: "fillin",
+            question: "The transfer of pollen from the stamen to the pistil is called _______.",
+            correct: "pollination",
+            hint: "Bees, wind, and other animals help move pollen between flowers."
+        },
+        {
+            type: "multiple",
+            question: "What develops from a fertilized ovule?",
+            options: [
+                "Pollen",
+                "A seed",
+                "A spore",
+                "A cone"
+            ],
+            correct: 1,
+            hint: "After pollination and fertilization, this forms inside the ovary."
+        },
+        // Seed Dispersal
+        {
+            type: "multiple",
+            question: "Why is seed dispersal important for plants?",
+            options: [
+                "To make seeds heavier",
+                "To spread seeds away from the parent plant",
+                "To make seeds smaller",
+                "To change seed color"
+            ],
+            correct: 1,
+            hint: "Seeds need to travel away so new plants don't compete with the parent for resources."
+        },
+        {
+            type: "multiple",
+            question: "Which is NOT a method of seed dispersal?",
+            options: [
+                "Wind",
+                "Animals eating fruit",
+                "Photosynthesis",
+                "Water"
+            ],
+            correct: 2,
+            hint: "Photosynthesis is how plants make food, not how seeds travel."
+        },
+        {
+            type: "truefalse",
+            question: "Dandelion seeds are dispersed by wind.",
+            correct: true,
+            hint: "Dandelion seeds have fluffy parachutes that help them float on the wind."
+        },
+        // Plant Tropisms
+        {
+            type: "multiple",
+            question: "What is a tropism?",
+            options: [
+                "A type of plant",
+                "A plant's response to a stimulus",
+                "A part of a flower",
+                "A type of seed"
+            ],
+            correct: 1,
+            hint: "Tropisms are how plants grow or move in response to light, gravity, or water."
+        },
+        {
+            type: "fillin",
+            question: "A plant's growth response toward or away from light is called _______.",
+            correct: "phototropism",
+            hint: "'Photo' means light. Plants bend toward light sources."
+        },
+        {
+            type: "multiple",
+            question: "What is gravitropism?",
+            options: [
+                "Growth response to light",
+                "Growth response to water",
+                "Growth response to gravity",
+                "Growth response to touch"
+            ],
+            correct: 2,
+            hint: "This is why roots grow down and stems grow up."
+        },
+        // Classification Review
+        {
+            type: "truefalse",
+            question: "All plants have flowers.",
+            correct: false,
+            hint: "Think about pine trees, ferns, and mosses - do they have flowers?"
+        },
+        {
+            type: "multiple",
+            question: "Which classification level is most specific?",
+            options: [
+                "Kingdom",
+                "Phylum",
+                "Genus",
+                "Species"
             ],
             correct: 3,
-            hint: "Pine trees and spruces are examples of this plant group."
+            hint: "This is the most specific level - organisms in the same one can breed together."
+        },
+        {
+            type: "multiple",
+            question: "What kingdom do all plants belong to?",
+            options: [
+                "Animal Kingdom",
+                "Plant Kingdom",
+                "Fungi Kingdom",
+                "Protist Kingdom"
+            ],
+            correct: 1,
+            hint: "All plants, from mosses to oak trees, belong to this kingdom."
         }
     ],
     7: [ // Atoms and Molecules
