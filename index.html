@@ -468,6 +468,404 @@
                 margin-bottom: 20px;
             }
         }
+
+        /* Today's Learning Section Styles */
+        .today-learning {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .today-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .today-header h2 {
+            color: #2E7D32;
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .today-date {
+            color: #558B2F;
+            font-weight: 500;
+        }
+
+        .today-focus {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .focus-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .focus-area {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .school-chapter {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .daily-goal-section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .goal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .goal-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .goal-status {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .goal-status.goal-complete {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .goal-progress-bar {
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .goal-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            transition: width 0.3s ease;
+            border-radius: 6px;
+        }
+
+        .goal-progress-fill.complete {
+            background: linear-gradient(90deg, #4CAF50, #2E7D32);
+        }
+
+        .daily-stats {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .recommended-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .recommended-chapters {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .recommended-chapter {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .recommended-chapter:hover {
+            border-color: #4CAF50;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+        }
+
+        .recommended-chapter.needs-work {
+            border-left: 4px solid #FF9800;
+        }
+
+        .rec-chapter-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rec-chapter-num {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .rec-chapter-title {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .rec-chapter-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+
+        .tag-current {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .tag-review {
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+
+        .tag-new {
+            background: #E8F5E9;
+            color: #388E3C;
+        }
+
+        .no-rec {
+            color: #666;
+            font-style: italic;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Curriculum Planner Styles */
+        .curriculum-planner-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .curriculum-planner-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .school-sync-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .school-sync-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .school-sync-section select {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .helper-text {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .weekly-schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .schedule-day {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .day-name {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .day-details {
+            padding: 15px;
+        }
+
+        .day-focus {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .day-goal {
+            color: #4CAF50;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .day-chapters {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .schedule-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .schedule-modal {
+            width: 800px;
+        }
+
+        .schedule-modal h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .schedule-edit-day {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .schedule-edit-day h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .schedule-edit-fields {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .schedule-edit-fields label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        .schedule-edit-fields input {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .schedule-edit-fields input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .today-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .daily-stats {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .recommended-chapter {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .weekly-schedule {
+                grid-template-columns: 1fr;
+            }
+
+            .schedule-modal {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -503,6 +901,15 @@
                 <div class="stat-item">
                     <span class="stat-value" id="currentStreak">0</span>
                     <span class="stat-label">Day Streak 🔥</span>
+                </div>
+            </div>
+
+            <!-- Today's Learning Section -->
+            <div class="today-learning" id="todayLearning">
+                <!-- Content will be rendered by CurriculumManager -->
+                <div class="today-header">
+                    <h2>Today's Learning Plan</h2>
+                    <span class="today-date">Loading...</span>
                 </div>
             </div>
 
@@ -551,6 +958,11 @@
                     <h3>Settings</h3>
                     <button class="btn btn-secondary" onclick="resetProgress()">Reset All Progress</button>
                     <button class="btn btn-secondary" onclick="changePin()">Change PIN</button>
+                </div>
+
+                <!-- Curriculum Planner Section -->
+                <div id="curriculumPlanner">
+                    <!-- Content will be rendered by CurriculumManager -->
                 </div>
             </div>
         </div>
@@ -5420,6 +5832,7 @@
         function init() {
             loadProgress();
             loadParentSettings();
+            loadCurriculum(); // Load curriculum and daily goals
             renderUnits();
             updateStats();
             checkDailyStreak();
@@ -5846,7 +6259,10 @@
 
             sessionStats.total++;
             if (isCorrect) sessionStats.correct++;
-            
+
+            // Track daily progress for curriculum goals
+            recordQuestionAnswered(currentChapter, isCorrect);
+
             // Store answer for test mode review
             sessionStats.answers.push({
                 question: question.question,
@@ -6045,7 +6461,7 @@
                 const progress = userProgress[i] || { correct: 0, total: 0, accuracy: 0, mastered: false };
                 const item = document.createElement('div');
                 item.className = 'chapter-progress-item';
-                
+
                 let chapterName = '';
                 Object.values(curriculum).forEach(unit => {
                     const chapter = unit.find(ch => ch.id === i);
@@ -6064,6 +6480,9 @@
                 `;
                 chartContainer.appendChild(item);
             }
+
+            // Also render the curriculum planner
+            renderCurriculumPlanner();
         }
 
         function resetProgress() {
@@ -6103,6 +6522,424 @@
                 alert('PIN changed successfully!');
             } else {
                 alert('Invalid PIN. Must be 4 digits.');
+            }
+        }
+
+        // ============================================
+        // CURRICULUM & DAILY GOALS MANAGEMENT
+        // ============================================
+
+        // Default weekly schedule template
+        const defaultWeeklySchedule = {
+            monday: { chapters: [1], goalQuestions: 10, focusArea: "Review & Practice" },
+            tuesday: { chapters: [2], goalQuestions: 10, focusArea: "New Material" },
+            wednesday: { chapters: [3], goalQuestions: 10, focusArea: "Review & Practice" },
+            thursday: { chapters: [4], goalQuestions: 10, focusArea: "New Material" },
+            friday: { chapters: [5], goalQuestions: 15, focusArea: "Weekly Review" },
+            saturday: { chapters: [], goalQuestions: 5, focusArea: "Light Review (Optional)" },
+            sunday: { chapters: [], goalQuestions: 0, focusArea: "Rest Day" }
+        };
+
+        // Curriculum state
+        let curriculumSchedule = null;
+        let dailyProgress = {
+            questionsAnswered: 0,
+            questionsCorrect: 0,
+            chaptersStudied: [],
+            goalMet: false,
+            date: new Date().toDateString()
+        };
+        let currentSchoolChapter = 1;
+
+        // Get day name
+        function getDayName() {
+            const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            return days[new Date().getDay()];
+        }
+
+        // Get today's schedule
+        function getTodaySchedule() {
+            const schedule = curriculumSchedule || defaultWeeklySchedule;
+            const today = getDayName();
+            return schedule[today] || { chapters: [], goalQuestions: 0, focusArea: "Free Practice" };
+        }
+
+        // Get recommended chapters
+        function getRecommendedChapters() {
+            const todaySchedule = getTodaySchedule();
+            const recommended = [];
+
+            todaySchedule.chapters.forEach(chId => {
+                if (chId <= currentSchoolChapter + 1) {
+                    recommended.push(chId);
+                }
+            });
+
+            if (recommended.length === 0 && currentSchoolChapter > 0) {
+                recommended.push(currentSchoolChapter);
+                if (currentSchoolChapter > 1) {
+                    recommended.push(currentSchoolChapter - 1);
+                }
+            }
+
+            // Add weak chapters
+            Object.keys(userProgress).forEach(chId => {
+                const progress = userProgress[chId];
+                if (progress.total >= 5 && progress.accuracy < 70 && !recommended.includes(parseInt(chId))) {
+                    if (parseInt(chId) <= currentSchoolChapter) {
+                        recommended.push(parseInt(chId));
+                    }
+                }
+            });
+
+            return recommended.slice(0, 3);
+        }
+
+        // Load curriculum from Firebase
+        function loadCurriculum() {
+            const curriculumDoc = doc(firestore, 'science-settings', 'curriculum');
+            getDoc(curriculumDoc).then((snapshot) => {
+                if (snapshot.exists()) {
+                    const data = snapshot.data();
+                    curriculumSchedule = data.weeklySchedule || defaultWeeklySchedule;
+                    currentSchoolChapter = data.currentSchoolChapter || 1;
+                } else {
+                    saveCurriculum();
+                }
+                loadDailyProgress();
+            }).catch((error) => {
+                console.error('Error loading curriculum:', error);
+                renderTodayLearning();
+            });
+        }
+
+        // Save curriculum
+        function saveCurriculum() {
+            const curriculumDoc = doc(firestore, 'science-settings', 'curriculum');
+            setDoc(curriculumDoc, {
+                weeklySchedule: curriculumSchedule || defaultWeeklySchedule,
+                currentSchoolChapter: currentSchoolChapter
+            }).catch((error) => {
+                console.error('Error saving curriculum:', error);
+            });
+        }
+
+        // Load daily progress
+        function loadDailyProgress() {
+            const today = new Date().toDateString();
+            const dailyDoc = doc(firestore, 'science-users', 'jordan-daily');
+
+            getDoc(dailyDoc).then((snapshot) => {
+                if (snapshot.exists()) {
+                    const data = snapshot.data();
+                    if (data.date === today) {
+                        dailyProgress = data;
+                    } else {
+                        resetDailyProgress();
+                    }
+                } else {
+                    resetDailyProgress();
+                }
+                renderTodayLearning();
+            }).catch((error) => {
+                console.error('Error loading daily progress:', error);
+                renderTodayLearning();
+            });
+        }
+
+        // Reset daily progress
+        function resetDailyProgress() {
+            dailyProgress = {
+                questionsAnswered: 0,
+                questionsCorrect: 0,
+                chaptersStudied: [],
+                goalMet: false,
+                date: new Date().toDateString()
+            };
+            saveDailyProgress();
+        }
+
+        // Save daily progress
+        function saveDailyProgress() {
+            const dailyDoc = doc(firestore, 'science-users', 'jordan-daily');
+            setDoc(dailyDoc, dailyProgress).catch((error) => {
+                console.error('Error saving daily progress:', error);
+            });
+        }
+
+        // Record a question answered (for daily tracking)
+        function recordQuestionAnswered(chapterId, isCorrect) {
+            const today = new Date().toDateString();
+
+            if (dailyProgress.date !== today) {
+                resetDailyProgress();
+            }
+
+            dailyProgress.questionsAnswered++;
+            if (isCorrect) dailyProgress.questionsCorrect++;
+
+            if (!dailyProgress.chaptersStudied.includes(chapterId)) {
+                dailyProgress.chaptersStudied.push(chapterId);
+            }
+
+            const todaySchedule = getTodaySchedule();
+            if (dailyProgress.questionsAnswered >= todaySchedule.goalQuestions) {
+                dailyProgress.goalMet = true;
+            }
+
+            saveDailyProgress();
+            renderTodayLearning();
+        }
+
+        // Get chapter info
+        function getChapterInfo(chapterId) {
+            for (const unitName in curriculum) {
+                const chapter = curriculum[unitName].find(ch => ch.id === chapterId);
+                if (chapter) return chapter;
+            }
+            return null;
+        }
+
+        // Render Today's Learning section
+        function renderTodayLearning() {
+            const container = document.getElementById('todayLearning');
+            if (!container) return;
+
+            const todaySchedule = getTodaySchedule();
+            const recommended = getRecommendedChapters();
+            const dayName = getDayName();
+            const formattedDay = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+
+            const goalProgress = todaySchedule.goalQuestions > 0
+                ? Math.min((dailyProgress.questionsAnswered / todaySchedule.goalQuestions) * 100, 100)
+                : 100;
+            const goalMet = dailyProgress.goalMet || (todaySchedule.goalQuestions > 0 && dailyProgress.questionsAnswered >= todaySchedule.goalQuestions);
+
+            let recommendedHTML = '';
+            if (recommended.length > 0) {
+                recommendedHTML = recommended.map(chId => {
+                    const chapter = getChapterInfo(chId);
+                    const progress = userProgress[chId] || { accuracy: 0, total: 0 };
+                    const isWeak = progress.total >= 5 && progress.accuracy < 70;
+                    const isCurrent = chId === currentSchoolChapter;
+
+                    return `
+                        <div class="recommended-chapter ${isWeak ? 'needs-work' : ''}" onclick="startChapter(${chId})">
+                            <div class="rec-chapter-info">
+                                <span class="rec-chapter-num">Ch. ${chId}</span>
+                                <span class="rec-chapter-title">${chapter ? chapter.title : 'Unknown'}</span>
+                            </div>
+                            <div class="rec-chapter-tags">
+                                ${isCurrent ? '<span class="tag tag-current">Current</span>' : ''}
+                                ${isWeak ? '<span class="tag tag-review">Needs Review</span>' : ''}
+                                ${progress.total === 0 ? '<span class="tag tag-new">New</span>' : ''}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                recommendedHTML = '<p class="no-rec">No specific chapters scheduled. Feel free to explore!</p>';
+            }
+
+            container.innerHTML = `
+                <div class="today-header">
+                    <h2>Today's Learning Plan</h2>
+                    <span class="today-date">${formattedDay}, ${new Date().toLocaleDateString()}</span>
+                </div>
+
+                <div class="today-focus">
+                    <span class="focus-label">Focus:</span>
+                    <span class="focus-area">${todaySchedule.focusArea}</span>
+                    ${currentSchoolChapter > 0 ? `<span class="school-chapter">School Chapter: ${currentSchoolChapter}</span>` : ''}
+                </div>
+
+                <div class="daily-goal-section">
+                    <div class="goal-header">
+                        <span class="goal-title">Daily Goal</span>
+                        <span class="goal-status ${goalMet ? 'goal-complete' : ''}">${goalMet ? 'Complete!' : `${dailyProgress.questionsAnswered}/${todaySchedule.goalQuestions} questions`}</span>
+                    </div>
+                    <div class="goal-progress-bar">
+                        <div class="goal-progress-fill ${goalMet ? 'complete' : ''}" style="width: ${goalProgress}%"></div>
+                    </div>
+                    <div class="daily-stats">
+                        <span>Accuracy: ${dailyProgress.questionsAnswered > 0 ? Math.round((dailyProgress.questionsCorrect / dailyProgress.questionsAnswered) * 100) : 0}%</span>
+                        <span>Chapters studied: ${dailyProgress.chaptersStudied.length}</span>
+                    </div>
+                </div>
+
+                <div class="recommended-section">
+                    <h3>Recommended for Today</h3>
+                    <div class="recommended-chapters">
+                        ${recommendedHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render curriculum planner in parent dashboard
+        function renderCurriculumPlanner() {
+            const container = document.getElementById('curriculumPlanner');
+            if (!container) return;
+
+            const schedule = curriculumSchedule || defaultWeeklySchedule;
+            const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+            let scheduleHTML = days.map(day => {
+                const daySchedule = schedule[day];
+                const formattedDay = day.charAt(0).toUpperCase() + day.slice(1);
+
+                return `
+                    <div class="schedule-day">
+                        <div class="day-name">${formattedDay}</div>
+                        <div class="day-details">
+                            <div class="day-focus">${daySchedule.focusArea}</div>
+                            <div class="day-goal">${daySchedule.goalQuestions} questions</div>
+                            <div class="day-chapters">
+                                ${daySchedule.chapters.length > 0
+                                    ? daySchedule.chapters.map(ch => `Ch.${ch}`).join(', ')
+                                    : 'No specific chapters'}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            let chapterOptions = '';
+            for (let i = 1; i <= 15; i++) {
+                const chapter = getChapterInfo(i);
+                chapterOptions += `<option value="${i}" ${i === currentSchoolChapter ? 'selected' : ''}>Ch. ${i}: ${chapter ? chapter.title : ''}</option>`;
+            }
+
+            container.innerHTML = `
+                <div class="curriculum-planner-section">
+                    <h3>Curriculum Settings</h3>
+
+                    <div class="school-sync-section">
+                        <label for="currentChapterSelect">Jordan's Current School Chapter:</label>
+                        <select id="currentChapterSelect" onchange="updateSchoolChapter(this.value)">
+                            ${chapterOptions}
+                        </select>
+                        <p class="helper-text">Update this as Jordan progresses in school to keep recommendations aligned.</p>
+                    </div>
+
+                    <h3>Weekly Schedule</h3>
+                    <div class="weekly-schedule">
+                        ${scheduleHTML}
+                    </div>
+
+                    <div class="schedule-actions">
+                        <button class="btn btn-secondary" onclick="editWeeklySchedule()">Edit Schedule</button>
+                        <button class="btn btn-secondary" onclick="resetToDefaultSchedule()">Reset to Default</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Update school chapter
+        function updateSchoolChapter(chapterId) {
+            currentSchoolChapter = parseInt(chapterId);
+            saveCurriculum();
+            renderTodayLearning();
+            renderCurriculumPlanner();
+        }
+
+        // Edit weekly schedule
+        function editWeeklySchedule() {
+            let modal = document.getElementById('scheduleModal');
+            if (!modal) {
+                const modalHTML = `
+                    <div id="scheduleModal" class="modal" style="display:none;">
+                        <div class="modal-content schedule-modal">
+                            <h3>Edit Weekly Schedule</h3>
+                            <div id="scheduleEditForm"></div>
+                            <div class="modal-actions">
+                                <button class="btn btn-primary" onclick="saveScheduleChanges()">Save Changes</button>
+                                <button class="btn btn-secondary" onclick="closeScheduleModal()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', modalHTML);
+                modal = document.getElementById('scheduleModal');
+            }
+            populateScheduleModal();
+            modal.style.display = 'flex';
+        }
+
+        // Populate schedule modal
+        function populateScheduleModal() {
+            const form = document.getElementById('scheduleEditForm');
+            if (!form) return;
+
+            const schedule = curriculumSchedule || defaultWeeklySchedule;
+            const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+            form.innerHTML = days.map(day => {
+                const daySchedule = schedule[day];
+                const formattedDay = day.charAt(0).toUpperCase() + day.slice(1);
+
+                return `
+                    <div class="schedule-edit-day">
+                        <h4>${formattedDay}</h4>
+                        <div class="schedule-edit-fields">
+                            <label>
+                                Focus Area:
+                                <input type="text" id="focus_${day}" value="${daySchedule.focusArea}" />
+                            </label>
+                            <label>
+                                Daily Goal (questions):
+                                <input type="number" id="goal_${day}" value="${daySchedule.goalQuestions}" min="0" max="50" />
+                            </label>
+                            <label>
+                                Chapters (comma-separated):
+                                <input type="text" id="chapters_${day}" value="${daySchedule.chapters.join(',')}" placeholder="e.g., 1,2,3" />
+                            </label>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Save schedule changes
+        function saveScheduleChanges() {
+            const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+            const newSchedule = {};
+
+            days.forEach(day => {
+                const focus = document.getElementById(`focus_${day}`).value;
+                const goal = parseInt(document.getElementById(`goal_${day}`).value) || 0;
+                const chaptersStr = document.getElementById(`chapters_${day}`).value;
+                const chapters = chaptersStr.split(',')
+                    .map(c => parseInt(c.trim()))
+                    .filter(c => !isNaN(c) && c >= 1 && c <= 15);
+
+                newSchedule[day] = {
+                    focusArea: focus,
+                    goalQuestions: goal,
+                    chapters: chapters
+                };
+            });
+
+            curriculumSchedule = newSchedule;
+            saveCurriculum();
+            closeScheduleModal();
+            renderCurriculumPlanner();
+            renderTodayLearning();
+        }
+
+        // Close schedule modal
+        function closeScheduleModal() {
+            const modal = document.getElementById('scheduleModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        // Reset to default schedule
+        function resetToDefaultSchedule() {
+            if (confirm('Reset to the default weekly schedule?')) {
+                curriculumSchedule = JSON.parse(JSON.stringify(defaultWeeklySchedule));
+                saveCurriculum();
+                renderCurriculumPlanner();
+                renderTodayLearning();
             }
         }
 
