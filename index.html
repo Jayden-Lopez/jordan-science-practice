@@ -4034,137 +4034,129 @@
                 ]
             },
             7: { // Atoms and Molecules - BJU Science 6 Chapter 7
-                // This chapter uses a special learning format with lessons followed by questions
+                // Comprehensive chapter covering chemistry, atoms, periodic table, bonds, acids & bases
                 hasLessons: true,
                 sections: [
-                    // SECTION 1: WHAT IS MATTER?
+                    // SECTION 1: WHAT IS CHEMISTRY?
                     {
-                        title: "What is Matter?",
-                        lesson: `<h3>🔬 What is Matter?</h3>
-                            <p>Everything around you is made of <strong>matter</strong>!</p>
+                        title: "What is Chemistry?",
+                        lesson: `<h3>🔬 What is Chemistry?</h3>
+                            <p><strong>Chemistry</strong> is the study of matter—what it is made of, what its usual characteristics are, and how it reacts with other matter.</p>
 
                             <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>📦 Definition of Matter</h4>
-                                <p><strong>Matter</strong> = Anything that has MASS and takes up SPACE</p>
-                                <p><strong>Mass</strong> = The amount of "stuff" in an object</p>
-                                <p><strong>Volume</strong> = The amount of space something takes up</p>
+                                <h4>📦 What is Matter?</h4>
+                                <p><strong>Matter</strong> = Anything that takes up space and has mass</p>
+                                <p>Everything around you is made of matter!</p>
+                                <p>Scientists now know there are over <strong>100 basic elements</strong> that are made up of very tiny atoms.</p>
                             </div>
 
                             <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>✅ Examples of Matter</h4>
-                                <ul>
-                                    <li>You! (You have mass and take up space)</li>
-                                    <li>Air (Even though you can't see it!)</li>
-                                    <li>Water, rocks, trees, animals</li>
-                                    <li>Your desk, books, pencils</li>
-                                </ul>
+                                <h4>📜 History of Chemistry</h4>
+                                <p>Ancient Greeks thought there were only four basic elements: fire, air, water, and earth.</p>
+                                <p>Some men called <strong>alchemists</strong> tried to turn common metals into gold.</p>
+                                <p>Through careful investigation and accurate recording, modern <strong>chemistry</strong> was developed.</p>
                             </div>
 
                             <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>❌ What is NOT Matter?</h4>
-                                <ul>
-                                    <li>Light (has no mass)</li>
-                                    <li>Heat (a form of energy)</li>
-                                    <li>Sound (a form of energy)</li>
-                                    <li>Ideas and thoughts</li>
-                                </ul>
+                                <h4>👨‍🔬 Robert Boyle - Father of Modern Chemistry</h4>
+                                <p>Robert Boyle believed that advances in science would come only through experimenting.</p>
+                                <p>His motto was <strong>"nothing by mere authority"</strong> - meaning he didn't accept science as true just because he read it in a book.</p>
+                                <p>He wrote <em>The Skeptical Chymist</em>, where he defined an element as a substance that cannot be separated into simpler components.</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "What is matter?",
-                                options: ["Only things you can see", "Anything that has mass and takes up space", "Only solid objects", "Only living things"],
+                                question: "Chemistry is the study of:",
+                                options: ["Only liquids", "Matter and how substances change", "Only living things", "Only gases"],
                                 correct: 1,
-                                hint: "Matter has two key properties: mass and volume (taking up space)."
+                                hint: "Chemistry studies what matter is made of and how it reacts."
                             },
                             {
-                                type: "truefalse",
-                                question: "Air is an example of matter.",
-                                correct: true,
-                                hint: "Even though you can't see air, it has mass and takes up space!"
+                                type: "fillin",
+                                question: "_______ is anything that takes up space and has mass.",
+                                correct: "matter",
+                                hint: "Everything around you - your desk, air, water - is this."
                             },
                             {
                                 type: "multiple",
-                                question: "Which of these is NOT matter?",
-                                options: ["Water", "Air", "Light", "Rock"],
+                                question: "Who is called the Father of Modern Chemistry?",
+                                options: ["Niels Bohr", "Dmitri Mendeleev", "Robert Boyle", "Albert Einstein"],
                                 correct: 2,
-                                hint: "Light is a form of energy - it doesn't have mass."
+                                hint: "His motto was 'nothing by mere authority' - he believed in experimenting."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Ancient Greeks correctly identified over 100 elements.",
+                                correct: false,
+                                hint: "Ancient Greeks thought there were only four elements: fire, air, water, and earth."
                             },
                             {
                                 type: "fillin",
-                                question: "The amount of space an object takes up is called its _______.",
-                                correct: "volume",
-                                hint: "This word describes how much room something occupies."
-                            },
-                            {
-                                type: "fillin",
-                                question: "The amount of 'stuff' in an object is called its _______.",
-                                correct: "mass",
-                                hint: "This is different from weight - it measures how much matter is in something."
+                                question: "Robert Boyle's motto was 'nothing by mere _______.'",
+                                correct: "authority",
+                                hint: "He didn't accept things just because he read them in a book."
                             }
                         ]
                     },
 
-                    // SECTION 2: ATOMS - BUILDING BLOCKS
+                    // SECTION 2: ATOMS - THE SMALLEST PIECE
                     {
-                        title: "Atoms: The Building Blocks of Matter",
-                        lesson: `<h3>⚛️ Atoms: The Building Blocks of Matter</h3>
-                            <p>All matter is made up of tiny particles called <strong>atoms</strong>!</p>
+                        title: "Atoms: Building Blocks of Matter",
+                        lesson: `<h3>⚛️ Atoms: The Smallest Piece of an Element</h3>
+                            <p>An <strong>atom</strong> is the smallest piece of an element that can be recognized as that element.</p>
 
                             <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🔍 What is an Atom?</h4>
-                                <p><strong>Atom</strong> = The smallest unit of matter that still has the properties of an element</p>
-                                <p>Atoms are SO tiny that millions of them could fit on the period at the end of this sentence!</p>
+                                <h4>🔍 Understanding Atoms</h4>
+                                <p>Imagine someone gives you a kilogram of gold. If you keep dividing it in half...</p>
+                                <p>Eventually you would get a piece that could no longer be divided and still be gold.</p>
+                                <p>That tiny piece would be called an <strong>atom</strong> of gold.</p>
                             </div>
 
                             <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>📜 A Brief History</h4>
-                                <p><strong>Democritus</strong> (ancient Greek philosopher) first proposed the idea of atoms</p>
-                                <p>The word "atom" comes from the Greek word meaning <strong>"uncuttable"</strong></p>
-                                <p>He believed atoms were the smallest pieces matter could be divided into</p>
+                                <h4>🧪 Elements</h4>
+                                <p>Substances containing only <strong>one kind of atom</strong> are called <strong>elements</strong>.</p>
+                                <p>Examples: gold, silver, iron, oxygen, carbon, copper</p>
+                                <p>An element cannot be broken down into simpler substances by chemical methods.</p>
                             </div>
 
                             <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>💡 Key Facts About Atoms</h4>
-                                <ul>
-                                    <li>Atoms are the basic building blocks of ALL matter</li>
-                                    <li>Different types of atoms make up different <strong>elements</strong></li>
-                                    <li>Atoms can combine to form <strong>molecules</strong></li>
-                                    <li>Atoms are mostly empty space!</li>
-                                </ul>
+                                <h4>🔬 Atomic Theory</h4>
+                                <p>Because atoms are so small, no one has actually seen what they look like.</p>
+                                <p><strong>Atomic theory</strong> = What scientists think atoms are like, based on repeated observations</p>
+                                <p>The models have changed as scientists discovered more about atoms.</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "What is the smallest unit of matter?",
-                                options: ["Molecule", "Atom", "Compound", "Element"],
+                                question: "The smallest recognizable piece of an element is called:",
+                                options: ["A molecule", "An atom", "A compound", "A proton"],
                                 correct: 1,
-                                hint: "This is the tiniest particle that still has properties of an element."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Who first proposed the idea of atoms?",
-                                options: ["Isaac Newton", "Albert Einstein", "Democritus", "Galileo"],
-                                correct: 2,
-                                hint: "This ancient Greek philosopher came up with the idea over 2,000 years ago."
+                                hint: "This is the tiniest piece that can still be recognized as that element."
                             },
                             {
                                 type: "fillin",
-                                question: "The word 'atom' comes from a Greek word meaning _______.",
-                                correct: "uncuttable",
-                                hint: "Democritus believed atoms couldn't be divided into anything smaller."
+                                question: "Substances that have only one kind of atom are called _______.",
+                                correct: "elements",
+                                hint: "Gold, oxygen, and carbon are examples of these pure substances."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What scientists think atoms are like based on repeated observations is called:",
+                                options: ["Chemical formula", "Atomic theory", "Periodic table", "Chemistry"],
+                                correct: 1,
+                                hint: "This is a theory about what atoms look like."
                             },
                             {
                                 type: "truefalse",
-                                question: "Atoms are the building blocks of all matter.",
-                                correct: true,
-                                hint: "Everything around you is made of atoms!"
-                            },
-                            {
-                                type: "truefalse",
-                                question: "Atoms are so large you can see them with your eyes.",
+                                question: "Scientists have directly seen what atoms look like with their eyes.",
                                 correct: false,
-                                hint: "Atoms are incredibly tiny - millions could fit on a period!"
+                                hint: "Atoms are too small to see - scientists use models based on observations."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "An element is a substance that contains only one kind of atom.",
+                                correct: true,
+                                hint: "Elements like gold or oxygen have only one type of atom."
                             }
                         ]
                     },
@@ -4173,264 +4165,420 @@
                     {
                         title: "Parts of an Atom",
                         lesson: `<h3>🔬 Parts of an Atom</h3>
-                            <p>Atoms are made up of three types of <strong>subatomic particles</strong>!</p>
+                            <p>All atoms have the same basic structure. They are made up of three main parts!</p>
 
                             <div style="background: #ffcdd2; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>➕ PROTONS</h4>
                                 <p><strong>Charge:</strong> POSITIVE (+)</p>
-                                <p><strong>Location:</strong> In the nucleus (center)</p>
-                                <p><strong>Fun Fact:</strong> The number of protons determines what element an atom is!</p>
+                                <p><strong>Location:</strong> In the nucleus (center of the atom)</p>
+                                <p>Protons and neutrons are by far the <strong>heaviest parts</strong> of an atom.</p>
                             </div>
 
                             <div style="background: #e0e0e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>⚪ NEUTRONS</h4>
-                                <p><strong>Charge:</strong> NEUTRAL (no charge)</p>
-                                <p><strong>Location:</strong> In the nucleus (center)</p>
-                                <p><strong>Fun Fact:</strong> Neutrons help hold the nucleus together!</p>
+                                <p><strong>Charge:</strong> NEUTRAL (N) - no charge</p>
+                                <p><strong>Location:</strong> In the nucleus</p>
+                                <p>Adding the number of protons and neutrons together gives the approximate <strong>atomic mass</strong>.</p>
                             </div>
 
                             <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>➖ ELECTRONS</h4>
                                 <p><strong>Charge:</strong> NEGATIVE (-)</p>
-                                <p><strong>Location:</strong> Orbiting AROUND the nucleus in energy levels</p>
-                                <p><strong>Fun Fact:</strong> Electrons are much smaller than protons and neutrons!</p>
+                                <p><strong>Location:</strong> Travel around the nucleus in <strong>shells</strong></p>
+                                <p>Electrons are very small and contribute almost nothing to the atom's mass.</p>
+                                <p>In a normal atom, the number of electrons equals the number of protons.</p>
                             </div>
 
                             <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>🎯 The Nucleus</h4>
-                                <p>The <strong>nucleus</strong> is the dense center of the atom</p>
-                                <p>It contains protons and neutrons</p>
-                                <p>Most of the atom's MASS is in the nucleus</p>
-                                <p>Electrons orbit around the nucleus in "shells" or energy levels</p>
+                                <p>The <strong>nucleus</strong> is the center section of the atom.</p>
+                                <p>It contains the protons and neutrons.</p>
+                                <p>Most of the atom's MASS is in the nucleus.</p>
                             </div>`,
                         questions: [
                             {
-                                type: "multiple",
-                                question: "The center of an atom is called the:",
-                                options: ["Electron", "Proton", "Nucleus", "Neutron"],
-                                correct: 2,
-                                hint: "This is the dense core where protons and neutrons are found."
-                            },
-                            {
                                 type: "fillin",
-                                question: "Particles with a negative charge are called _______.",
+                                question: "The three main parts of an atom are protons, neutrons, and _______.",
                                 correct: "electrons",
-                                hint: "These particles orbit around the nucleus of an atom."
+                                hint: "These negatively charged particles travel around the nucleus."
                             },
                             {
                                 type: "multiple",
                                 question: "Which particle has a positive charge?",
                                 options: ["Electron", "Proton", "Neutron", "Nucleus"],
                                 correct: 1,
-                                hint: "This particle is found in the nucleus and determines the element."
+                                hint: "This particle is found in the nucleus with the neutrons."
                             },
                             {
                                 type: "multiple",
                                 question: "Which particle has no charge (is neutral)?",
-                                options: ["Electron", "Proton", "Neutron", "All have charges"],
+                                options: ["Electron", "Proton", "Neutron", "Shell"],
                                 correct: 2,
-                                hint: "The name of this particle sounds like 'neutral'!"
-                            },
-                            {
-                                type: "truefalse",
-                                question: "Protons and neutrons are found in the nucleus.",
-                                correct: true,
-                                hint: "The nucleus is the center of the atom where these particles are located."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Where are electrons located in an atom?",
-                                options: ["In the nucleus", "Orbiting around the nucleus", "Outside the atom", "They don't exist in atoms"],
-                                correct: 1,
-                                hint: "Electrons move around the nucleus in energy levels or 'shells'."
+                                hint: "The name sounds like 'neutral' - it has no charge!"
                             },
                             {
                                 type: "fillin",
-                                question: "The number of _______ determines what element an atom is.",
-                                correct: "protons",
-                                hint: "This positive particle in the nucleus defines the element."
+                                question: "Protons and neutrons are found in the _______, the center of the atom.",
+                                correct: "nucleus",
+                                hint: "This is the dense center where most of the atom's mass is located."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Negatively charged electrons travel around the nucleus.",
+                                correct: true,
+                                hint: "Electrons orbit the nucleus in shells."
+                            },
+                            {
+                                type: "multiple",
+                                question: "In a normal atom, the number of protons equals the number of:",
+                                options: ["Neutrons", "Electrons", "Shells", "Nuclei"],
+                                correct: 1,
+                                hint: "The positive and negative charges balance out in a normal atom."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The sum of protons and neutrons gives an atom's approximate:",
+                                options: ["Atomic number", "Atomic mass", "Charge", "Shell number"],
+                                correct: 1,
+                                hint: "This measures how heavy the atom is."
                             }
                         ]
                     },
 
-                    // SECTION 4: ELEMENTS AND PERIODIC TABLE
+                    // SECTION 4: ELECTRON SHELLS AND THE BOHR MODEL
                     {
-                        title: "Elements and the Periodic Table",
-                        lesson: `<h3>🧪 Elements and the Periodic Table</h3>
-                            <p>An <strong>element</strong> is a pure substance made of only ONE type of atom!</p>
-
-                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🔤 What is an Element?</h4>
-                                <p><strong>Element</strong> = A substance that cannot be broken down into simpler substances</p>
-                                <p>Each element is made of only ONE kind of atom</p>
-                                <p>There are about <strong>118 known elements</strong></p>
-                                <p>Examples: Oxygen (O), Gold (Au), Carbon (C), Iron (Fe)</p>
-                            </div>
+                        title: "Electron Shells and the Bohr Model",
+                        lesson: `<h3>🔄 Electron Shells and the Bohr Model</h3>
+                            <p><strong>Niels Bohr</strong>, a Danish scientist born in 1885, developed a simplified model of the atom.</p>
 
                             <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>📊 The Periodic Table</h4>
-                                <p>The <strong>Periodic Table</strong> organizes all known elements</p>
-                                <p>Elements are arranged by their <strong>atomic number</strong> (number of protons)</p>
-                                <p>Each element has:</p>
-                                <ul>
-                                    <li><strong>Symbol</strong> - One or two letter abbreviation (H, He, Na)</li>
-                                    <li><strong>Atomic Number</strong> - Number of protons</li>
-                                    <li><strong>Atomic Mass</strong> - Total mass of protons + neutrons</li>
-                                </ul>
+                                <h4>👨‍🔬 Niels Bohr</h4>
+                                <p>Bohr is considered one of the greatest scientists of the twentieth century.</p>
+                                <p>He devised a model based on the idea that electrons move in <strong>shells</strong>.</p>
+                                <p>The Bohr model makes understanding the atom easier, but it is a simplified version.</p>
                             </div>
 
-                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>⭐ Common Elements to Know</h4>
-                                <p><strong>H</strong> = Hydrogen (lightest element, #1)</p>
-                                <p><strong>O</strong> = Oxygen (we breathe this!)</p>
-                                <p><strong>C</strong> = Carbon (found in all living things)</p>
-                                <p><strong>N</strong> = Nitrogen (most of our air)</p>
-                                <p><strong>Fe</strong> = Iron (makes steel)</p>
-                                <p><strong>Au</strong> = Gold (precious metal)</p>
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔵 Electron Shells</h4>
+                                <p>A <strong>shell</strong> represents the average distance that electrons are from the nucleus.</p>
+                                <p>Electrons move randomly around the nucleus, like a swarm of bees around a hive.</p>
+                                <p>They stay within a limited cloud-like space surrounding the nucleus.</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 Shell Capacity</h4>
+                                <p><strong>First shell</strong> (closest to nucleus): Can hold a maximum of <strong>2 electrons</strong></p>
+                                <p><strong>Second shell</strong>: Can hold a maximum of <strong>8 electrons</strong></p>
+                                <p>Each shell farther from the nucleus can hold more electrons.</p>
+                                <p>Because electrons move freely within their shells, they provide the means for atoms to combine with other atoms!</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧪 Example Elements</h4>
+                                <p><strong>Hydrogen</strong>: 1 proton, 0 neutrons, 1 electron</p>
+                                <p><strong>Helium</strong>: 2 protons, 2 neutrons, 2 electrons</p>
+                                <p><strong>Carbon</strong>: 6 protons, 6 neutrons, 6 electrons</p>
+                                <p><strong>Oxygen</strong>: 8 protons, 8 neutrons, 8 electrons</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "What is an element?",
-                                options: ["A mixture of atoms", "A substance made of only one type of atom", "Two atoms bonded together", "A compound"],
-                                correct: 1,
-                                hint: "Elements are pure substances that cannot be broken down further."
-                            },
-                            {
-                                type: "multiple",
-                                question: "How are elements organized in the Periodic Table?",
-                                options: ["By color", "By atomic number (number of protons)", "By size", "Alphabetically"],
-                                correct: 1,
-                                hint: "The atomic number tells you how many protons are in each element."
+                                question: "Who developed a simplified model of the atom based on electrons in shells?",
+                                options: ["Robert Boyle", "Dmitri Mendeleev", "Niels Bohr", "Albert Einstein"],
+                                correct: 2,
+                                hint: "This Danish scientist was born in 1885."
                             },
                             {
                                 type: "fillin",
-                                question: "The symbol for oxygen is _______.",
-                                correct: "O",
-                                hint: "It's just the first letter of oxygen, capitalized."
+                                question: "The space that represents the average distance electrons are from the nucleus is called a _______.",
+                                correct: "shell",
+                                hint: "Electrons travel around the nucleus in these energy levels."
                             },
                             {
                                 type: "multiple",
-                                question: "What does the atomic number of an element tell you?",
-                                options: ["The number of electrons", "The number of protons", "The number of neutrons", "The total mass"],
+                                question: "The first shell (closest to the nucleus) can hold a maximum of how many electrons?",
+                                options: ["1", "2", "6", "8"],
                                 correct: 1,
-                                hint: "The atomic number equals the number of protons in the nucleus."
+                                hint: "This is the smallest shell capacity."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The second shell can hold a maximum of how many electrons?",
+                                options: ["2", "4", "6", "8"],
+                                correct: 3,
+                                hint: "The second shell is larger and holds more electrons."
                             },
                             {
                                 type: "truefalse",
-                                question: "There are about 118 known elements.",
+                                question: "Niels Bohr devised a model of the atom based on electrons moving in shells.",
                                 correct: true,
-                                hint: "Scientists have discovered and created 118 elements so far!"
+                                hint: "The Bohr model shows electrons in orbital shells around the nucleus."
                             },
                             {
                                 type: "multiple",
-                                question: "What is the symbol for gold?",
-                                options: ["Go", "Gd", "Au", "G"],
+                                question: "Carbon has 6 protons. How many electrons does carbon have?",
+                                options: ["2", "4", "6", "12"],
                                 correct: 2,
-                                hint: "Gold's symbol comes from its Latin name 'aurum'."
-                            },
-                            {
-                                type: "fillin",
-                                question: "The element found in all living things is _______.",
-                                correct: "carbon",
-                                hint: "This element has the symbol C."
+                                hint: "In a normal atom, the number of protons equals the number of electrons."
                             }
                         ]
                     },
 
-                    // SECTION 5: MOLECULES AND COMPOUNDS
+                    // SECTION 5: CHEMICAL SYMBOLS AND CLASSIFYING ELEMENTS
                     {
-                        title: "Molecules and Compounds",
-                        lesson: `<h3>🔗 Molecules and Compounds</h3>
-                            <p>When atoms bond together, they form <strong>molecules</strong>!</p>
+                        title: "Chemical Symbols",
+                        lesson: `<h3>🔤 Chemical Symbols</h3>
+                            <p>Scientists use <strong>chemical symbols</strong> as abbreviations for the names of elements.</p>
 
-                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🔗 What is a Molecule?</h4>
-                                <p><strong>Molecule</strong> = Two or more atoms bonded together</p>
-                                <p>Molecules can be made of:</p>
-                                <ul>
-                                    <li>The SAME type of atom (O₂ - two oxygen atoms)</li>
-                                    <li>DIFFERENT types of atoms (H₂O - hydrogen and oxygen)</li>
-                                </ul>
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📝 Why Use Symbols?</h4>
+                                <p>Symbols are quicker and easier to write than full names.</p>
+                                <p>Scientists around the world use the same symbols, making communication easier.</p>
+                                <p>Many abbreviations are based on an element's English name.</p>
                             </div>
 
-                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🧪 What is a Compound?</h4>
-                                <p><strong>Compound</strong> = A molecule made of TWO OR MORE DIFFERENT elements</p>
-                                <p>Examples of compounds:</p>
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📋 Rules for Chemical Symbols</h4>
+                                <p>The <strong>first letter is always capitalized</strong></p>
+                                <p>If there's a second letter, it is <strong>lowercase</strong></p>
+                                <p>Examples: <strong>O</strong> (Oxygen), <strong>C</strong> (Carbon), <strong>Ca</strong> (Calcium), <strong>Cl</strong> (Chlorine)</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🌍 Symbols from Latin Words</h4>
+                                <p>Some symbols come from Latin names and seem strange:</p>
+                                <p><strong>Fe</strong> = Iron (from Latin "ferrum")</p>
+                                <p><strong>Au</strong> = Gold (from Latin "aurum")</p>
+                                <p><strong>Ag</strong> = Silver (from Latin "argentum")</p>
+                                <p><strong>Na</strong> = Sodium (from Latin "natrium")</p>
+                                <p><strong>K</strong> = Potassium (from Latin "kalium")</p>
+                                <p><strong>Pb</strong> = Lead (from Latin "plumbum")</p>
+                                <p><strong>Hg</strong> = Mercury (from Latin "hydrargyrum")</p>
+                                <p><strong>Sn</strong> = Tin (from Latin "stannum")</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "Chemical symbols are _______ of the names of elements.",
+                                correct: "abbreviations",
+                                hint: "They are shorter ways to write element names."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the chemical symbol for iron?",
+                                options: ["Ir", "I", "Fe", "In"],
+                                correct: 2,
+                                hint: "It comes from the Latin word 'ferrum'."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the chemical symbol for gold?",
+                                options: ["Go", "Gd", "Au", "G"],
+                                correct: 2,
+                                hint: "It comes from the Latin word 'aurum'."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the chemical symbol for sodium?",
+                                options: ["So", "S", "Na", "Sd"],
+                                correct: 2,
+                                hint: "It comes from the Latin word 'natrium'."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "In a chemical symbol, the first letter is capitalized and the second letter (if any) is lowercase.",
+                                correct: true,
+                                hint: "For example, Ca for Calcium has a capital C and lowercase a."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why do scientists use chemical symbols?",
+                                options: ["They are secret codes", "They are easier and quicker to write, and are universal", "They are required by law", "They look more scientific"],
+                                correct: 1,
+                                hint: "Symbols help scientists around the world communicate easily."
+                            }
+                        ]
+                    },
+
+                    // SECTION 6: THE PERIODIC TABLE
+                    {
+                        title: "The Periodic Table of the Elements",
+                        lesson: `<h3>📊 The Periodic Table of the Elements</h3>
+                            <p>The <strong>periodic table of the elements</strong> is a classification system that organizes all known elements.</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>👨‍🔬 Dmitri Mendeleev</h4>
+                                <p>In 1869, a Russian chemist named <strong>Dmitri Mendeleev</strong> came up with a way to organize elements.</p>
+                                <p>He arranged elements by their atomic weights and grouped them by chemical and physical properties.</p>
+                                <p>He left gaps in his chart where he felt sure there were undiscovered elements - and he was right!</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📋 Reading the Periodic Table</h4>
+                                <p>Each square describes one element and includes:</p>
                                 <ul>
-                                    <li><strong>H₂O</strong> (water) - hydrogen + oxygen</li>
-                                    <li><strong>CO₂</strong> (carbon dioxide) - carbon + oxygen</li>
-                                    <li><strong>NaCl</strong> (table salt) - sodium + chlorine</li>
+                                    <li><strong>Atomic Number</strong> - Number of protons (top)</li>
+                                    <li><strong>Element Name</strong></li>
+                                    <li><strong>Chemical Symbol</strong></li>
+                                    <li><strong>Atomic Mass</strong> - Sum of protons + neutrons</li>
                                 </ul>
                             </div>
 
                             <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>⚠️ Important Difference!</h4>
-                                <p><strong>O₂</strong> (oxygen gas) = A molecule but NOT a compound (only one element)</p>
-                                <p><strong>H₂O</strong> (water) = A molecule AND a compound (two different elements)</p>
-                                <p><strong>Remember:</strong> All compounds are molecules, but not all molecules are compounds!</p>
+                                <h4>↔️ Periods (Rows)</h4>
+                                <p>The horizontal rows are called <strong>periods</strong>.</p>
+                                <p>Elements in the same period have the same number of electron shells.</p>
+                                <p>All elements in the first row have one shell for their electrons.</p>
+                                <p>All elements in the second row have two shells.</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>↕️ Groups (Columns)</h4>
+                                <p>The vertical columns are called <strong>groups</strong> or families.</p>
+                                <p>Elements in the same group have the same number of electrons in their outer shell.</p>
+                                <p>Elements in a group share similar physical and chemical properties.</p>
+                                <p>If you want to find elements that are similar, look at elements in the same column!</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "What is a molecule?",
-                                options: ["A single atom", "Two or more atoms bonded together", "A type of element", "A subatomic particle"],
-                                correct: 1,
-                                hint: "Molecules are formed when atoms join together."
-                            },
-                            {
-                                type: "truefalse",
-                                question: "A molecule is made up of two or more atoms bonded together.",
-                                correct: true,
-                                hint: "Molecules are formed when atoms chemically bond."
-                            },
-                            {
-                                type: "multiple",
-                                question: "What is H₂O?",
-                                options: ["An atom", "An element", "A molecule", "A proton"],
+                                question: "Who developed the classification system for elements called the periodic table?",
+                                options: ["Robert Boyle", "Niels Bohr", "Dmitri Mendeleev", "Albert Einstein"],
                                 correct: 2,
-                                hint: "H₂O is water - made of hydrogen and oxygen atoms bonded together."
-                            },
-                            {
-                                type: "multiple",
-                                question: "What is a compound?",
-                                options: ["A single element", "A molecule made of different elements", "An atom with no electrons", "A type of mixture"],
-                                correct: 1,
-                                hint: "Compounds contain two or more DIFFERENT types of atoms bonded together."
-                            },
-                            {
-                                type: "truefalse",
-                                question: "O₂ (oxygen gas) is a compound.",
-                                correct: false,
-                                hint: "O₂ is only made of one type of element (oxygen), so it's a molecule but not a compound."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Which is an example of a compound?",
-                                options: ["O₂ (oxygen)", "N₂ (nitrogen)", "NaCl (salt)", "He (helium)"],
-                                correct: 2,
-                                hint: "A compound has two or more DIFFERENT elements - sodium and chlorine."
+                                hint: "This Russian chemist organized elements in 1869."
                             },
                             {
                                 type: "fillin",
-                                question: "The compound CO₂ is called carbon _______.",
-                                correct: "dioxide",
-                                hint: "This gas is what you breathe out and plants use for photosynthesis."
+                                question: "The horizontal rows on the periodic table are called _______.",
+                                correct: "periods",
+                                hint: "Elements in the same row have the same number of electron shells."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The vertical columns on the periodic table are called _______.",
+                                correct: "groups",
+                                hint: "Elements in the same column have similar properties."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Elements in the same group (column) share similar:",
+                                options: ["Atomic numbers", "Physical and chemical properties", "Colors", "Names"],
+                                correct: 1,
+                                hint: "Groups contain elements that react similarly with other elements."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "The periodic table classifies elements showing which elements possess similar characteristics.",
+                                correct: true,
+                                hint: "That's exactly what Mendeleev designed it to do!"
+                            },
+                            {
+                                type: "multiple",
+                                question: "The atomic number tells you the number of:",
+                                options: ["Neutrons", "Electrons only", "Protons", "Shells"],
+                                correct: 2,
+                                hint: "The atomic number equals the number of protons in the nucleus."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Elements in the same period (row) have the same number of electron shells.",
+                                correct: true,
+                                hint: "Row 1 elements have 1 shell, row 2 elements have 2 shells, etc."
                             }
                         ]
                     },
 
-                    // SECTION 6: CHEMICAL FORMULAS
+                    // SECTION 7: COMPOUNDS AND MOLECULES
+                    {
+                        title: "Compounds and Molecules",
+                        lesson: `<h3>🔗 Compounds and Molecules</h3>
+                            <p>Atoms can join with other atoms to form <strong>molecules</strong>!</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔗 Molecules</h4>
+                                <p><strong>Molecules</strong> = Atoms joined together</p>
+                                <p>Sometimes identical atoms group together (like O₂ - two oxygen atoms)</p>
+                                <p>A few atoms chemically join with identical atoms to form units called <strong>diatomic molecules</strong>.</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧪 Chemical Changes and Compounds</h4>
+                                <p>Most atoms join with different types of atoms in a process called a <strong>chemical change</strong> or <strong>chemical reaction</strong>.</p>
+                                <p>Usually the chemical change produces molecules known as <strong>compounds</strong>.</p>
+                                <p>Compounds are called compounds because the atoms come from two or more different elements.</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💧 Common Compounds</h4>
+                                <p><strong>H₂O (Water)</strong>: Hydrogen + Oxygen</p>
+                                <p>Hydrogen is extremely flammable. Oxygen is needed to make things burn.</p>
+                                <p>But water (H₂O) is used to put out fires! The compound has different properties than its elements.</p>
+                                <p><strong>NaCl (Table Salt)</strong>: Sodium + Chlorine</p>
+                                <p>Sodium is a metal that may cause an explosion when it reacts with water.</p>
+                                <p>Chlorine is a poisonous, greenish-colored gas.</p>
+                                <p>But together they form salt - safe to eat and necessary for good health!</p>
+                            </div>
+
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⚠️ Important!</h4>
+                                <p>All compounds are molecules, but NOT all molecules are compounds.</p>
+                                <p>O₂ is a molecule (two atoms bonded) but NOT a compound (same element).</p>
+                                <p>H₂O is both a molecule AND a compound (different elements).</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "Atoms can join with other atoms to form _______.",
+                                correct: "molecules",
+                                hint: "These are groups of atoms bonded together."
+                            },
+                            {
+                                type: "multiple",
+                                question: "A chemical change usually produces a:",
+                                options: ["Proton", "Neutron", "Compound", "Shell"],
+                                correct: 2,
+                                hint: "When different atoms join through a chemical reaction, they form this."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The process in which different types of atoms join to form a new substance is called a:",
+                                options: ["Physical change", "Chemical change", "Nuclear change", "No change"],
+                                correct: 1,
+                                hint: "This process creates compounds with new properties."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "All compounds are molecules, but not all molecules are compounds.",
+                                correct: true,
+                                hint: "O₂ is a molecule but not a compound because it has only one type of element."
+                            },
+                            {
+                                type: "multiple",
+                                question: "How is water (H₂O) different from the elements hydrogen and oxygen?",
+                                options: ["It has the same properties", "It is used to put out fires while hydrogen is flammable", "It has no properties", "It is a gas"],
+                                correct: 1,
+                                hint: "Compounds have very different properties from their original elements."
+                            },
+                            {
+                                type: "fillin",
+                                question: "The compound NaCl is commonly known as table _______.",
+                                correct: "salt",
+                                hint: "Sodium + Chlorine = this common seasoning."
+                            }
+                        ]
+                    },
+
+                    // SECTION 8: CHEMICAL FORMULAS
                     {
                         title: "Chemical Formulas",
                         lesson: `<h3>📝 Chemical Formulas</h3>
-                            <p>Scientists use <strong>chemical formulas</strong> to show what atoms are in a molecule!</p>
+                            <p>A <strong>chemical formula</strong> uses chemical symbols and numbers to abbreviate the name of a compound.</p>
 
                             <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>📝 Reading Chemical Formulas</h4>
-                                <p><strong>Letters</strong> = Element symbols (H, O, C, N)</p>
-                                <p><strong>Subscript numbers</strong> = How many of that atom</p>
+                                <p>A chemical formula tells a scientist information about a compound:</p>
+                                <p><strong>Letters</strong> = Element symbols (H, O, C, Na)</p>
+                                <p><strong>Subscript numbers</strong> = How many atoms of that element</p>
                                 <p>No number = just 1 atom</p>
                             </div>
 
@@ -4438,412 +4586,636 @@
                                 <h4>🔍 Examples</h4>
                                 <p><strong>H₂O</strong> = 2 Hydrogen + 1 Oxygen (water)</p>
                                 <p><strong>CO₂</strong> = 1 Carbon + 2 Oxygen (carbon dioxide)</p>
-                                <p><strong>O₂</strong> = 2 Oxygen atoms (oxygen gas)</p>
-                                <p><strong>C₆H₁₂O₆</strong> = 6 Carbon + 12 Hydrogen + 6 Oxygen (glucose/sugar)</p>
                                 <p><strong>NaCl</strong> = 1 Sodium + 1 Chlorine (table salt)</p>
+                                <p><strong>H₂CO₃</strong> = 2 Hydrogen + 1 Carbon + 3 Oxygen (carbonic acid)</p>
+                                <p><strong>NaHCO₃</strong> = Sodium + Hydrogen + Carbon + 3 Oxygen (baking soda)</p>
                             </div>
 
-                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>💡 Quick Tips</h4>
-                                <p>The small numbers (subscripts) tell you how MANY atoms</p>
-                                <p>If there's no number after a letter, it means there's just ONE</p>
-                                <p>Capital letters start new element symbols</p>
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Common Formulas to Know</h4>
+                                <p><strong>Cane sugar</strong>: C₁₂H₂₂O₁₁</p>
+                                <p><strong>Baking soda</strong>: NaHCO₃</p>
+                                <p><strong>Aspirin</strong>: C₉H₈O₄</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "In H₂O, how many hydrogen atoms are there?",
-                                options: ["1", "2", "3", "0"],
+                                question: "The atomic symbols and numbers used to abbreviate the name of a compound is called a:",
+                                options: ["Chemical symbol", "Chemical formula", "Periodic table", "Atomic number"],
                                 correct: 1,
-                                hint: "The small 2 after H tells you the number of hydrogen atoms."
+                                hint: "This tells you what atoms and how many are in a compound."
                             },
                             {
                                 type: "multiple",
-                                question: "In CO₂, how many oxygen atoms are there?",
-                                options: ["1", "2", "3", "0"],
+                                question: "What does the chemical formula H₂O tell a scientist?",
+                                options: ["There is 1 hydrogen and 2 oxygen", "There are 2 hydrogen and 1 oxygen", "There are 2 of each", "There is 1 of each"],
                                 correct: 1,
-                                hint: "The subscript 2 after O means there are 2 oxygen atoms."
-                            },
-                            {
-                                type: "multiple",
-                                question: "What does the formula NaCl represent?",
-                                options: ["Water", "Carbon dioxide", "Table salt", "Sugar"],
-                                correct: 2,
-                                hint: "Na is sodium and Cl is chlorine - together they make this common seasoning."
+                                hint: "The subscript 2 is after the H, meaning 2 hydrogen atoms."
                             },
                             {
                                 type: "fillin",
                                 question: "The chemical formula for water is _______.",
                                 correct: "H2O",
-                                hint: "Water has 2 hydrogen atoms and 1 oxygen atom."
-                            },
-                            {
-                                type: "truefalse",
-                                question: "In a chemical formula, if there's no number after an element symbol, it means there is one atom of that element.",
-                                correct: true,
-                                hint: "No subscript means just 1 - like the O in H₂O means 1 oxygen."
+                                hint: "Two hydrogen atoms and one oxygen atom."
                             },
                             {
                                 type: "multiple",
-                                question: "What is the chemical formula for carbon dioxide?",
-                                options: ["CO", "CO₂", "C₂O", "O₂C"],
-                                correct: 1,
-                                hint: "Carbon dioxide has 1 carbon and 2 oxygen atoms."
-                            }
-                        ]
-                    },
-
-                    // SECTION 7: STATES OF MATTER
-                    {
-                        title: "States of Matter",
-                        lesson: `<h3>🧊💧💨 States of Matter</h3>
-                            <p>Matter exists in three main states: <strong>solid, liquid, and gas</strong>!</p>
-
-                            <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🧊 SOLID</h4>
-                                <p><strong>Definite shape</strong> - keeps its own shape</p>
-                                <p><strong>Definite volume</strong> - takes up a fixed amount of space</p>
-                                <p>Particles are <strong>packed tightly</strong> and vibrate in place</p>
-                                <p><strong>Examples:</strong> Ice, rocks, wood, metal</p>
-                            </div>
-
-                            <div style="background: #b3e5fc; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>💧 LIQUID</h4>
-                                <p><strong>No definite shape</strong> - takes the shape of its container</p>
-                                <p><strong>Definite volume</strong> - takes up a fixed amount of space</p>
-                                <p>Particles can <strong>slide past each other</strong></p>
-                                <p><strong>Examples:</strong> Water, juice, oil, milk</p>
-                            </div>
-
-                            <div style="background: #e1f5fe; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>💨 GAS</h4>
-                                <p><strong>No definite shape</strong> - spreads to fill its container</p>
-                                <p><strong>No definite volume</strong> - expands or compresses</p>
-                                <p>Particles move <strong>freely and quickly</strong></p>
-                                <p><strong>Examples:</strong> Air, oxygen, water vapor, helium</p>
-                            </div>
-
-                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🔄 Changing States</h4>
-                                <p><strong>Melting</strong>: Solid → Liquid (add heat)</p>
-                                <p><strong>Freezing</strong>: Liquid → Solid (remove heat)</p>
-                                <p><strong>Evaporation/Boiling</strong>: Liquid → Gas (add heat)</p>
-                                <p><strong>Condensation</strong>: Gas → Liquid (remove heat)</p>
-                            </div>`,
-                        questions: [
-                            {
-                                type: "multiple",
-                                question: "Which state of matter has a definite shape AND definite volume?",
-                                options: ["Solid", "Liquid", "Gas", "All of them"],
+                                question: "What does H₂CO₃ tell you about carbonic acid?",
+                                options: ["2 hydrogen, 1 carbon, 3 oxygen", "2 hydrogen, 3 carbon, 1 oxygen", "1 hydrogen, 2 carbon, 3 oxygen", "3 hydrogen, 2 carbon, 1 oxygen"],
                                 correct: 0,
-                                hint: "This state keeps its own shape - like ice or a rock."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Which state of matter takes the shape of its container but has a definite volume?",
-                                options: ["Solid", "Liquid", "Gas", "None of them"],
-                                correct: 1,
-                                hint: "Pour water into different containers - it changes shape but has the same volume."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Which state of matter has no definite shape AND no definite volume?",
-                                options: ["Solid", "Liquid", "Gas", "All of them"],
-                                correct: 2,
-                                hint: "This state spreads out to fill any container - like air."
-                            },
-                            {
-                                type: "fillin",
-                                question: "The change from solid to liquid is called _______.",
-                                correct: "melting",
-                                hint: "Think of what happens when ice gets warm."
-                            },
-                            {
-                                type: "fillin",
-                                question: "The change from liquid to gas is called _______ or boiling.",
-                                correct: "evaporation",
-                                hint: "This happens when water turns into water vapor."
-                            },
-                            {
-                                type: "multiple",
-                                question: "What happens to particles when a solid melts into a liquid?",
-                                options: ["They stop moving", "They move faster and slide past each other", "They disappear", "They become larger"],
-                                correct: 1,
-                                hint: "Adding heat gives particles more energy to move around."
+                                hint: "Read the subscript numbers after each element symbol."
                             },
                             {
                                 type: "truefalse",
-                                question: "Condensation is when a gas changes into a liquid.",
+                                question: "In a chemical formula, if there's no number after an element, it means there is one atom of that element.",
                                 correct: true,
-                                hint: "Think of water droplets forming on a cold glass - that's condensation!"
+                                hint: "No subscript means just 1 - like the C in H₂CO₃ means 1 carbon."
                             }
                         ]
                     },
 
-                    // SECTION 8: PHYSICAL VS CHEMICAL CHANGES
+                    // SECTION 9: TYPES OF CHEMICAL REACTIONS
                     {
-                        title: "Physical vs. Chemical Changes",
-                        lesson: `<h3>⚡ Physical vs. Chemical Changes</h3>
-                            <p>Matter can change in two different ways!</p>
+                        title: "Types of Chemical Reactions",
+                        lesson: `<h3>⚗️ Types of Chemical Reactions</h3>
+                            <p>Chemical reactions occur when molecules combine or break apart to form new substances!</p>
 
-                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>📦 PHYSICAL CHANGES</h4>
-                                <p>The substance stays the SAME - only its appearance changes</p>
-                                <p><strong>NO new substance is formed</strong></p>
-                                <p>Usually REVERSIBLE (can be undone)</p>
-                                <p><strong>Examples:</strong></p>
-                                <ul>
-                                    <li>Ice melting into water</li>
-                                    <li>Cutting paper</li>
-                                    <li>Breaking glass</li>
-                                    <li>Dissolving sugar in water</li>
-                                </ul>
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>➕ Synthesis Reaction</h4>
+                                <p>Molecules <strong>combine</strong> to form a new substance.</p>
+                                <p>Example: Carbon dioxide (CO₂) reacts with water (H₂O) to form carbonic acid (H₂CO₃)</p>
+                                <p>Two or more substances → One new substance</p>
                             </div>
 
                             <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🔥 CHEMICAL CHANGES</h4>
-                                <p>A NEW substance is formed with different properties</p>
-                                <p><strong>A chemical reaction occurs</strong></p>
-                                <p>Usually NOT reversible</p>
-                                <p><strong>Examples:</strong></p>
-                                <ul>
-                                    <li>Burning wood</li>
-                                    <li>Rusting iron</li>
-                                    <li>Cooking an egg</li>
-                                    <li>Baking a cake</li>
-                                </ul>
+                                <h4>➖ Decomposition Reaction</h4>
+                                <p>A compound <strong>breaks apart</strong> into two or more simpler compounds.</p>
+                                <p>Example: When our bodies digest complex molecules like sugars, they break down into simpler molecules like water and carbon dioxide.</p>
+                                <p>One substance → Two or more simpler substances</p>
                             </div>
 
-                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🔍 Signs of a Chemical Change</h4>
-                                <ul>
-                                    <li>Color change</li>
-                                    <li>Gas bubbles produced</li>
-                                    <li>Temperature change (heat released or absorbed)</li>
-                                    <li>Light produced</li>
-                                    <li>New smell</li>
-                                    <li>Precipitate (solid) forms</li>
-                                </ul>
+                            <div style="background: #b3e5fc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔄 Single Replacement Reaction</h4>
+                                <p>One element <strong>replaces another</strong> element in a compound.</p>
+                                <p>Example: Zinc (Zn) replaces copper (Cu) in copper chloride (CuCl₂) to form zinc chloride (ZnCl₂)</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔄🔄 Double Replacement Reaction</h4>
+                                <p>Two elements <strong>switch places</strong> with each other.</p>
+                                <p>Compounds trade elements with each other.</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "Which is an example of a physical change?",
-                                options: ["Burning wood", "Rusting iron", "Melting ice", "Cooking an egg"],
-                                correct: 2,
-                                hint: "In a physical change, no new substance is formed - the water is still H₂O."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Which is an example of a chemical change?",
-                                options: ["Cutting paper", "Freezing water", "Burning wood", "Breaking glass"],
-                                correct: 2,
-                                hint: "Burning creates new substances like ash and carbon dioxide."
-                            },
-                            {
-                                type: "truefalse",
-                                question: "In a physical change, a new substance is formed.",
-                                correct: false,
-                                hint: "Physical changes only change appearance - the substance stays the same."
-                            },
-                            {
-                                type: "truefalse",
-                                question: "Rusting is a chemical change.",
-                                correct: true,
-                                hint: "When iron rusts, it combines with oxygen to form a new substance (iron oxide)."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Which is NOT a sign of a chemical change?",
-                                options: ["Color change", "Gas bubbles", "Change in shape", "New smell"],
-                                correct: 2,
-                                hint: "Changing shape is a physical change - like cutting or folding."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Dissolving sugar in water is a:",
-                                options: ["Chemical change", "Physical change", "Nuclear change", "No change"],
+                                question: "A reaction in which molecules combine to form a new substance is called a:",
+                                options: ["Decomposition reaction", "Synthesis reaction", "Replacement reaction", "Nuclear reaction"],
                                 correct: 1,
-                                hint: "The sugar can be recovered by evaporating the water - no new substance is formed."
+                                hint: "Synthesis means 'putting together'."
                             },
                             {
                                 type: "fillin",
-                                question: "A change that produces a new substance is called a _______ change.",
-                                correct: "chemical",
-                                hint: "This type of change involves a reaction that creates new materials."
+                                question: "A _______ reaction is when a compound breaks apart into two or more simpler compounds.",
+                                correct: "decomposition",
+                                hint: "This is the opposite of synthesis - breaking down."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "In a synthesis reaction, molecules combine to form a new substance.",
+                                correct: true,
+                                hint: "Synthesis = combining, putting together."
+                            },
+                            {
+                                type: "multiple",
+                                question: "When one element replaces another element in a compound, it is called a:",
+                                options: ["Synthesis reaction", "Decomposition reaction", "Single replacement reaction", "Double replacement reaction"],
+                                correct: 2,
+                                hint: "One element takes the place of another in the compound."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "In a decomposition reaction, a compound breaks down into simpler substances.",
+                                correct: true,
+                                hint: "Decomposition means breaking apart into smaller pieces."
                             }
                         ]
                     },
 
-                    // SECTION 9: MIXTURES AND SOLUTIONS
+                    // SECTION 10: ATOMIC BONDS
                     {
-                        title: "Mixtures and Solutions",
-                        lesson: `<h3>🥗 Mixtures and Solutions</h3>
-                            <p>Sometimes substances are combined WITHOUT forming new compounds!</p>
+                        title: "Atomic Bonds: Covalent and Ionic",
+                        lesson: `<h3>🔗 Atomic Bonds</h3>
+                            <p>Atoms tend to form molecules based on the number of electrons in their outermost shell.</p>
 
                             <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🥗 MIXTURES</h4>
-                                <p><strong>Mixture</strong> = Two or more substances combined but NOT chemically bonded</p>
-                                <p>Each substance keeps its own properties</p>
-                                <p>Can usually be separated by physical means</p>
-                                <p><strong>Examples:</strong> Trail mix, salad, sand and water</p>
+                                <h4>⭐ Stable Atoms</h4>
+                                <p>If an atom's outermost shell is completely filled, it is <strong>closed</strong> and the atom is <strong>stable</strong>.</p>
+                                <p>Stable atoms are not likely to form compounds with other atoms.</p>
+                                <p><strong>Noble gases</strong> (like neon, argon, krypton) are stable atoms - they rarely undergo chemical reactions.</p>
+                                <p>Why do some atoms bond? <strong>To complete their outer shell of electrons!</strong></p>
                             </div>
 
-                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🧂 SOLUTIONS</h4>
-                                <p><strong>Solution</strong> = A special type of mixture where one substance dissolves completely in another</p>
-                                <p>Looks the same throughout (homogeneous)</p>
-                                <p><strong>Solute</strong> = The substance that dissolves (like salt)</p>
-                                <p><strong>Solvent</strong> = The substance that does the dissolving (like water)</p>
-                                <p><strong>Examples:</strong> Salt water, lemonade, air</p>
+                            <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🤝 Covalent Bonds</h4>
+                                <p><strong>Covalent bonds</strong> occur when atoms <strong>share</strong> pairs of electrons.</p>
+                                <p>By sharing electrons, the atoms fill in their outer shells.</p>
+                                <p>Gases and liquids are most likely to contain covalent bonds.</p>
+                                <p>Example: Oxygen (O₂) - two oxygen atoms share electrons. Water (H₂O) - hydrogen and oxygen share electrons.</p>
                             </div>
 
-                            <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>⚠️ Mixtures vs. Compounds</h4>
-                                <p><strong>Mixtures:</strong></p>
+                            <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⚡ Ions and Ionic Bonds</h4>
+                                <p>An <strong>ion</strong> is an atom that has gained or lost electrons.</p>
+                                <p>When an atom gains electrons, it becomes a <strong>negative ion</strong>.</p>
+                                <p>When an atom loses electrons, it becomes a <strong>positive ion</strong>.</p>
+                                <p><strong>Ionic bonds</strong> form when positive and negative ions are attracted to each other (like magnets!).</p>
+                                <p>Example: Table salt (NaCl) - sodium gives an electron to chlorine. They are held together by opposite charges.</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔑 Key Difference</h4>
+                                <p><strong>Covalent bonds</strong> = Atoms SHARE electrons</p>
+                                <p><strong>Ionic bonds</strong> = Atoms TRANSFER electrons, creating ions that attract</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "An atom that has gained or lost electrons is called an _______.",
+                                correct: "ion",
+                                hint: "This charged atom has more or fewer electrons than protons."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Covalent bonds occur when atoms:",
+                                options: ["Transfer electrons", "Share electrons", "Lose electrons", "Destroy electrons"],
+                                correct: 1,
+                                hint: "In covalent bonds, atoms share pairs of electrons."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Ionic bonds form when:",
+                                options: ["Atoms share electrons", "Positive and negative ions attract each other", "Atoms lose all electrons", "Atoms have no charge"],
+                                correct: 1,
+                                hint: "Opposite charges attract, like the north and south poles of magnets."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Noble gases rarely undergo chemical reactions because their outer shell is full.",
+                                correct: true,
+                                hint: "Atoms with complete outer shells are stable and don't need to bond."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Why do noble gases rarely undergo chemical reactions?",
+                                options: ["They are too heavy", "Their outermost shell is completely filled", "They have no electrons", "They are radioactive"],
+                                correct: 1,
+                                hint: "They are stable atoms - their outer shells are already complete."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What is the difference between covalent and ionic bonding?",
+                                options: ["They are the same", "Covalent bonds share electrons; ionic bonds transfer electrons", "Covalent bonds transfer electrons; ionic bonds share electrons", "Neither involves electrons"],
+                                correct: 1,
+                                hint: "Covalent = sharing, Ionic = transfer (giving/taking)."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "In a covalent bond, atoms share electrons.",
+                                correct: true,
+                                hint: "Covalent means 'sharing valence electrons'."
+                            }
+                        ]
+                    },
+
+                    // SECTION 11: ACIDS AND BASES
+                    {
+                        title: "Acids and Bases",
+                        lesson: `<h3>🧪 Acids and Bases</h3>
+                            <p>Acids and bases are compounds with special properties that make them useful to people in many ways.</p>
+
+                            <div style="background: #ffcdd2; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🍋 ACIDS</h4>
+                                <p><strong>Acids</strong> form hydrogen ions (H⁺) when dissolved in water.</p>
+                                <p>The strength of an acid depends on the number of hydrogen ions it forms.</p>
+                                <p><strong>Properties:</strong></p>
                                 <ul>
-                                    <li>NOT chemically combined</li>
-                                    <li>Can be separated by physical means</li>
-                                    <li>Each part keeps its properties</li>
+                                    <li>Taste <strong>sour</strong> (like lemon juice and vinegar)</li>
+                                    <li>Can burn and be <strong>corrosive</strong></li>
+                                    <li><strong>Corrosive acids</strong> can burn skin and dissolve metals</li>
                                 </ul>
-                                <p><strong>Compounds:</strong></p>
+                                <p><strong>Examples:</strong> Lemon juice, vinegar, stomach acid (hydrochloric acid)</p>
+                            </div>
+
+                            <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧼 BASES</h4>
+                                <p><strong>Bases</strong> form hydroxide ions (OH⁻) when dissolved in water.</p>
+                                <p>Bases that dissolve in water are called <strong>alkalis</strong>.</p>
+                                <p><strong>Properties:</strong></p>
                                 <ul>
-                                    <li>Chemically combined</li>
-                                    <li>Can only be separated by chemical means</li>
-                                    <li>Has NEW properties</li>
+                                    <li>Taste <strong>bitter</strong></li>
+                                    <li>Feel <strong>slippery</strong> (like soap)</li>
+                                    <li>Strong bases can be dangerous too!</li>
                                 </ul>
+                                <p><strong>Examples:</strong> Soap, baking soda, ammonia, bleach, drain cleaner</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💡 Remember!</h4>
+                                <p>Your stomach produces one of the strongest acids - <strong>hydrochloric acid</strong> - to help digest food!</p>
+                                <p>God designed our stomach with a special coating to protect it from this corrosive acid.</p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "What is a mixture?",
-                                options: ["Atoms bonded together", "Two or more substances combined but not chemically bonded", "A single element", "A type of atom"],
+                                question: "When acids are dissolved in water, what type of ions are formed?",
+                                options: ["Hydroxide ions", "Hydrogen ions", "Sodium ions", "Chloride ions"],
                                 correct: 1,
-                                hint: "In a mixture, substances are combined but can be separated physically."
+                                hint: "Acids produce H⁺ ions."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Bases that dissolve in water are called _______.",
+                                correct: "alkalis",
+                                hint: "This is another name for water-soluble bases."
                             },
                             {
                                 type: "multiple",
-                                question: "In a solution, the substance that dissolves is called the:",
-                                options: ["Solvent", "Solute", "Solution", "Mixture"],
+                                question: "Acids taste:",
+                                options: ["Sweet", "Sour", "Bitter", "Salty"],
                                 correct: 1,
-                                hint: "Think of salt dissolving in water - the salt is this."
+                                hint: "Think of how lemon juice and vinegar taste."
                             },
                             {
                                 type: "multiple",
-                                question: "In a solution, the substance that does the dissolving is called the:",
-                                options: ["Solute", "Solvent", "Solution", "Compound"],
-                                correct: 1,
-                                hint: "Water is often called the 'universal' one of these."
-                            },
-                            {
-                                type: "truefalse",
-                                question: "Salt water is an example of a solution.",
-                                correct: true,
-                                hint: "Salt dissolves completely in water, making a solution."
-                            },
-                            {
-                                type: "multiple",
-                                question: "Which is an example of a mixture?",
-                                options: ["Water (H₂O)", "Salt (NaCl)", "Trail mix", "Carbon dioxide (CO₂)"],
+                                question: "Bases taste:",
+                                options: ["Sweet", "Sour", "Bitter", "Salty"],
                                 correct: 2,
-                                hint: "Which one has parts that aren't chemically bonded and can be picked apart?"
+                                hint: "Bases have the opposite taste of acids."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Bases feel:",
+                                options: ["Rough", "Dry", "Slippery", "Sticky"],
+                                correct: 2,
+                                hint: "Think of how soap feels."
+                            },
+                            {
+                                type: "fillin",
+                                question: "Acids that can burn skin and dissolve metals are called _______ acids.",
+                                correct: "corrosive",
+                                hint: "These are very strong, dangerous acids."
                             },
                             {
                                 type: "truefalse",
-                                question: "Mixtures can usually be separated by physical means.",
+                                question: "Your stomach produces hydrochloric acid to help digest food.",
                                 correct: true,
-                                hint: "You can use filtering, sorting, or evaporation to separate mixtures."
+                                hint: "It's one of the strongest acids, but your stomach lining protects you."
                             }
                         ]
                     },
 
-                    // SECTION 10: CHAPTER REVIEW
+                    // SECTION 12: THE pH SCALE
+                    {
+                        title: "The pH Scale",
+                        lesson: `<h3>📏 The pH Scale</h3>
+                            <p>Scientists use a special scale to determine the concentration of acids or bases in a solution.</p>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📏 What is pH?</h4>
+                                <p>The <strong>pH scale</strong> is used to determine the amount of an acid or a base in a solution.</p>
+                                <p>The term "pH" comes from French words meaning "the power of hydrogen."</p>
+                                <p>The pH scale is numbered from <strong>0 to 14</strong>.</p>
+                            </div>
+
+                            <div style="background: #ffcdd2; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🍋 Acids: pH 0-6</h4>
+                                <p>Acids measure from <strong>0 to 6.9</strong> on the pH scale.</p>
+                                <p><strong>0</strong> = highly acidic (very strong acid)</p>
+                                <p><strong>6</strong> = slightly acidic (weak acid)</p>
+                                <p>Examples: Hydrochloric acid (0-1), Lemon (2-3), Vinegar (3-4), Tomato juice (4-5), Coffee (5-6)</p>
+                            </div>
+
+                            <div style="background: #c8e6c9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💧 Neutral: pH 7</h4>
+                                <p>A solution that is neither basic nor acidic is <strong>neutral</strong>.</p>
+                                <p>Pure water has a pH of <strong>7.0</strong> - exactly neutral.</p>
+                            </div>
+
+                            <div style="background: #bbdefb; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧼 Bases: pH 8-14</h4>
+                                <p>Bases measure from <strong>7.1 to 14</strong> on the pH scale.</p>
+                                <p><strong>8</strong> = slightly basic (weak base)</p>
+                                <p><strong>14</strong> = highly basic (very strong base)</p>
+                                <p>Examples: Baking soda (8-9), Toothpaste (9-10), Ammonia (11-12), Bleach (12-13), Lye/oven cleaner (13-14)</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "The pH scale is used to determine:",
+                                options: ["Temperature", "The amount of an acid or base in a solution", "Weight", "Volume"],
+                                correct: 1,
+                                hint: "pH measures how acidic or basic something is."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The pH scale ranges from:",
+                                options: ["1 to 10", "0 to 14", "0 to 100", "-7 to 7"],
+                                correct: 1,
+                                hint: "The scale goes from very acidic (0) to very basic (14)."
+                            },
+                            {
+                                type: "fillin",
+                                question: "A solution that is neither basic nor acidic is _______.",
+                                correct: "neutral",
+                                hint: "Pure water has this pH - right in the middle at 7."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Pure water has a pH of:",
+                                options: ["0", "5", "7", "14"],
+                                correct: 2,
+                                hint: "Water is neutral - right in the middle of the scale."
+                            },
+                            {
+                                type: "multiple",
+                                question: "A substance with a pH of 2 would be:",
+                                options: ["A strong acid", "A weak acid", "Neutral", "A strong base"],
+                                correct: 0,
+                                hint: "Low numbers (0-3) are strong acids."
+                            },
+                            {
+                                type: "multiple",
+                                question: "A substance with a pH of 12 would be:",
+                                options: ["A strong acid", "A weak acid", "Neutral", "A strong base"],
+                                correct: 3,
+                                hint: "High numbers (11-14) are strong bases."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Acids have a pH below 7 and bases have a pH above 7.",
+                                correct: true,
+                                hint: "7 is neutral - acids are lower, bases are higher."
+                            }
+                        ]
+                    },
+
+                    // SECTION 13: INDICATORS
+                    {
+                        title: "Indicators",
+                        lesson: `<h3>🌈 Indicators</h3>
+                            <p>How do scientists know if something is an acid or a base? They use <strong>indicators</strong>!</p>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔬 What is an Indicator?</h4>
+                                <p>An <strong>indicator</strong> is a substance that changes color when exposed to acid or base solutions.</p>
+                                <p>Indicators help scientists determine if a solution is acidic or basic - and how strong it is!</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📜 Litmus Paper</h4>
+                                <p><strong>Litmus paper</strong> is treated with an indicator substance made from lichens.</p>
+                                <p><strong>Blue litmus paper</strong> turns RED in acids</p>
+                                <p><strong>Red litmus paper</strong> turns BLUE in bases</p>
+                                <p>Litmus paper tells you if something is an acid or a base, but not how strong.</p>
+                            </div>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>📊 Indicator Paper (pH Paper)</h4>
+                                <p><strong>Indicator paper</strong> changes to different colors depending on the pH.</p>
+                                <p>It shows by its color the pH value of the solution.</p>
+                                <p>This gives MORE information than litmus paper - it tells you how strong the acid or base is!</p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🥬 Natural Indicators</h4>
+                                <p>Many natural substances can also indicate whether something is acidic or basic!</p>
+                                <p><strong>Red cabbage juice</strong> changes colors:</p>
+                                <ul>
+                                    <li>Bright red/pink = Strong acid</li>
+                                    <li>Purple = Neutral</li>
+                                    <li>Blue-green = Weak base</li>
+                                    <li>Yellow/green = Strong base</li>
+                                </ul>
+                                <p>Beets, pears, and other substances can also indicate pH by changing color!</p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "fillin",
+                                question: "An _______ is a substance that changes color when exposed to acid or base solutions.",
+                                correct: "indicator",
+                                hint: "This substance shows whether something is acidic or basic."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Blue litmus paper turns what color in an acid?",
+                                options: ["Blue", "Green", "Red", "Yellow"],
+                                correct: 2,
+                                hint: "Blue litmus turns this color when it touches an acid."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Red litmus paper turns what color in a base?",
+                                options: ["Red", "Blue", "Green", "Yellow"],
+                                correct: 1,
+                                hint: "Red litmus turns this color when it touches a base."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Which gives more information about pH - litmus paper or indicator paper?",
+                                options: ["Litmus paper", "Indicator paper", "They give the same information", "Neither shows pH"],
+                                correct: 1,
+                                hint: "One only tells acid/base, the other tells how strong."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Red cabbage juice can be used as a natural indicator.",
+                                correct: true,
+                                hint: "Red cabbage juice changes different colors based on pH."
+                            },
+                            {
+                                type: "multiple",
+                                question: "When red cabbage juice turns purple, the solution is:",
+                                options: ["Strongly acidic", "Weakly acidic", "Neutral", "Basic"],
+                                correct: 2,
+                                hint: "Purple indicates a neutral solution with pH around 7."
+                            }
+                        ]
+                    },
+
+                    // SECTION 14: NEUTRALIZATION AND SALTS
+                    {
+                        title: "Neutralization and Salts",
+                        lesson: `<h3>⚖️ Neutralizing Acids and Bases</h3>
+                            <p>When an acid and a base come in contact with each other, they <strong>neutralize</strong> each other!</p>
+
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>⚖️ Neutralization</h4>
+                                <p>When an acid and a base react, they <strong>neutralize</strong> each other.</p>
+                                <p>The properties of each substance change.</p>
+                                <p>The chemical reaction between an acid and a base produces <strong>water</strong> and a <strong>salt</strong>.</p>
+                                <p><strong>Acid + Base → Water + Salt</strong></p>
+                            </div>
+
+                            <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧂 What is a Salt?</h4>
+                                <p>A <strong>salt</strong> is an ionic compound formed from a reaction between an acid and a base.</p>
+                                <p>It contains positive ions from a base and negative ions from an acid.</p>
+                                <p>Most salts are composed of a metal and a nonmetal.</p>
+                            </div>
+
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🧂 Common Salts</h4>
+                                <p><strong>Table salt</strong> (NaCl) - sodium chloride</p>
+                                <p><strong>Salt substitute</strong> (KCl) - potassium chloride</p>
+                                <p><strong>Chalk</strong> (CaCO₃) - calcium carbonate</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>💊 Antacids</h4>
+                                <p>Sometimes people have too much acid in their stomach and get heartburn.</p>
+                                <p><strong>Antacid tablets</strong> contain a base material that stops or lessens the effect of stomach acid.</p>
+                                <p>The base in the antacid neutralizes the extra acid!</p>
+                                <p>Since most cleaners are bases, what can you assume? <strong>Most foods are acidic!</strong></p>
+                            </div>`,
+                        questions: [
+                            {
+                                type: "multiple",
+                                question: "When an acid and a base react, they:",
+                                options: ["Explode", "Neutralize each other", "Become more acidic", "Become more basic"],
+                                correct: 1,
+                                hint: "The acid and base cancel out each other's properties."
+                            },
+                            {
+                                type: "fillin",
+                                question: "A _______ is an ionic compound produced from a reaction between an acid and a base.",
+                                correct: "salt",
+                                hint: "Table salt (NaCl) is the most common example."
+                            },
+                            {
+                                type: "multiple",
+                                question: "The chemical reaction between an acid and a base produces:",
+                                options: ["Water and salt", "Carbon dioxide", "Oxygen", "Hydrogen"],
+                                correct: 0,
+                                hint: "Acid + Base → Water + Salt"
+                            },
+                            {
+                                type: "fillin",
+                                question: "Common salts include table salt, salt substitute, and _______.",
+                                correct: "chalk",
+                                hint: "This writing material is calcium carbonate (CaCO₃)."
+                            },
+                            {
+                                type: "truefalse",
+                                question: "Antacid tablets contain a base that neutralizes stomach acid.",
+                                correct: true,
+                                hint: "Antacids help people with too much stomach acid."
+                            },
+                            {
+                                type: "multiple",
+                                question: "Since most cleaners are bases, most foods are probably:",
+                                options: ["Basic", "Neutral", "Acidic", "Salty"],
+                                correct: 2,
+                                hint: "Bases neutralize acids, so cleaners are designed to clean up acidic food spills."
+                            }
+                        ]
+                    },
+
+                    // SECTION 15: CHAPTER 7 REVIEW
                     {
                         title: "Chapter 7 Review",
                         lesson: `<h3>📚 Chapter 7 Review: Atoms and Molecules</h3>
-                            <p>Let's review everything we learned about atoms and molecules!</p>
+                            <p>Let's review everything we learned!</p>
 
                             <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>⚛️ Key Vocabulary</h4>
-                                <p><strong>Matter</strong> = Anything with mass that takes up space</p>
-                                <p><strong>Atom</strong> = Smallest unit of matter</p>
-                                <p><strong>Element</strong> = Pure substance of one type of atom</p>
-                                <p><strong>Molecule</strong> = Two or more atoms bonded together</p>
-                                <p><strong>Compound</strong> = Molecule with different elements</p>
+                                <p><strong>Chemistry</strong> = Study of matter and how substances change</p>
+                                <p><strong>Atom</strong> = Smallest piece of an element</p>
+                                <p><strong>Element</strong> = Substance with only one kind of atom</p>
+                                <p><strong>Molecule</strong> = Atoms joined together</p>
+                                <p><strong>Compound</strong> = Molecule made of different elements</p>
+                                <p><strong>Ion</strong> = Atom that has gained or lost electrons</p>
                             </div>
 
                             <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 15px 0;">
                                 <h4>🔬 Parts of an Atom</h4>
                                 <p><strong>Protons</strong> = Positive (+), in nucleus</p>
-                                <p><strong>Neutrons</strong> = Neutral, in nucleus</p>
-                                <p><strong>Electrons</strong> = Negative (-), orbit the nucleus</p>
-                                <p><strong>Nucleus</strong> = Center of atom (protons + neutrons)</p>
+                                <p><strong>Neutrons</strong> = Neutral (N), in nucleus</p>
+                                <p><strong>Electrons</strong> = Negative (-), orbit in shells</p>
                             </div>
 
                             <div style="background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>🧊💧💨 States of Matter</h4>
-                                <p><strong>Solid</strong> = Definite shape and volume</p>
-                                <p><strong>Liquid</strong> = Definite volume, no definite shape</p>
-                                <p><strong>Gas</strong> = No definite shape or volume</p>
+                                <h4>📊 Periodic Table</h4>
+                                <p><strong>Periods</strong> = Horizontal rows (same number of shells)</p>
+                                <p><strong>Groups</strong> = Vertical columns (similar properties)</p>
+                                <p><strong>Atomic number</strong> = Number of protons</p>
+                                <p><strong>Atomic mass</strong> = Protons + neutrons</p>
+                            </div>
+
+                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                                <h4>🔗 Bonds</h4>
+                                <p><strong>Covalent bond</strong> = Atoms SHARE electrons</p>
+                                <p><strong>Ionic bond</strong> = Atoms TRANSFER electrons (ions attract)</p>
                             </div>
 
                             <div style="background: #ffccbc; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                                <h4>⚡ Types of Changes</h4>
-                                <p><strong>Physical Change</strong> = No new substance formed</p>
-                                <p><strong>Chemical Change</strong> = New substance formed</p>
+                                <h4>🧪 Acids and Bases</h4>
+                                <p><strong>Acids</strong> = pH 0-6, taste sour, form H⁺ ions</p>
+                                <p><strong>Neutral</strong> = pH 7 (water)</p>
+                                <p><strong>Bases</strong> = pH 8-14, taste bitter, feel slippery, form OH⁻ ions</p>
+                                <p><strong>Acid + Base → Water + Salt</strong></p>
                             </div>`,
                         questions: [
                             {
                                 type: "multiple",
-                                question: "What are the three subatomic particles?",
-                                options: ["Atoms, molecules, compounds", "Protons, neutrons, electrons", "Solids, liquids, gases", "Elements, mixtures, solutions"],
+                                question: "Chemistry is the study of:",
+                                options: ["Only living things", "Matter and how substances change", "Only outer space", "Only electricity"],
                                 correct: 1,
-                                hint: "These particles make up atoms - one positive, one negative, one neutral."
+                                hint: "Chemistry studies what matter is made of and how it reacts."
                             },
                             {
                                 type: "fillin",
                                 question: "The _______ is the center of an atom where protons and neutrons are found.",
                                 correct: "nucleus",
-                                hint: "This word also means the center or core of something."
+                                hint: "This dense center contains most of the atom's mass."
                             },
                             {
                                 type: "multiple",
-                                question: "What type of change occurs when ice melts?",
-                                options: ["Chemical change", "Physical change", "Nuclear change", "No change"],
+                                question: "Who developed the periodic table of elements?",
+                                options: ["Niels Bohr", "Robert Boyle", "Dmitri Mendeleev", "Albert Einstein"],
+                                correct: 2,
+                                hint: "This Russian chemist organized the elements in 1869."
+                            },
+                            {
+                                type: "multiple",
+                                question: "What type of bond involves atoms sharing electrons?",
+                                options: ["Ionic bond", "Covalent bond", "Nuclear bond", "Hydrogen bond"],
                                 correct: 1,
-                                hint: "The water is still H₂O - just in a different state."
+                                hint: "Covalent means 'sharing valence electrons'."
                             },
                             {
                                 type: "truefalse",
-                                question: "All matter is made up of atoms.",
+                                question: "The pH scale ranges from 0 to 14.",
                                 correct: true,
-                                hint: "Atoms are the building blocks of everything around you!"
+                                hint: "0 is most acidic, 7 is neutral, 14 is most basic."
                             },
                             {
                                 type: "multiple",
-                                question: "Which particle determines what element an atom is?",
-                                options: ["Electron", "Neutron", "Proton", "Nucleus"],
-                                correct: 2,
-                                hint: "The number of these positive particles defines the element."
-                            },
-                            {
-                                type: "multiple",
-                                question: "H₂O is an example of a:",
-                                options: ["Element", "Atom", "Compound", "Mixture"],
-                                correct: 2,
-                                hint: "Water is made of two different elements (H and O) bonded together."
+                                question: "An indicator is a substance that:",
+                                options: ["Changes color in acids and bases", "Makes acids stronger", "Creates new elements", "Destroys matter"],
+                                correct: 0,
+                                hint: "Indicators help identify acids and bases by changing color."
                             },
                             {
                                 type: "fillin",
-                                question: "A substance that dissolves in a solvent is called a _______.",
-                                correct: "solute",
-                                hint: "Salt is this when it dissolves in water."
+                                question: "When an acid and a base react, they produce water and a _______.",
+                                correct: "salt",
+                                hint: "This ionic compound is formed from neutralization."
                             },
                             {
                                 type: "truefalse",
-                                question: "Burning wood is a chemical change.",
+                                question: "All compounds are molecules, but not all molecules are compounds.",
                                 correct: true,
-                                hint: "Burning creates new substances like ash and carbon dioxide."
+                                hint: "O₂ is a molecule but not a compound (only one element)."
                             }
                         ]
                     }
