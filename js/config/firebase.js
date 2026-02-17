@@ -4,7 +4,7 @@
     // Access via global firebase object
 
     const firebaseConfig = {
-        apiKey: "***REMOVED***",
+        apiKey: "AIzaSyDiSmSBVokse4STiKtq_f4LzTC5vVybhqo",
         authDomain: "jordan-math-practice.firebaseapp.com",
         projectId: "jordan-math-practice",
         storageBucket: "jordan-math-practice.firebasestorage.app",
