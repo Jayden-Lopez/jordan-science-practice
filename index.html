@@ -7534,33 +7534,24 @@
                 options: question.options
             });
 
-            // TEST MODE: No immediate feedback
-            if (sessionStats.isTestMode) {
-                document.getElementById('feedback').style.display = 'none';
-                document.getElementById('submitBtn').style.display = 'none';
-                document.getElementById('nextBtn').style.display = 'inline-block';
-                selectedAnswer = null;
-                return;
-            }
-
-            // PRACTICE MODE: Show feedback immediately
+            // IMMEDIATE FEEDBACK FOR ALL MODES (Practice and Test)
             const feedback = document.getElementById('feedback');
             feedback.style.display = 'block';
             feedback.className = 'feedback ' + (isCorrect ? 'correct' : 'incorrect');
-            
+
             if (isCorrect) {
                 feedback.textContent = '✓ Correct! Great job!';
             } else {
                 if (question.type === 'multiple') {
-                    feedback.textContent = `✗ Not quite. The correct answer is: ${question.options[question.correct]}`;
+                    feedback.textContent = `✗ Incorrect. The correct answer is: ${question.options[question.correct]}`;
                 } else if (question.type === 'truefalse') {
-                    feedback.textContent = `✗ Not quite. The correct answer is: ${question.correct ? 'True' : 'False'}`;
+                    feedback.textContent = `✗ Incorrect. The correct answer is: ${question.correct ? 'True' : 'False'}`;
                 } else {
-                    feedback.textContent = `✗ Not quite. The correct answer is: ${question.correct}`;
+                    feedback.textContent = `✗ Incorrect. The correct answer is: ${question.correct}`;
                 }
             }
 
-            // Visual feedback on options (Practice mode only)
+            // Visual feedback on options - highlight correct/incorrect answers
             if (question.type === 'multiple' || question.type === 'truefalse') {
                 document.querySelectorAll('.option-btn').forEach((btn, i) => {
                     btn.onclick = null;
