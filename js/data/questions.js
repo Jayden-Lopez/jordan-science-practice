@@ -757,53 +757,401 @@ const questionBank = {
         }
     ],
     8: [ // Electricity and Magnetism
+        // Static Electricity
         {
             type: "multiple",
-            question: "What is electricity?",
+            question: "What particle has a negative charge?",
             options: [
-                "Movement of light",
-                "Flow of electric charge",
-                "Transfer of heat",
-                "Form of sound"
+                "Proton",
+                "Electron",
+                "Neutron",
+                "Nucleus"
             ],
             correct: 1,
-            hint: "Electricity involves tiny charged particles moving through a material."
-        },
-        {
-            type: "truefalse",
-            question: "Magnets have two poles: north and south.",
-            correct: true,
-            hint: "Every magnet has two opposite ends or poles."
+            hint: "This tiny particle orbits around the nucleus and can move from one atom to another."
         },
         {
             type: "multiple",
-            question: "Materials that allow electricity to flow through them easily are called:",
+            question: "What happens when two objects with the same charge are brought together?",
             options: [
-                "Insulators",
-                "Conductors",
-                "Resistors",
-                "Transformers"
+                "They attract each other",
+                "Nothing happens",
+                "They repel each other",
+                "They become neutral"
             ],
-            correct: 1,
-            hint: "Metals like copper and aluminum are good examples of these materials."
+            correct: 2,
+            hint: "Think about what 'like charges' do according to the Law of Electric Charges."
         },
         {
             type: "fillin",
-            question: "A path through which electric current can flow is called a _______.",
-            correct: "circuit",
-            hint: "This word describes a complete loop for electricity to travel through."
+            question: "The buildup of electric charges on an object is called _______ electricity.",
+            correct: "static",
+            hint: "This type of electricity stays in place rather than flowing."
+        },
+        {
+            type: "truefalse",
+            question: "When an object loses electrons, it becomes negatively charged.",
+            correct: false,
+            hint: "Electrons have a negative charge. If you LOSE something negative, what happens to the overall charge?"
         },
         {
             type: "multiple",
-            question: "What happens when like poles of two magnets are brought together?",
+            question: "Which is an example of static electricity?",
             options: [
-                "They attract",
-                "They repel",
-                "They stick together",
-                "Nothing happens"
+                "Getting a shock after walking on carpet",
+                "A flashlight turning on",
+                "A ceiling fan spinning",
+                "A phone charging"
+            ],
+            correct: 0,
+            hint: "Static electricity involves a sudden discharge of built-up charges."
+        },
+        {
+            type: "multiple",
+            question: "According to the Law of Electric Charges, what do opposite charges do?",
+            options: [
+                "Repel each other",
+                "Attract each other",
+                "Cancel each other out",
+                "Nothing"
             ],
             correct: 1,
-            hint: "Like poles (north-north or south-south) push away from each other."
+            hint: "Think about positive (+) and negative (-) charges coming near each other."
+        },
+        // Current Electricity
+        {
+            type: "multiple",
+            question: "What is the continuous flow of electric charges called?",
+            options: [
+                "Static electricity",
+                "Magnetic field",
+                "Current electricity",
+                "Resistance"
+            ],
+            correct: 2,
+            hint: "This type of electricity flows continuously, unlike static electricity which stays in place."
+        },
+        {
+            type: "fillin",
+            question: "A material that allows electricity to flow easily is called a _______.",
+            correct: "conductor",
+            hint: "Copper wire is an example of this type of material. It 'conducts' electricity."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is an insulator?",
+            options: [
+                "Copper wire",
+                "Aluminum foil",
+                "Salt water",
+                "Rubber"
+            ],
+            correct: 3,
+            hint: "This material is often used to coat electrical wires to keep us safe."
+        },
+        {
+            type: "truefalse",
+            question: "Voltage is the 'push' that moves electrons through a circuit.",
+            correct: true,
+            hint: "Think of voltage like water pressure in a hose - it pushes the water (electrons) through."
+        },
+        {
+            type: "fillin",
+            question: "A material that resists the flow of electricity is called an _______.",
+            correct: "insulator",
+            hint: "Rubber and plastic are examples. They 'insulate' against electricity."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is a good conductor of electricity?",
+            options: [
+                "Rubber",
+                "Plastic",
+                "Copper",
+                "Glass"
+            ],
+            correct: 2,
+            hint: "This metal is used in most electrical wires because electricity flows through it easily."
+        },
+        {
+            type: "multiple",
+            question: "Current is measured in units called:",
+            options: [
+                "Volts",
+                "Amperes (amps)",
+                "Ohms",
+                "Watts"
+            ],
+            correct: 1,
+            hint: "This unit measures how much electric charge flows through a circuit."
+        },
+        // Circuits
+        {
+            type: "multiple",
+            question: "In which type of circuit are all components connected in a single path?",
+            options: [
+                "Parallel circuit",
+                "Series circuit",
+                "Open circuit",
+                "Closed circuit"
+            ],
+            correct: 1,
+            hint: "Think of 'series' like a TV series - one episode follows another in a single sequence."
+        },
+        {
+            type: "multiple",
+            question: "What happens in a series circuit if one light bulb burns out?",
+            options: [
+                "All the lights go out",
+                "Only that light goes out",
+                "The other lights get brighter",
+                "Nothing happens"
+            ],
+            correct: 0,
+            hint: "In a series circuit, there's only ONE path for electricity. What happens if that path is broken?"
+        },
+        {
+            type: "truefalse",
+            question: "In a parallel circuit, if one component fails, the others keep working.",
+            correct: true,
+            hint: "Parallel circuits have multiple paths - electricity can take other routes."
+        },
+        {
+            type: "fillin",
+            question: "A complete, closed path through which electricity flows is called a _______.",
+            correct: "circuit",
+            hint: "This word comes from Latin meaning 'to go around.'"
+        },
+        {
+            type: "multiple",
+            question: "Which of these is NOT required for a basic electric circuit?",
+            options: [
+                "Power source (battery)",
+                "Conductor (wire)",
+                "Magnet",
+                "Load (light bulb)"
+            ],
+            correct: 2,
+            hint: "A basic circuit needs power, something to carry the electricity, and something to use the electricity."
+        },
+        {
+            type: "multiple",
+            question: "Why are the wires in your house arranged in parallel circuits instead of series?",
+            options: [
+                "Parallel circuits use less electricity",
+                "If one device breaks, the others still work",
+                "Parallel circuits are cheaper to install",
+                "Series circuits are illegal"
+            ],
+            correct: 1,
+            hint: "What would happen if all your lights were in series and one bulb burned out?"
+        },
+        {
+            type: "truefalse",
+            question: "An open circuit allows electricity to flow.",
+            correct: false,
+            hint: "An 'open' circuit has a break in it - like a switch turned off."
+        },
+        {
+            type: "multiple",
+            question: "What does a switch do in a circuit?",
+            options: [
+                "Increases the voltage",
+                "Opens or closes the circuit",
+                "Creates more electricity",
+                "Stores electricity"
+            ],
+            correct: 1,
+            hint: "A switch controls whether electricity can flow through the circuit or not."
+        },
+        // Magnets
+        {
+            type: "multiple",
+            question: "What are the two ends of a magnet called?",
+            options: [
+                "Positive and negative",
+                "North and south poles",
+                "Top and bottom",
+                "Strong and weak ends"
+            ],
+            correct: 1,
+            hint: "These are named after directions on a compass."
+        },
+        {
+            type: "multiple",
+            question: "What happens when you bring two north poles together?",
+            options: [
+                "They repel each other",
+                "They attract each other",
+                "Nothing happens",
+                "They become south poles"
+            ],
+            correct: 0,
+            hint: "Like poles behave the same way as like electric charges."
+        },
+        {
+            type: "fillin",
+            question: "The invisible area around a magnet where magnetic force acts is called a _______.",
+            correct: "magnetic field",
+            hint: "It's two words: _______ field."
+        },
+        {
+            type: "truefalse",
+            question: "Opposite magnetic poles repel each other.",
+            correct: false,
+            hint: "Think about north and south poles - do they push apart or pull together?"
+        },
+        {
+            type: "multiple",
+            question: "Which metal is NOT attracted to magnets?",
+            options: [
+                "Iron",
+                "Nickel",
+                "Cobalt",
+                "Aluminum"
+            ],
+            correct: 3,
+            hint: "Only iron, nickel, and cobalt are magnetic. This metal is used in foil and cans."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is attracted to a magnet?",
+            options: [
+                "Wood",
+                "Plastic",
+                "Iron",
+                "Glass"
+            ],
+            correct: 2,
+            hint: "Magnets attract certain metals, especially this one used to make steel."
+        },
+        {
+            type: "truefalse",
+            question: "A compass works because Earth acts like a giant magnet.",
+            correct: true,
+            hint: "Earth has a magnetic field with north and south magnetic poles."
+        },
+        // Electromagnets
+        {
+            type: "multiple",
+            question: "What type of magnet is created by electric current flowing through a coil of wire?",
+            options: [
+                "Permanent magnet",
+                "Temporary magnet",
+                "Electromagnet",
+                "Bar magnet"
+            ],
+            correct: 2,
+            hint: "The name combines 'electric' and 'magnet.'"
+        },
+        {
+            type: "multiple",
+            question: "Which of these will make an electromagnet stronger?",
+            options: [
+                "Using fewer coils of wire",
+                "Adding an iron core",
+                "Decreasing the current",
+                "Using plastic instead of iron"
+            ],
+            correct: 1,
+            hint: "Iron is a magnetic material - putting it inside the coil concentrates the magnetic field."
+        },
+        {
+            type: "truefalse",
+            question: "When you turn off the electricity to an electromagnet, it loses its magnetism.",
+            correct: true,
+            hint: "Unlike permanent magnets, electromagnets depend on electric current to work."
+        },
+        {
+            type: "fillin",
+            question: "A magnet made by wrapping wire around an iron core and running electricity through it is an _______.",
+            correct: "electromagnet",
+            hint: "Combine the words 'electric' and 'magnet.'"
+        },
+        {
+            type: "multiple",
+            question: "Which device uses an electromagnet?",
+            options: [
+                "A compass",
+                "A refrigerator magnet",
+                "A bar magnet",
+                "An electric motor"
+            ],
+            correct: 3,
+            hint: "This device needs electricity to work and converts electrical energy to motion."
+        },
+        {
+            type: "multiple",
+            question: "Who discovered that electricity and magnetism are connected?",
+            options: [
+                "Hans Christian Oersted",
+                "Isaac Newton",
+                "Albert Einstein",
+                "Benjamin Franklin"
+            ],
+            correct: 0,
+            hint: "This Danish scientist noticed that a compass needle moved when placed near a wire carrying electric current."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is a use for electromagnets?",
+            options: [
+                "Making permanent magnets",
+                "Lifting heavy scrap metal at junkyards",
+                "Replacing batteries",
+                "Storing electricity"
+            ],
+            correct: 1,
+            hint: "Electromagnets can be turned on and off, which is useful for picking up and dropping metal objects."
+        },
+        // Review/Mixed Questions
+        {
+            type: "multiple",
+            question: "How are the Law of Electric Charges and the Law of Magnetic Poles similar?",
+            options: [
+                "Both only work with electricity",
+                "Both only work with magnets",
+                "Both say opposites attract and likes repel",
+                "They are completely different"
+            ],
+            correct: 2,
+            hint: "Think about what happens with + and - charges, and what happens with N and S poles."
+        },
+        {
+            type: "fillin",
+            question: "Electric current is the flow of _______ through a conductor.",
+            correct: "electrons",
+            hint: "These are the negatively charged particles that orbit the nucleus."
+        },
+        {
+            type: "multiple",
+            question: "What is the difference between a permanent magnet and an electromagnet?",
+            options: [
+                "Permanent magnets are stronger",
+                "Electromagnets can be turned on and off",
+                "Permanent magnets use electricity",
+                "There is no difference"
+            ],
+            correct: 1,
+            hint: "One type keeps its magnetism all the time, the other only when electricity flows."
+        },
+        {
+            type: "truefalse",
+            question: "Static electricity flows continuously through a wire.",
+            correct: false,
+            hint: "Static means 'not moving.' Current electricity is what flows through wires."
+        },
+        {
+            type: "multiple",
+            question: "What three things are needed to make an electromagnet?",
+            options: [
+                "Battery, magnet, and wood",
+                "Wire coil, iron core, and electric current",
+                "Copper, glass, and plastic",
+                "North pole, south pole, and battery"
+            ],
+            correct: 1,
+            hint: "You need something to carry electricity, something magnetic inside, and a power source."
         }
     ],
     9: [ // Motion and Machines
