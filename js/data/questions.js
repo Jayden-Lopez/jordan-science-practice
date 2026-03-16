@@ -757,30 +757,18 @@ const questionBank = {
         }
     ],
     8: [ // Electricity and Magnetism
-        // Static Electricity
+        // === STATIC VS CURRENT ELECTRICITY ===
         {
             type: "multiple",
-            question: "What particle has a negative charge?",
+            question: "What is the main difference between static electricity and current electricity?",
             options: [
-                "Proton",
-                "Electron",
-                "Neutron",
-                "Nucleus"
+                "Static is stronger than current",
+                "Static stays in place; current flows continuously",
+                "Current only works with magnets",
+                "There is no difference"
             ],
             correct: 1,
-            hint: "This tiny particle orbits around the nucleus and can move from one atom to another."
-        },
-        {
-            type: "multiple",
-            question: "What happens when two objects with the same charge are brought together?",
-            options: [
-                "They attract each other",
-                "Nothing happens",
-                "They repel each other",
-                "They become neutral"
-            ],
-            correct: 2,
-            hint: "Think about what 'like charges' do according to the Law of Electric Charges."
+            hint: "Think about what 'static' means - not moving. Current means flowing."
         },
         {
             type: "fillin",
@@ -790,9 +778,9 @@ const questionBank = {
         },
         {
             type: "truefalse",
-            question: "When an object loses electrons, it becomes negatively charged.",
-            correct: false,
-            hint: "Electrons have a negative charge. If you LOSE something negative, what happens to the overall charge?"
+            question: "Current electricity flows continuously through a conductor.",
+            correct: true,
+            hint: "Current means flow - electricity moves through wires continuously."
         },
         {
             type: "multiple",
@@ -806,58 +794,16 @@ const questionBank = {
             correct: 0,
             hint: "Static electricity involves a sudden discharge of built-up charges."
         },
-        {
-            type: "multiple",
-            question: "According to the Law of Electric Charges, what do opposite charges do?",
-            options: [
-                "Repel each other",
-                "Attract each other",
-                "Cancel each other out",
-                "Nothing"
-            ],
-            correct: 1,
-            hint: "Think about positive (+) and negative (-) charges coming near each other."
-        },
-        // Current Electricity
-        {
-            type: "multiple",
-            question: "What is the continuous flow of electric charges called?",
-            options: [
-                "Static electricity",
-                "Magnetic field",
-                "Current electricity",
-                "Resistance"
-            ],
-            correct: 2,
-            hint: "This type of electricity flows continuously, unlike static electricity which stays in place."
-        },
+        // === CONDUCTORS AND INSULATORS ===
         {
             type: "fillin",
             question: "A material that allows electricity to flow easily is called a _______.",
             correct: "conductor",
-            hint: "Copper wire is an example of this type of material. It 'conducts' electricity."
-        },
-        {
-            type: "multiple",
-            question: "Which of these is an insulator?",
-            options: [
-                "Copper wire",
-                "Aluminum foil",
-                "Salt water",
-                "Rubber"
-            ],
-            correct: 3,
-            hint: "This material is often used to coat electrical wires to keep us safe."
-        },
-        {
-            type: "truefalse",
-            question: "Voltage is the 'push' that moves electrons through a circuit.",
-            correct: true,
-            hint: "Think of voltage like water pressure in a hose - it pushes the water (electrons) through."
+            hint: "Copper wire is an example. It 'conducts' electricity."
         },
         {
             type: "fillin",
-            question: "A material that resists the flow of electricity is called an _______.",
+            question: "A material that resists or blocks the flow of electricity is called an _______.",
             correct: "insulator",
             hint: "Rubber and plastic are examples. They 'insulate' against electricity."
         },
@@ -871,32 +817,69 @@ const questionBank = {
                 "Glass"
             ],
             correct: 2,
-            hint: "This metal is used in most electrical wires because electricity flows through it easily."
+            hint: "This metal is used in most electrical wires."
         },
         {
             type: "multiple",
-            question: "Current is measured in units called:",
+            question: "Which of these is an insulator?",
             options: [
-                "Volts",
-                "Amperes (amps)",
-                "Ohms",
-                "Watts"
+                "Copper wire",
+                "Aluminum foil",
+                "Silver",
+                "Rubber"
             ],
-            correct: 1,
-            hint: "This unit measures how much electric charge flows through a circuit."
+            correct: 3,
+            hint: "This material is used to coat electrical wires to keep us safe."
         },
-        // Circuits
+        // === CIRCUITS ===
+        {
+            type: "fillin",
+            question: "A complete, closed path through which electricity flows is called a _______.",
+            correct: "circuit",
+            hint: "This word comes from Latin meaning 'to go around.'"
+        },
         {
             type: "multiple",
-            question: "In which type of circuit are all components connected in a single path?",
+            question: "What does a switch do in a circuit?",
             options: [
-                "Parallel circuit",
-                "Series circuit",
-                "Open circuit",
-                "Closed circuit"
+                "Increases the voltage",
+                "Opens or closes the circuit to control electricity flow",
+                "Creates more electricity",
+                "Stores electricity"
             ],
             correct: 1,
-            hint: "Think of 'series' like a TV series - one episode follows another in a single sequence."
+            hint: "A switch controls whether electricity can flow or not."
+        },
+        {
+            type: "fillin",
+            question: "A device that opens or closes a circuit is called a _______.",
+            correct: "switch",
+            hint: "You use one of these to turn lights on and off."
+        },
+        // === SERIES AND PARALLEL CIRCUITS ===
+        {
+            type: "multiple",
+            question: "In a series circuit, components are connected:",
+            options: [
+                "In separate branches",
+                "In a single path, one after another",
+                "Without any wires",
+                "Only to batteries"
+            ],
+            correct: 1,
+            hint: "Series means one after another, like a TV series."
+        },
+        {
+            type: "multiple",
+            question: "In a parallel circuit, components are connected:",
+            options: [
+                "In a single path",
+                "One after another",
+                "In separate branches",
+                "Without a power source"
+            ],
+            correct: 2,
+            hint: "Parallel circuits have multiple paths for electricity to flow."
         },
         {
             type: "multiple",
@@ -908,7 +891,7 @@ const questionBank = {
                 "Nothing happens"
             ],
             correct: 0,
-            hint: "In a series circuit, there's only ONE path for electricity. What happens if that path is broken?"
+            hint: "In a series circuit, there's only ONE path. If it breaks, no electricity flows."
         },
         {
             type: "truefalse",
@@ -917,54 +900,165 @@ const questionBank = {
             hint: "Parallel circuits have multiple paths - electricity can take other routes."
         },
         {
-            type: "fillin",
-            question: "A complete, closed path through which electricity flows is called a _______.",
-            correct: "circuit",
-            hint: "This word comes from Latin meaning 'to go around.'"
-        },
-        {
             type: "multiple",
-            question: "Which of these is NOT required for a basic electric circuit?",
-            options: [
-                "Power source (battery)",
-                "Conductor (wire)",
-                "Magnet",
-                "Load (light bulb)"
-            ],
-            correct: 2,
-            hint: "A basic circuit needs power, something to carry the electricity, and something to use the electricity."
-        },
-        {
-            type: "multiple",
-            question: "Why are the wires in your house arranged in parallel circuits instead of series?",
+            question: "Why are the wires in your house arranged in parallel circuits?",
             options: [
                 "Parallel circuits use less electricity",
                 "If one device breaks, the others still work",
-                "Parallel circuits are cheaper to install",
+                "Parallel circuits are cheaper",
                 "Series circuits are illegal"
             ],
             correct: 1,
             hint: "What would happen if all your lights were in series and one bulb burned out?"
         },
+        // === SHORT CIRCUITS AND RESISTORS ===
         {
-            type: "truefalse",
-            question: "An open circuit allows electricity to flow.",
-            correct: false,
-            hint: "An 'open' circuit has a break in it - like a switch turned off."
+            type: "multiple",
+            question: "What is a short circuit?",
+            options: [
+                "A circuit that is very small",
+                "An unintended path that allows too much current to flow",
+                "A circuit with no battery",
+                "A circuit that uses less electricity"
+            ],
+            correct: 1,
+            hint: "A short circuit bypasses the normal path and can cause overheating or fires."
+        },
+        {
+            type: "fillin",
+            question: "An unintended path in a circuit that allows too much current to flow is called a _______ circuit.",
+            correct: "short",
+            hint: "This dangerous situation can cause wires to overheat."
         },
         {
             type: "multiple",
-            question: "What does a switch do in a circuit?",
+            question: "What does a resistor do in a circuit?",
             options: [
-                "Increases the voltage",
-                "Opens or closes the circuit",
-                "Creates more electricity",
-                "Stores electricity"
+                "Increases electricity flow",
+                "Limits or controls the flow of electricity",
+                "Stores electricity",
+                "Creates magnetism"
             ],
             correct: 1,
-            hint: "A switch controls whether electricity can flow through the circuit or not."
+            hint: "A resistor 'resists' the flow of current."
         },
-        // Magnets
+        {
+            type: "fillin",
+            question: "A component that limits or controls the flow of current in a circuit is called a _______.",
+            correct: "resistor",
+            hint: "This component 'resists' electricity flow."
+        },
+        // === ELECTRICAL MEASUREMENTS: VOLTS, WATTS, AMPERES ===
+        {
+            type: "multiple",
+            question: "What unit measures voltage (electrical pressure)?",
+            options: [
+                "Watts",
+                "Amperes",
+                "Volts",
+                "Ohms"
+            ],
+            correct: 2,
+            hint: "This unit is named after Alessandro Volta."
+        },
+        {
+            type: "fillin",
+            question: "The unit that measures electrical pressure or force is called a _______.",
+            correct: "volt",
+            hint: "A typical wall outlet in the US provides 120 of these."
+        },
+        {
+            type: "multiple",
+            question: "What unit measures electric current (the flow of electrons)?",
+            options: [
+                "Volts",
+                "Watts",
+                "Amperes (amps)",
+                "Ohms"
+            ],
+            correct: 2,
+            hint: "This unit is named after André-Marie Ampère."
+        },
+        {
+            type: "fillin",
+            question: "The unit that measures the flow of electric current is called an _______.",
+            correct: "ampere",
+            hint: "This is often shortened to 'amp.'"
+        },
+        {
+            type: "multiple",
+            question: "What unit measures electrical power (how much energy is used)?",
+            options: [
+                "Volts",
+                "Amperes",
+                "Watts",
+                "Ohms"
+            ],
+            correct: 2,
+            hint: "Light bulbs are rated in this unit - like a 60-____ bulb."
+        },
+        {
+            type: "fillin",
+            question: "The unit that measures how much electrical power a device uses is called a _______.",
+            correct: "watt",
+            hint: "A 100-____ light bulb uses more power than a 60-____ bulb."
+        },
+        {
+            type: "multiple",
+            question: "A 1500-watt blow dryer uses more power than a 750-watt blow dryer. What might happen if too many high-wattage devices are on the same circuit?",
+            options: [
+                "Nothing happens",
+                "The circuit could overload and trip a breaker",
+                "The devices work better",
+                "The electricity becomes free"
+            ],
+            correct: 1,
+            hint: "Circuits have limits. Too much power draw can overload them."
+        },
+        // === BATTERIES AND ELECTRIC CELLS ===
+        {
+            type: "multiple",
+            question: "What is an electric cell?",
+            options: [
+                "A type of light bulb",
+                "A device that converts chemical energy to electrical energy",
+                "A type of wire",
+                "A measurement of electricity"
+            ],
+            correct: 1,
+            hint: "A battery is made of one or more of these."
+        },
+        {
+            type: "fillin",
+            question: "A device that converts chemical energy into electrical energy is called an electric _______.",
+            correct: "cell",
+            hint: "A battery contains one or more of these."
+        },
+        {
+            type: "multiple",
+            question: "What is an electrolyte?",
+            options: [
+                "A type of magnet",
+                "A chemical substance that conducts electricity in a battery",
+                "A unit of measurement",
+                "A type of circuit"
+            ],
+            correct: 1,
+            hint: "This substance inside a battery allows ions to move between electrodes."
+        },
+        {
+            type: "fillin",
+            question: "The chemical substance inside a battery that allows electricity to flow is called an _______.",
+            correct: "electrolyte",
+            hint: "This conducts electricity through chemical reactions."
+        },
+        {
+            type: "truefalse",
+            question: "A battery converts chemical energy into electrical energy.",
+            correct: true,
+            hint: "Chemical reactions inside the battery produce electricity."
+        },
+        // === MAGNETS AND MAGNETIC FIELDS ===
         {
             type: "multiple",
             question: "What are the two ends of a magnet called?",
@@ -972,186 +1066,409 @@ const questionBank = {
                 "Positive and negative",
                 "North and south poles",
                 "Top and bottom",
-                "Strong and weak ends"
+                "Strong and weak"
             ],
             correct: 1,
-            hint: "These are named after directions on a compass."
-        },
-        {
-            type: "multiple",
-            question: "What happens when you bring two north poles together?",
-            options: [
-                "They repel each other",
-                "They attract each other",
-                "Nothing happens",
-                "They become south poles"
-            ],
-            correct: 0,
-            hint: "Like poles behave the same way as like electric charges."
+            hint: "These are named after directions, like on a compass."
         },
         {
             type: "fillin",
             question: "The invisible area around a magnet where magnetic force acts is called a _______.",
             correct: "magnetic field",
-            hint: "It's two words: _______ field."
-        },
-        {
-            type: "truefalse",
-            question: "Opposite magnetic poles repel each other.",
-            correct: false,
-            hint: "Think about north and south poles - do they push apart or pull together?"
+            hint: "Two words: magnetic _______."
         },
         {
             type: "multiple",
-            question: "Which metal is NOT attracted to magnets?",
+            question: "What happens when you bring two north poles together?",
             options: [
-                "Iron",
-                "Nickel",
-                "Cobalt",
-                "Aluminum"
+                "They attract each other",
+                "They repel each other",
+                "Nothing happens",
+                "They become south poles"
             ],
-            correct: 3,
-            hint: "Only iron, nickel, and cobalt are magnetic. This metal is used in foil and cans."
-        },
-        {
-            type: "multiple",
-            question: "Which of these is attracted to a magnet?",
-            options: [
-                "Wood",
-                "Plastic",
-                "Iron",
-                "Glass"
-            ],
-            correct: 2,
-            hint: "Magnets attract certain metals, especially this one used to make steel."
+            correct: 1,
+            hint: "Like poles repel, opposite poles attract."
         },
         {
             type: "truefalse",
-            question: "A compass works because Earth acts like a giant magnet.",
+            question: "Opposite magnetic poles attract each other.",
             correct: true,
-            hint: "Earth has a magnetic field with north and south magnetic poles."
+            hint: "North and south poles are attracted to each other."
         },
-        // Electromagnets
+        // === RELATIONSHIP BETWEEN ELECTRICITY AND MAGNETISM ===
         {
             type: "multiple",
-            question: "What type of magnet is created by electric current flowing through a coil of wire?",
+            question: "What did Hans Christian Oersted discover?",
             options: [
-                "Permanent magnet",
-                "Temporary magnet",
-                "Electromagnet",
-                "Bar magnet"
+                "How to make batteries",
+                "That electric current creates a magnetic field",
+                "How to make light bulbs",
+                "How computers work"
             ],
-            correct: 2,
-            hint: "The name combines 'electric' and 'magnet.'"
+            correct: 1,
+            hint: "He noticed a compass needle moved when near a wire carrying electric current."
+        },
+        {
+            type: "truefalse",
+            question: "Hans Christian Oersted discovered that electricity and magnetism are related.",
+            correct: true,
+            hint: "His discovery showed that electric current produces magnetism."
+        },
+        {
+            type: "multiple",
+            question: "What did Joseph Henry and Michael Faraday discover?",
+            options: [
+                "How to make permanent magnets",
+                "That a changing magnetic field can create electricity",
+                "How batteries work",
+                "How to make insulators"
+            ],
+            correct: 1,
+            hint: "Their discovery led to the invention of generators and transformers."
+        },
+        {
+            type: "truefalse",
+            question: "Joseph Henry and Michael Faraday discovered that a changing magnetic field can produce electricity.",
+            correct: true,
+            hint: "This principle is used in generators to produce electricity."
+        },
+        // === ELECTROMAGNETS ===
+        {
+            type: "multiple",
+            question: "Who invented the first practical electromagnet?",
+            options: [
+                "Hans Christian Oersted",
+                "William Sturgeon",
+                "Benjamin Franklin",
+                "Thomas Edison"
+            ],
+            correct: 1,
+            hint: "This English inventor created the first electromagnet that could lift heavy objects."
+        },
+        {
+            type: "fillin",
+            question: "A magnet created by electric current flowing through a coil of wire is called an _______.",
+            correct: "electromagnet",
+            hint: "Combine 'electric' and 'magnet.'"
+        },
+        {
+            type: "multiple",
+            question: "How does an electromagnet work?",
+            options: [
+                "It uses permanent magnets only",
+                "Electric current flows through a coil, creating a magnetic field",
+                "It runs on batteries alone without wire",
+                "It uses only static electricity"
+            ],
+            correct: 1,
+            hint: "When electricity flows through a coiled wire, it creates magnetism."
+        },
+        {
+            type: "multiple",
+            question: "What happens when you turn off the electricity to an electromagnet?",
+            options: [
+                "It stays magnetic forever",
+                "It loses its magnetism",
+                "It becomes stronger",
+                "It explodes"
+            ],
+            correct: 1,
+            hint: "Unlike permanent magnets, electromagnets need electricity to work."
         },
         {
             type: "multiple",
             question: "Which of these will make an electromagnet stronger?",
             options: [
                 "Using fewer coils of wire",
-                "Adding an iron core",
+                "Adding an iron core and more coils",
                 "Decreasing the current",
                 "Using plastic instead of iron"
             ],
             correct: 1,
-            hint: "Iron is a magnetic material - putting it inside the coil concentrates the magnetic field."
+            hint: "More coils, more current, and an iron core all increase strength."
+        },
+        // === MAGLEV ===
+        {
+            type: "multiple",
+            question: "What does 'maglev' stand for?",
+            options: [
+                "Magnetic lever",
+                "Magnetic levitation",
+                "Magnet level",
+                "Magnetic elevation"
+            ],
+            correct: 1,
+            hint: "These trains float above the track using magnets."
+        },
+        {
+            type: "fillin",
+            question: "Trains that float above the track using powerful electromagnets use _______ technology.",
+            correct: "maglev",
+            hint: "Short for 'magnetic levitation.'"
         },
         {
             type: "truefalse",
-            question: "When you turn off the electricity to an electromagnet, it loses its magnetism.",
+            question: "Maglev trains use electromagnets to float above the track.",
             correct: true,
-            hint: "Unlike permanent magnets, electromagnets depend on electric current to work."
+            hint: "Magnetic levitation lifts the train so there's no friction with the track."
         },
-        {
-            type: "fillin",
-            question: "A magnet made by wrapping wire around an iron core and running electricity through it is an _______.",
-            correct: "electromagnet",
-            hint: "Combine the words 'electric' and 'magnet.'"
-        },
+        // === GENERATORS ===
         {
             type: "multiple",
-            question: "Which device uses an electromagnet?",
+            question: "How does a generator work?",
             options: [
-                "A compass",
-                "A refrigerator magnet",
-                "A bar magnet",
-                "An electric motor"
-            ],
-            correct: 3,
-            hint: "This device needs electricity to work and converts electrical energy to motion."
-        },
-        {
-            type: "multiple",
-            question: "Who discovered that electricity and magnetism are connected?",
-            options: [
-                "Hans Christian Oersted",
-                "Isaac Newton",
-                "Albert Einstein",
-                "Benjamin Franklin"
-            ],
-            correct: 0,
-            hint: "This Danish scientist noticed that a compass needle moved when placed near a wire carrying electric current."
-        },
-        {
-            type: "multiple",
-            question: "Which of these is a use for electromagnets?",
-            options: [
-                "Making permanent magnets",
-                "Lifting heavy scrap metal at junkyards",
-                "Replacing batteries",
-                "Storing electricity"
+                "It stores electricity in batteries",
+                "It uses a changing magnetic field to produce electricity",
+                "It converts electricity into magnetism only",
+                "It uses static electricity"
             ],
             correct: 1,
-            hint: "Electromagnets can be turned on and off, which is useful for picking up and dropping metal objects."
+            hint: "Generators use the principle discovered by Faraday and Henry."
         },
-        // Review/Mixed Questions
+        {
+            type: "truefalse",
+            question: "A generator converts mechanical energy into electrical energy using magnetism.",
+            correct: true,
+            hint: "Spinning magnets or coils create a changing magnetic field that produces electricity."
+        },
         {
             type: "multiple",
-            question: "How are the Law of Electric Charges and the Law of Magnetic Poles similar?",
+            question: "What principle do generators use to produce electricity?",
             options: [
-                "Both only work with electricity",
-                "Both only work with magnets",
-                "Both say opposites attract and likes repel",
-                "They are completely different"
+                "Static electricity buildup",
+                "A changing magnetic field creates electric current",
+                "Chemical reactions in batteries",
+                "Heat from burning fuel directly"
             ],
-            correct: 2,
-            hint: "Think about what happens with + and - charges, and what happens with N and S poles."
+            correct: 1,
+            hint: "This was discovered by Faraday and Henry."
         },
-        {
-            type: "fillin",
-            question: "Electric current is the flow of _______ through a conductor.",
-            correct: "electrons",
-            hint: "These are the negatively charged particles that orbit the nucleus."
-        },
+        // === ELECTRICAL VS ELECTRONIC DEVICES ===
         {
             type: "multiple",
-            question: "What is the difference between a permanent magnet and an electromagnet?",
+            question: "What is the main difference between electrical devices and electronic devices?",
             options: [
-                "Permanent magnets are stronger",
-                "Electromagnets can be turned on and off",
-                "Permanent magnets use electricity",
+                "Electrical devices are bigger",
+                "Electronic devices use semiconductors to control electrical signals",
+                "Electrical devices don't use electricity",
                 "There is no difference"
             ],
             correct: 1,
-            hint: "One type keeps its magnetism all the time, the other only when electricity flows."
-        },
-        {
-            type: "truefalse",
-            question: "Static electricity flows continuously through a wire.",
-            correct: false,
-            hint: "Static means 'not moving.' Current electricity is what flows through wires."
+            hint: "Electronic devices use special components to process information."
         },
         {
             type: "multiple",
-            question: "What three things are needed to make an electromagnet?",
+            question: "Which is an example of an electrical device (not electronic)?",
             options: [
-                "Battery, magnet, and wood",
-                "Wire coil, iron core, and electric current",
-                "Copper, glass, and plastic",
-                "North pole, south pole, and battery"
+                "Computer",
+                "Smartphone",
+                "Toaster",
+                "Video game console"
+            ],
+            correct: 2,
+            hint: "Electrical devices simply use electricity for power, like heating or motors."
+        },
+        {
+            type: "multiple",
+            question: "Which is an example of an electronic device?",
+            options: [
+                "Light bulb",
+                "Electric heater",
+                "Computer",
+                "Electric stove"
+            ],
+            correct: 2,
+            hint: "Electronic devices process information using semiconductors."
+        },
+        // === SEMICONDUCTORS AND INTEGRATED CIRCUITS ===
+        {
+            type: "multiple",
+            question: "What is a semiconductor?",
+            options: [
+                "A material that always conducts electricity",
+                "A material that never conducts electricity",
+                "A material that can conduct electricity under certain conditions",
+                "A type of battery"
+            ],
+            correct: 2,
+            hint: "Semi means 'half' or 'partial' - it's between a conductor and insulator."
+        },
+        {
+            type: "fillin",
+            question: "A material that can act as both a conductor and an insulator depending on conditions is called a _______.",
+            correct: "semiconductor",
+            hint: "Silicon is the most common example, used in computer chips."
+        },
+        {
+            type: "multiple",
+            question: "What is an integrated circuit?",
+            options: [
+                "A very large circuit board",
+                "A tiny chip containing thousands or millions of electronic components",
+                "A circuit with only one component",
+                "A type of battery"
             ],
             correct: 1,
-            hint: "You need something to carry electricity, something magnetic inside, and a power source."
+            hint: "Also called a microchip, it packs many components onto a tiny chip."
+        },
+        {
+            type: "fillin",
+            question: "A tiny chip containing many electronic components is called an _______ circuit.",
+            correct: "integrated",
+            hint: "Also known as a microchip or chip."
+        },
+        // === ELECTRICAL SIGNALS AND BINARY ===
+        {
+            type: "multiple",
+            question: "What is an electrical signal?",
+            options: [
+                "A type of magnet",
+                "Electricity that carries information",
+                "A measurement of voltage",
+                "A type of battery"
+            ],
+            correct: 1,
+            hint: "Electronic devices use these to communicate and process data."
+        },
+        {
+            type: "fillin",
+            question: "Electricity that carries information in electronic devices is called an electrical _______.",
+            correct: "signal",
+            hint: "These can represent data like sounds, images, or numbers."
+        },
+        {
+            type: "multiple",
+            question: "What number system do computers use?",
+            options: [
+                "Decimal (base 10)",
+                "Binary (base 2)",
+                "Hexadecimal (base 16)",
+                "Roman numerals"
+            ],
+            correct: 1,
+            hint: "Computers use only two digits: 0 and 1."
+        },
+        {
+            type: "fillin",
+            question: "The number system using only 0s and 1s that computers use is called the _______ number system.",
+            correct: "binary",
+            hint: "Binary means 'two' - only two digits are used."
+        },
+        {
+            type: "truefalse",
+            question: "In the binary number system, data is represented using only 0s and 1s.",
+            correct: true,
+            hint: "Computers process information as patterns of on (1) and off (0) signals."
+        },
+        // === PARTS OF A COMPUTER ===
+        {
+            type: "multiple",
+            question: "Which part of a computer processes information and runs programs?",
+            options: [
+                "Monitor",
+                "Keyboard",
+                "CPU (Central Processing Unit)",
+                "Mouse"
+            ],
+            correct: 2,
+            hint: "This is often called the 'brain' of the computer."
+        },
+        {
+            type: "multiple",
+            question: "Which part of a computer stores data and programs even when the power is off?",
+            options: [
+                "RAM",
+                "Hard drive or SSD",
+                "CPU",
+                "Monitor"
+            ],
+            correct: 1,
+            hint: "This is where your files, photos, and programs are saved permanently."
+        },
+        {
+            type: "multiple",
+            question: "Which part of a computer temporarily stores data while programs are running?",
+            options: [
+                "Hard drive",
+                "RAM (Random Access Memory)",
+                "Monitor",
+                "Keyboard"
+            ],
+            correct: 1,
+            hint: "This memory is fast but loses data when the computer is turned off."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is an input device?",
+            options: [
+                "Monitor",
+                "Printer",
+                "Keyboard",
+                "Speakers"
+            ],
+            correct: 2,
+            hint: "Input devices send information INTO the computer."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is an output device?",
+            options: [
+                "Mouse",
+                "Keyboard",
+                "Scanner",
+                "Monitor"
+            ],
+            correct: 3,
+            hint: "Output devices display or send information OUT from the computer."
+        },
+        // === REVIEW QUESTIONS ===
+        {
+            type: "truefalse",
+            question: "William Sturgeon invented the first practical electromagnet.",
+            correct: true,
+            hint: "This English inventor's electromagnet could lift heavy objects."
+        },
+        {
+            type: "multiple",
+            question: "What converts mechanical energy into electrical energy?",
+            options: [
+                "Battery",
+                "Generator",
+                "Light bulb",
+                "Resistor"
+            ],
+            correct: 1,
+            hint: "Power plants use these to produce electricity."
+        },
+        {
+            type: "multiple",
+            question: "What converts chemical energy into electrical energy?",
+            options: [
+                "Generator",
+                "Motor",
+                "Battery (electric cell)",
+                "Transformer"
+            ],
+            correct: 2,
+            hint: "Chemical reactions inside produce electricity."
+        },
+        {
+            type: "truefalse",
+            question: "A circuit must be closed (complete) for electricity to flow.",
+            correct: true,
+            hint: "An open circuit has a break, so electricity cannot flow."
+        },
+        {
+            type: "multiple",
+            question: "If a 750-watt blow dryer is replaced with a 1500-watt blow dryer and the circuit trips, what likely happened?",
+            options: [
+                "The blow dryer is broken",
+                "The circuit was overloaded with too much power",
+                "The battery died",
+                "The magnets failed"
+            ],
+            correct: 1,
+            hint: "Higher wattage means more power draw, which can overload a circuit."
         }
     ],
     9: [ // Motion and Machines
