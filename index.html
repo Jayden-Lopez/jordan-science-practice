@@ -7841,8 +7841,8 @@
                 answerArea.appendChild(input);
             }
 
-            // Add hint button and hint box (only in practice mode)
-            if (!sessionStats.isTestMode && question.hint) {
+            // Add hint button and hint box (available in all modes)
+            if (question.hint) {
                 const hintBtn = document.createElement('button');
                 hintBtn.className = 'btn-hint';
                 hintBtn.textContent = '💡 Need a Hint?';
