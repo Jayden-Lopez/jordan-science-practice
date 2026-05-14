@@ -1522,74 +1522,351 @@ const questionBank = {
         }
     ],
     10: [ // Stars
+        // === VOCABULARY: BRIGHTNESS ===
         {
             type: "multiple",
-            question: "What is the closest star to Earth?",
+            question: "What term describes the overall brightness of stars?",
             options: [
-                "Alpha Centauri",
-                "Polaris",
-                "The Sun",
-                "Sirius"
+                "Luminosity",
+                "Magnitude",
+                "Parallax",
+                "Nova"
+            ],
+            correct: 1,
+            hint: "This word means the brightness of a star — it comes in two types: apparent and absolute."
+        },
+        {
+            type: "fillin",
+            question: "The true brightness of a star, regardless of how far away it is, is called _______ magnitude.",
+            correct: "absolute",
+            hint: "This tells us how bright the star actually is, not just how bright it looks."
+        },
+        {
+            type: "fillin",
+            question: "How bright a star appears to us from Earth is called _______ magnitude.",
+            correct: "apparent",
+            hint: "A nearby dim star can appear brighter than a very distant brilliant star."
+        },
+        {
+            type: "multiple",
+            question: "A star that is very far away will have a lower _______ magnitude but its _______ magnitude tells its true brightness.",
+            options: [
+                "absolute; apparent",
+                "apparent; absolute",
+                "nova; pulsar",
+                "parallax; magnitude"
+            ],
+            correct: 1,
+            hint: "Apparent = how it looks from Earth; Absolute = how bright it really is."
+        },
+        // === VOCABULARY: STAR EVENTS ===
+        {
+            type: "fillin",
+            question: "A cloud of dust, gases, and debris in space is called a _______.",
+            correct: "nebula",
+            hint: "Stars are born inside these clouds of gas and dust."
+        },
+        {
+            type: "fillin",
+            question: "When an existing star suddenly flares up and becomes much brighter, this event is called a _______.",
+            correct: "nova",
+            hint: "This is a sudden, dramatic increase in a star's brightness."
+        },
+        {
+            type: "fillin",
+            question: "The death explosion of a star is called a _______.",
+            correct: "supernova",
+            hint: "This is one of the most powerful explosions in the universe — 'super' means it's even bigger than a nova."
+        },
+        {
+            type: "multiple",
+            question: "What is a supernova?",
+            options: [
+                "A star that flares up temporarily",
+                "A cloud of gas and dust",
+                "The death explosion of a star",
+                "A neutron star"
             ],
             correct: 2,
-            hint: "This star gives us light and warmth every day."
+            hint: "This is the catastrophic explosion that occurs when a massive star dies."
+        },
+        // === VOCABULARY: NEUTRON STARS AND PULSARS ===
+        {
+            type: "fillin",
+            question: "An extremely dense star made mostly of neutrons is called a _______ star.",
+            correct: "neutron",
+            hint: "These incredibly dense objects form when a massive star's core collapses."
+        },
+        {
+            type: "fillin",
+            question: "A neutron star that spins rapidly on its axis and emits beams of energy is called a _______.",
+            correct: "pulsar",
+            hint: "The spinning makes it seem to 'pulse' — like a lighthouse beacon in space."
+        },
+        {
+            type: "multiple",
+            question: "What is a pulsar?",
+            options: [
+                "A cloud of gas and dust",
+                "A star that explodes",
+                "A neutron star that spins rapidly on its axis",
+                "A variable star"
+            ],
+            correct: 2,
+            hint: "As it spins, its beam of energy sweeps past Earth regularly, like a lighthouse."
+        },
+        {
+            type: "multiple",
+            question: "A supergiant star may collapse into a very dense core, which can result in:",
+            options: [
+                "A nova",
+                "A nebula",
+                "A neutron star or black hole",
+                "A pulsar turning into a planet"
+            ],
+            correct: 2,
+            hint: "When a supergiant collapses, the result can be incredibly dense — sometimes not even light can escape."
+        },
+        // === BLACK HOLES ===
+        {
+            type: "truefalse",
+            question: "A supergiant star that collapses and disappears from space is called a black hole.",
+            correct: true,
+            hint: "A black hole's gravity is so strong that nothing, not even light, can escape."
+        },
+        {
+            type: "multiple",
+            question: "What is a black hole?",
+            options: [
+                "A dark nebula",
+                "A region of space with gravity so strong that nothing can escape it",
+                "A type of pulsar",
+                "An area with no stars"
+            ],
+            correct: 1,
+            hint: "Even light cannot escape a black hole's gravity — that's why we can't see it directly."
+        },
+        // === STAR SIZES ===
+        {
+            type: "multiple",
+            question: "Which lists the sizes of stars from SMALLEST to LARGEST?",
+            options: [
+                "Giant, dwarf, supergiant",
+                "Supergiant, giant, dwarf",
+                "Dwarf, giant, supergiant",
+                "Dwarf, supergiant, giant"
+            ],
+            correct: 2,
+            hint: "Think of the prefix 'super' as meaning biggest, and 'dwarf' as smallest."
         },
         {
             type: "truefalse",
-            question: "All stars are the same size and brightness.",
+            question: "Supergiants are the largest category of stars.",
+            correct: true,
+            hint: "From smallest to largest: dwarf stars → giant stars → supergiants."
+        },
+        {
+            type: "fillin",
+            question: "Our Sun is classified as a _______ star — the smallest category.",
+            correct: "dwarf",
+            hint: "Despite being enormous compared to Earth, our Sun is small compared to giant and supergiant stars."
+        },
+        // === LIGHT-YEAR ===
+        {
+            type: "truefalse",
+            question: "A light-year is the distance that light travels in one year.",
+            correct: true,
+            hint: "Light travels about 186,000 miles per second — a light-year is that speed times one year."
+        },
+        {
+            type: "fillin",
+            question: "The distance that light travels in one year is called a _______.",
+            correct: "light-year",
+            hint: "This unit is used to measure huge distances between stars."
+        },
+        {
+            type: "multiple",
+            question: "Why do scientists use light-years to measure distances in space?",
+            options: [
+                "Because space has no miles",
+                "Because stars are so far apart that miles and kilometers are impractical",
+                "Because light travels slowly",
+                "Because planets use light-years too"
+            ],
+            correct: 1,
+            hint: "Even the nearest star beyond our Sun is about 4 light-years away — that's about 25 trillion miles!"
+        },
+        // === PARALLAX ===
+        {
+            type: "fillin",
+            question: "The apparent shift in the position of a nearby star compared to distant stars as Earth orbits the Sun is called _______.",
+            correct: "parallax",
+            hint: "Hold your finger up and blink each eye — the finger appears to 'shift.' Stars do this too."
+        },
+        {
+            type: "multiple",
+            question: "What is parallax?",
+            options: [
+                "The brightness of a star",
+                "The apparent movement or change in position of one star in relation to other stars",
+                "The spinning of a neutron star",
+                "The explosion of a supergiant"
+            ],
+            correct: 1,
+            hint: "Scientists use this shift to calculate how far away nearby stars are."
+        },
+        {
+            type: "truefalse",
+            question: "The apparent movement or change in position of one star in relationship to other stars is known as pulsating.",
             correct: false,
-            hint: "Stars come in many different sizes and brightnesses."
+            hint: "This is called PARALLAX, not pulsating. Pulsating refers to variable stars that change in brightness."
+        },
+        // === WHAT STARS ARE ===
+        {
+            type: "truefalse",
+            question: "Stars are glowing balls of gases that reflect light.",
+            correct: false,
+            hint: "Stars PRODUCE (give off) their own light through nuclear fusion — they do not reflect it."
         },
         {
             type: "multiple",
             question: "What causes a star to shine?",
             options: [
-                "Reflection of light",
+                "Reflection of sunlight",
                 "Nuclear fusion",
-                "Burning of fuel",
-                "Chemical reactions"
+                "Burning of coal or gas",
+                "Chemical reactions with oxygen"
             ],
             correct: 1,
-            hint: "Stars produce energy by combining atoms in their core at extreme temperatures."
+            hint: "Stars produce energy by fusing hydrogen atoms into helium at extreme temperatures."
+        },
+        // === CLOSEST STAR ===
+        {
+            type: "multiple",
+            question: "What is the closest star to Earth?",
+            options: [
+                "Proxima Centauri",
+                "Polaris",
+                "The Sun",
+                "Sirius"
+            ],
+            correct: 2,
+            hint: "This star is right in our solar system — it gives us light and warmth every day."
         },
         {
-            type: "fillin",
-            question: "A pattern of stars that form a recognizable shape is called a _______.",
-            correct: "constellation",
-            hint: "Examples include the Big Dipper and Orion."
+            type: "truefalse",
+            question: "Proxima Centauri is the closest star to Earth.",
+            correct: false,
+            hint: "The SUN is the closest star to Earth. Proxima Centauri is the closest star BEYOND our solar system."
         },
+        // === STAR COLOR AND TEMPERATURE ===
         {
             type: "multiple",
             question: "What color are the hottest stars?",
             options: [
                 "Red",
                 "Yellow",
-                "Blue",
-                "Orange"
+                "Orange",
+                "Blue"
             ],
-            correct: 2,
-            hint: "Think about the hottest part of a flame - it's this color."
-        }
-    ],
-    11: [ // Solar System
+            correct: 3,
+            hint: "Think about the hottest part of a flame — it glows blue-white."
+        },
         {
             type: "multiple",
-            question: "How many planets are in our solar system?",
+            question: "What color are the coolest stars?",
             options: [
-                "7",
-                "8",
-                "9",
-                "10"
+                "Blue",
+                "White",
+                "Yellow",
+                "Red"
             ],
-            correct: 1,
-            hint: "Pluto is no longer considered a planet, so count from Mercury to Neptune."
+            correct: 3,
+            hint: "Red stars are the coolest; blue stars are the hottest."
+        },
+        {
+            type: "multiple",
+            question: "What does a star's color tell us?",
+            options: [
+                "Its size",
+                "Its age",
+                "Its surface temperature",
+                "Its distance from Earth"
+            ],
+            correct: 2,
+            hint: "Blue = hottest, yellow = medium, red = coolest."
         },
         {
             type: "truefalse",
-            question: "Jupiter is the largest planet in our solar system.",
+            question: "A star's color depends on its surface temperature.",
             correct: true,
-            hint: "This gas giant is bigger than all other planets combined."
+            hint: "Blue stars are hottest, yellow stars are medium temperature, and red stars are the coolest."
         },
+        // === VARIABLE STARS ===
+        {
+            type: "truefalse",
+            question: "Variable stars regularly or repeatedly change in magnitude.",
+            correct: true,
+            hint: "Variable stars change in brightness — either because they physically pulsate or because one star eclipses another."
+        },
+        {
+            type: "multiple",
+            question: "What is a pulsating variable star?",
+            options: [
+                "A star that explodes",
+                "A star that grows bigger and smaller, getting brighter and dimmer",
+                "A star blocked by another star",
+                "A neutron star"
+            ],
+            correct: 1,
+            hint: "These stars physically expand and contract, which changes their brightness."
+        },
+        {
+            type: "multiple",
+            question: "What is an eclipsing variable star?",
+            options: [
+                "A star that pulsates in size",
+                "A star that explodes periodically",
+                "A star system where one star passes in front of another, blocking its light",
+                "A star near a black hole"
+            ],
+            correct: 2,
+            hint: "The brightness changes because one star 'eclipses' (blocks) the other from our view."
+        },
+        {
+            type: "multiple",
+            question: "What is the main difference between pulsating and eclipsing variable stars?",
+            options: [
+                "Pulsating stars are hotter",
+                "Pulsating stars grow bigger and smaller; eclipsing stars change brightness when one star blocks another",
+                "Eclipsing stars are larger",
+                "There is no difference"
+            ],
+            correct: 1,
+            hint: "Pulsating = the star itself changes size; eclipsing = a second star blocks the light."
+        },
+        // === CONSTELLATIONS ===
+        {
+            type: "fillin",
+            question: "A pattern of stars that form a recognizable shape is called a _______.",
+            correct: "constellation",
+            hint: "Examples include the Big Dipper, Orion, and Cassiopeia."
+        },
+        {
+            type: "multiple",
+            question: "Which of these is a famous constellation?",
+            options: [
+                "Pulsar",
+                "Orion",
+                "Nebula",
+                "Nova"
+            ],
+            correct: 1,
+            hint: "This constellation is named after a hunter from Greek mythology and is visible in winter."
+        }
+    ],
+    11: [ // Solar System
+        // === THE SUN ===
         {
             type: "multiple",
             question: "What is the center of our solar system?",
@@ -1603,10 +1880,108 @@ const questionBank = {
             hint: "All the planets orbit around this massive star."
         },
         {
+            type: "truefalse",
+            question: "The Sun is a star.",
+            correct: true,
+            hint: "The Sun is the closest star to Earth - it's a giant ball of hot gas."
+        },
+        {
+            type: "multiple",
+            question: "What process produces the Sun's energy?",
+            options: [
+                "Burning of coal",
+                "Chemical reactions",
+                "Nuclear fusion",
+                "Electricity"
+            ],
+            correct: 2,
+            hint: "Hydrogen atoms are combined to form helium, releasing enormous energy."
+        },
+        {
             type: "fillin",
-            question: "The path a planet takes around the sun is called its _______.",
-            correct: "orbit",
-            hint: "This is the curved path that planets follow as they circle the sun."
+            question: "The outer atmosphere of the Sun that is visible during a solar eclipse is called the _______.",
+            correct: "corona",
+            hint: "This glowing outer layer extends millions of miles into space."
+        },
+        {
+            type: "multiple",
+            question: "Dark areas on the Sun's surface caused by cooler temperatures are called:",
+            options: [
+                "Solar flares",
+                "Sunspots",
+                "Prominences",
+                "Coronas"
+            ],
+            correct: 1,
+            hint: "These appear darker because they are slightly cooler than the surrounding surface."
+        },
+        // === PLANETS - ORDER AND OVERVIEW ===
+        {
+            type: "multiple",
+            question: "How many planets are in our solar system?",
+            options: [
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            correct: 1,
+            hint: "Pluto is no longer considered a planet, so count from Mercury to Neptune."
+        },
+        {
+            type: "multiple",
+            question: "Which planet is closest to the Sun?",
+            options: [
+                "Venus",
+                "Earth",
+                "Mercury",
+                "Mars"
+            ],
+            correct: 2,
+            hint: "This tiny, cratered planet has extreme temperature swings."
+        },
+        {
+            type: "multiple",
+            question: "Which planet is farthest from the Sun?",
+            options: [
+                "Saturn",
+                "Uranus",
+                "Pluto",
+                "Neptune"
+            ],
+            correct: 3,
+            hint: "This icy blue planet is the outermost of the eight planets."
+        },
+        {
+            type: "fillin",
+            question: "The correct order of the first four planets from the Sun is Mercury, Venus, Earth, _______.",
+            correct: "Mars",
+            hint: "This red planet comes right after Earth."
+        },
+        {
+            type: "fillin",
+            question: "A helpful way to remember the planet order is 'My Very Educated Mother Just Served Us _______.'",
+            correct: "Nachos",
+            hint: "The last word starts with N, for Neptune."
+        },
+        // === INNER PLANETS (TERRESTRIAL) ===
+        {
+            type: "multiple",
+            question: "What do the inner planets (Mercury, Venus, Earth, Mars) have in common?",
+            options: [
+                "They all have rings",
+                "They are all gas giants",
+                "They are all rocky and dense",
+                "They all have many moons"
+            ],
+            correct: 2,
+            hint: "The inner planets are called terrestrial planets because they have solid rocky surfaces."
+        },
+        {
+            type: "truefalse",
+            question: "The inner planets are called terrestrial planets.",
+            correct: true,
+            hint: "'Terrestrial' means 'earth-like' - these planets have rocky surfaces like Earth."
         },
         {
             type: "multiple",
@@ -1619,6 +1994,323 @@ const questionBank = {
             ],
             correct: 1,
             hint: "This planet appears reddish because of iron oxide (rust) on its surface."
+        },
+        {
+            type: "multiple",
+            question: "Which planet has the hottest surface temperature in our solar system?",
+            options: [
+                "Mercury",
+                "Venus",
+                "Earth",
+                "Mars"
+            ],
+            correct: 1,
+            hint: "This planet's thick atmosphere traps heat - its surface is hotter than Mercury even though it's farther from the Sun."
+        },
+        {
+            type: "truefalse",
+            question: "Venus rotates in the opposite direction from most planets.",
+            correct: true,
+            hint: "On Venus, the Sun rises in the west and sets in the east."
+        },
+        {
+            type: "multiple",
+            question: "Which planet has conditions most similar to Earth?",
+            options: [
+                "Mercury",
+                "Venus",
+                "Mars",
+                "Jupiter"
+            ],
+            correct: 2,
+            hint: "This planet has polar ice caps, seasons, and scientists have found evidence of ancient water."
+        },
+        {
+            type: "multiple",
+            question: "How many moons does Mars have?",
+            options: [
+                "0",
+                "1",
+                "2",
+                "4"
+            ],
+            correct: 2,
+            hint: "Mars has two small, potato-shaped moons named Phobos and Deimos."
+        },
+        // === OUTER PLANETS (GAS GIANTS) ===
+        {
+            type: "multiple",
+            question: "What are Jupiter, Saturn, Uranus, and Neptune called?",
+            options: [
+                "Terrestrial planets",
+                "Dwarf planets",
+                "Gas giants",
+                "Rocky planets"
+            ],
+            correct: 2,
+            hint: "These outer planets are mostly made of gases and are much larger than the inner planets."
+        },
+        {
+            type: "truefalse",
+            question: "Jupiter is the largest planet in our solar system.",
+            correct: true,
+            hint: "This gas giant is bigger than all other planets combined."
+        },
+        {
+            type: "multiple",
+            question: "What is the Great Red Spot on Jupiter?",
+            options: [
+                "A volcano",
+                "A giant storm that has lasted hundreds of years",
+                "A desert region",
+                "A large crater"
+            ],
+            correct: 1,
+            hint: "This enormous storm system is larger than Earth and has raged for centuries."
+        },
+        {
+            type: "multiple",
+            question: "Which planet is famous for its beautiful ring system?",
+            options: [
+                "Jupiter",
+                "Uranus",
+                "Saturn",
+                "Neptune"
+            ],
+            correct: 2,
+            hint: "This planet's rings are made of ice and rock and are visible from Earth with a telescope."
+        },
+        {
+            type: "truefalse",
+            question: "Saturn is the only planet with rings.",
+            correct: false,
+            hint: "Jupiter, Uranus, and Neptune also have rings, but Saturn's are the most visible."
+        },
+        {
+            type: "multiple",
+            question: "Which planet rotates on its side (tilted almost 98 degrees)?",
+            options: [
+                "Jupiter",
+                "Saturn",
+                "Uranus",
+                "Neptune"
+            ],
+            correct: 2,
+            hint: "This planet essentially rolls around the Sun like a bowling ball."
+        },
+        {
+            type: "multiple",
+            question: "Which planet appears blue-green because of methane gas in its atmosphere?",
+            options: [
+                "Jupiter",
+                "Saturn",
+                "Uranus",
+                "Neptune"
+            ],
+            correct: 2,
+            hint: "Both Uranus and Neptune look bluish, but this one has a more blue-green tint."
+        },
+        // === EARTH AND THE MOON ===
+        {
+            type: "fillin",
+            question: "The path a planet takes around the Sun is called its _______.",
+            correct: "orbit",
+            hint: "This is the curved path that planets follow as they circle the Sun."
+        },
+        {
+            type: "multiple",
+            question: "What causes Earth to have day and night?",
+            options: [
+                "Earth's revolution around the Sun",
+                "Earth's rotation on its axis",
+                "The Moon blocking the Sun",
+                "Clouds covering the Sun"
+            ],
+            correct: 1,
+            hint: "Earth spins like a top, causing one side to face the Sun (day) while the other faces away (night)."
+        },
+        {
+            type: "multiple",
+            question: "What causes Earth to have seasons?",
+            options: [
+                "Earth getting closer and farther from the Sun",
+                "Earth's tilted axis as it revolves around the Sun",
+                "The Moon's gravity",
+                "Changes in the Sun's brightness"
+            ],
+            correct: 1,
+            hint: "Earth's axis is tilted, so different parts receive more direct sunlight at different times of year."
+        },
+        {
+            type: "fillin",
+            question: "One complete spin of Earth on its axis takes approximately 24 hours, which is one _______.",
+            correct: "day",
+            hint: "This is why we have morning and night on a regular schedule."
+        },
+        {
+            type: "fillin",
+            question: "One complete trip of Earth around the Sun takes approximately 365 days, which is one _______.",
+            correct: "year",
+            hint: "This is how long Earth's revolution takes."
+        },
+        {
+            type: "multiple",
+            question: "What is Earth's moon?",
+            options: [
+                "A star",
+                "A planet",
+                "A natural satellite",
+                "An asteroid"
+            ],
+            correct: 2,
+            hint: "The Moon orbits Earth, making it a natural satellite of our planet."
+        },
+        {
+            type: "multiple",
+            question: "What causes the phases of the Moon?",
+            options: [
+                "Earth's shadow on the Moon",
+                "The Moon's rotation",
+                "Our view of the lit side of the Moon as it orbits Earth",
+                "Clouds on the Moon"
+            ],
+            correct: 2,
+            hint: "The Sun always lights half the Moon; we see different amounts of the lit side as the Moon orbits Earth."
+        },
+        {
+            type: "truefalse",
+            question: "A solar eclipse occurs when the Moon passes between Earth and the Sun.",
+            correct: true,
+            hint: "The Moon blocks the Sun's light from reaching part of Earth."
+        },
+        {
+            type: "truefalse",
+            question: "A lunar eclipse occurs when the Moon passes between Earth and the Sun.",
+            correct: false,
+            hint: "A lunar eclipse occurs when Earth passes between the Sun and the Moon, casting Earth's shadow on the Moon."
+        },
+        // === OTHER SOLAR SYSTEM OBJECTS ===
+        {
+            type: "multiple",
+            question: "The asteroid belt is located between which two planets?",
+            options: [
+                "Earth and Mars",
+                "Mars and Jupiter",
+                "Jupiter and Saturn",
+                "Saturn and Uranus"
+            ],
+            correct: 1,
+            hint: "This region of rocky debris lies between the inner and outer planets."
+        },
+        {
+            type: "fillin",
+            question: "Rocky objects that orbit the Sun, mostly found between Mars and Jupiter, are called _______.",
+            correct: "asteroids",
+            hint: "These range in size from tiny pebbles to hundreds of miles across."
+        },
+        {
+            type: "multiple",
+            question: "What is a comet?",
+            options: [
+                "A rocky planet with no atmosphere",
+                "A ball of ice, rock, and dust that orbits the Sun",
+                "A type of asteroid",
+                "A small moon"
+            ],
+            correct: 1,
+            hint: "As these objects near the Sun, heat causes them to release gases that form a glowing tail."
+        },
+        {
+            type: "truefalse",
+            question: "Comets have tails that always point away from the Sun.",
+            correct: true,
+            hint: "Solar wind pushes the comet's tail away from the Sun, so the tail always points away from it."
+        },
+        {
+            type: "multiple",
+            question: "What is a meteoroid?",
+            options: [
+                "A planet that lost its atmosphere",
+                "A small rocky or metallic body in space",
+                "A moon of Jupiter",
+                "A type of star"
+            ],
+            correct: 1,
+            hint: "These become meteors when they enter Earth's atmosphere and burn up."
+        },
+        {
+            type: "multiple",
+            question: "What do we call a meteor that survives and hits Earth's surface?",
+            options: [
+                "Asteroid",
+                "Comet",
+                "Meteorite",
+                "Satellite"
+            ],
+            correct: 2,
+            hint: "When a meteor makes it all the way to the ground, it gets this name."
+        },
+        {
+            type: "fillin",
+            question: "A small body that orbits another body in space (like a moon orbiting a planet) is called a _______.",
+            correct: "satellite",
+            hint: "The Moon is Earth's natural one; GPS uses artificial ones."
+        },
+        // === DWARF PLANETS AND PLUTO ===
+        {
+            type: "multiple",
+            question: "Why was Pluto reclassified as a dwarf planet in 2006?",
+            options: [
+                "It disappeared",
+                "It is too small and has not cleared its orbital neighborhood",
+                "It melted",
+                "Scientists made a mistake"
+            ],
+            correct: 1,
+            hint: "A planet must orbit the Sun, be round, and have cleared its neighborhood. Pluto hasn't done the last one."
+        },
+        {
+            type: "truefalse",
+            question: "Pluto is now classified as a dwarf planet.",
+            correct: true,
+            hint: "In 2006 the International Astronomical Union reclassified Pluto."
+        },
+        // === GRAVITY AND DISTANCE ===
+        {
+            type: "multiple",
+            question: "What force keeps the planets in orbit around the Sun?",
+            options: [
+                "Magnetism",
+                "Friction",
+                "Gravity",
+                "Wind"
+            ],
+            correct: 2,
+            hint: "This force acts between all objects with mass and holds the solar system together."
+        },
+        {
+            type: "truefalse",
+            question: "Planets closer to the Sun take less time to orbit the Sun than planets farther away.",
+            correct: true,
+            hint: "Mercury orbits in 88 days; Neptune takes about 165 Earth years."
+        },
+        {
+            type: "multiple",
+            question: "What unit do scientists use to measure distances in our solar system?",
+            options: [
+                "Miles",
+                "Light-years",
+                "Astronomical Units (AU)",
+                "Kilometers"
+            ],
+            correct: 2,
+            hint: "One AU equals the average distance between Earth and the Sun (about 93 million miles)."
+        },
+        {
+            type: "fillin",
+            question: "The average distance between Earth and the Sun is called one _______ Unit (AU).",
+            correct: "Astronomical",
+            hint: "This is the standard unit for measuring distances within our solar system."
         }
     ],
     12: [ // Plant and Animal Reproduction
