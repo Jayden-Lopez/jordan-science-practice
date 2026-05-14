@@ -1523,276 +1523,192 @@ const questionBank = {
     ],
     10: [ // Stars — Study Guide Ch. 10, Lesson 117, pages 236–43
 
-        // ── SECTION A: Match definitions to terms ──────────────────────────
-        // Word bank: absolute magnitude, apparent magnitude, magnitude,
-        //            nebula, neutron star, nova, pulsar, supernova
+        // ── SECTION A: Match the definitions with their terms ──────────────
+        // Word bank: A. absolute magnitude  B. apparent magnitude  C. magnitude
+        //            D. nebula  E. neutron star  F. nova  G. pulsar  H. supernova
 
-        // Q1 — "the brightness of stars" → magnitude (C)
         {
             type: "multiple",
-            question: "Study Guide #1 — \'The brightness of stars\' matches which term?",
-            options: [
-                "absolute magnitude",
-                "apparent magnitude",
-                "magnitude",
-                "nova"
-            ],
+            question: "SECTION A — #1. the brightness of stars",
+            options: ["absolute magnitude", "apparent magnitude", "magnitude", "nova"],
             correct: 2,
-            hint: "Magnitude is the general word for a star\'s brightness. Absolute and apparent are the two types."
+            hint: "Magnitude is the general word for brightness. Absolute and apparent are the two specific types."
         },
-        // Q2 — "how bright a star appears to us" → apparent magnitude (B)
         {
             type: "multiple",
-            question: "Study Guide #2 — \'How bright a star appears to us\' matches which term?",
-            options: [
-                "absolute magnitude",
-                "apparent magnitude",
-                "magnitude",
-                "nebula"
-            ],
+            question: "SECTION A — #2. how bright a star appears to us",
+            options: ["absolute magnitude", "apparent magnitude", "magnitude", "nebula"],
             correct: 1,
-            hint: "Apparent means \'as it appears\' — it depends on both the star\'s true brightness AND its distance from us."
+            hint: "Apparent means 'as it appears' — this depends on the star's distance from Earth."
         },
-        // Q3 — "true brightness of a star" → absolute magnitude (A)
         {
             type: "multiple",
-            question: "Study Guide #3 — \'True brightness of a star\' matches which term?",
-            options: [
-                "absolute magnitude",
-                "apparent magnitude",
-                "pulsar",
-                "supernova"
-            ],
+            question: "SECTION A — #3. true brightness of a star",
+            options: ["absolute magnitude", "apparent magnitude", "pulsar", "supernova"],
             correct: 0,
-            hint: "Absolute magnitude is the real brightness of a star no matter how far away it is."
+            hint: "Absolute magnitude is the star's real brightness, no matter how far away it is."
         },
-        // Q4 — "neutron star that spins rapidly on its axis" → pulsar (G)
         {
             type: "multiple",
-            question: "Study Guide #4 — \'Neutron star that spins rapidly on its axis\' matches which term?",
-            options: [
-                "neutron star",
-                "nova",
-                "pulsar",
-                "supernova"
-            ],
+            question: "SECTION A — #4. neutron star that spins rapidly on its axis",
+            options: ["neutron star", "nova", "pulsar", "supernova"],
             correct: 2,
-            hint: "A pulsar pulses — its spinning beam sweeps past Earth like a lighthouse."
+            hint: "Its spinning beam sweeps past Earth like a lighthouse — making it seem to 'pulse'."
         },
-        // Q5 — "may occur when a supergiant collapses to a very dense core" → neutron star (E)
         {
             type: "multiple",
-            question: "Study Guide #5 — \'May occur when a supergiant collapses to a very dense core\' matches which term?",
-            options: [
-                "nebula",
-                "nova",
-                "pulsar",
-                "neutron star"
-            ],
+            question: "SECTION A — #5. may occur when a supergiant collapses to a very dense core",
+            options: ["nebula", "nova", "pulsar", "neutron star"],
             correct: 3,
-            hint: "When a supergiant\'s core collapses, it can form this incredibly dense object made mostly of neutrons."
+            hint: "When a supergiant's core collapses, it can form this incredibly dense object made mostly of neutrons."
         },
-        // Q6 — "a cloud of dust, gases, and debris" → nebula (D)
         {
             type: "multiple",
-            question: "Study Guide #6 — \'A cloud of dust, gases, and debris\' matches which term?",
-            options: [
-                "nebula",
-                "nova",
-                "pulsar",
-                "supernova"
-            ],
+            question: "SECTION A — #6. a cloud of dust, gases, and debris",
+            options: ["nebula", "nova", "pulsar", "supernova"],
             correct: 0,
-            hint: "Stars are born inside these clouds. The word comes from the Latin word for \'cloud.\'"
+            hint: "Stars are born inside these clouds. The Latin word for 'cloud' is the root of this term."
         },
-        // Q7 — "an existing star flares and becomes brighter" → nova (F)
         {
             type: "multiple",
-            question: "Study Guide #7 — \'An existing star flares and becomes brighter\' matches which term?",
-            options: [
-                "absolute magnitude",
-                "nebula",
-                "neutron star",
-                "nova"
-            ],
+            question: "SECTION A — #7. an existing star flares and becomes brighter",
+            options: ["absolute magnitude", "nebula", "neutron star", "nova"],
             correct: 3,
-            hint: "A nova is a sudden dramatic brightening of an existing star. It is NOT the death of the star."
-        },
-        // Q8 — "the death explosion of a star" → supernova (H)
-        {
-            type: "multiple",
-            question: "Study Guide #8 — \'The death explosion of a star\' matches which term?",
-            options: [
-                "nova",
-                "nebula",
-                "supernova",
-                "neutron star"
-            ],
-            correct: 2,
-            hint: "Super means bigger — a supernova is a nova taken to the extreme: the star completely destroys itself."
-        },
-
-        // ── SECTION B: Number star sizes smallest to largest ───────────────
-
-        // Q9-11 — dwarf=1, giant=2, supergiant=3
-        {
-            type: "multiple",
-            question: "Study Guide #9–11 — Which order correctly lists star sizes from SMALLEST to LARGEST?",
-            options: [
-                "giant stars, dwarf stars, supergiants",
-                "supergiants, giant stars, dwarf stars",
-                "dwarf stars, giant stars, supergiants",
-                "dwarf stars, supergiants, giant stars"
-            ],
-            correct: 2,
-            hint: "Dwarf = smallest (1), Giant = middle (2), Supergiant = largest (3)."
+            hint: "This is a sudden brightening of a star — NOT the death of the star. A 'super' version destroys the star."
         },
         {
             type: "multiple",
-            question: "Which size category is the largest?",
-            options: [
-                "Dwarf stars",
-                "Giant stars",
-                "Supergiants",
-                "They are all the same size"
-            ],
+            question: "SECTION A — #8. the death explosion of a star",
+            options: ["nova", "nebula", "supernova", "neutron star"],
             correct: 2,
-            hint: "Supergiants are number 3 — the largest of the three categories."
+            hint: "'Super' means bigger — this is a nova taken to the extreme: the star completely destroys itself."
+        },
+
+        // ── SECTION B: Number the sizes of stars from smallest to largest ──
+
+        {
+            type: "multiple",
+            question: "SECTION B — #9. What number is correct for supergiants (1 = smallest, 3 = largest)?",
+            options: ["1 — smallest", "2 — middle", "3 — largest", "4 — extra large"],
+            correct: 2,
+            hint: "Supergiants are the biggest category of stars."
         },
         {
-            type: "fillin",
-            question: "Our Sun is classified as a _______ star, which is the smallest size category.",
-            correct: "dwarf",
-            hint: "Even though it looks huge to us, the Sun is a dwarf star compared to giants and supergiants."
+            type: "multiple",
+            question: "SECTION B — #10. What number is correct for dwarf stars (1 = smallest, 3 = largest)?",
+            options: ["1 — smallest", "2 — middle", "3 — largest", "0 — not a real category"],
+            correct: 0,
+            hint: "Our own Sun is a dwarf star — the smallest of the three size categories."
+        },
+        {
+            type: "multiple",
+            question: "SECTION B — #11. What number is correct for giant stars (1 = smallest, 3 = largest)?",
+            options: ["1 — smallest", "2 — middle", "3 — largest", "0 — not a real category"],
+            correct: 1,
+            hint: "Giant stars are in the middle — bigger than dwarfs but smaller than supergiants."
         },
 
-        // ── SECTION C: True / False — write correction for underlined word ─
+        // ── SECTION C: Write T if true; if false, write a correction ───────
+        // Instruction: The underlined word is the one that may need correcting.
 
-        // Q12 — TRUE: A light-year is the distance that light travels in one year.
         {
             type: "truefalse",
-            question: "Study Guide #12 — A light-year is the distance that light travels in one year.",
+            question: "SECTION C — #12. A light-year is the distance that light travels in one year. (True or False?)",
             correct: true,
-            hint: "TRUE. A light-year measures distance, not time — it is how far light travels in one full year."
+            hint: "TRUE — a light-year is a unit of DISTANCE, not time. It is how far light travels in one year."
         },
-        // Q13 — FALSE: underlined word is 'pulsating' → correction: parallax
         {
             type: "truefalse",
-            question: "Study Guide #13 — The apparent movement or change in position of one star in relationship to other stars is known as pulsating.",
+            question: "SECTION C — #13. The apparent movement or change in position of one star in relationship to other stars is known as [pulsating]. (True or False?)",
             correct: false,
-            hint: "FALSE. The underlined word \'pulsating\' should be replaced with PARALLAX."
+            hint: "FALSE — the underlined word 'pulsating' is wrong. Write the correction."
         },
         {
             type: "fillin",
-            question: "Study Guide #13 correction — The apparent movement or change in position of one star in relationship to other stars is known as _______.",
+            question: "SECTION C — #13 correction: The apparent movement or change in position of one star in relationship to other stars is known as _______.",
             correct: "parallax",
-            hint: "Parallax is the apparent shift in a star\'s position when viewed from different points in Earth\'s orbit."
+            hint: "Parallax is the apparent shift in position when seen from two different points in Earth's orbit."
         },
-        // Q14 — FALSE: underlined word is 'reflect' → correction: give off
         {
             type: "truefalse",
-            question: "Study Guide #14 — Stars are glowing balls of gases that reflect light.",
+            question: "SECTION C — #14. Stars are glowing balls of gases that [reflect] light. (True or False?)",
             correct: false,
-            hint: "FALSE. The underlined word \'reflect\' should be replaced with GIVE OFF. Stars produce their own light."
+            hint: "FALSE — the underlined word 'reflect' is wrong. Stars produce their own light, they don't reflect it."
         },
         {
             type: "fillin",
-            question: "Study Guide #14 correction — Stars are glowing balls of gases that _______ light.",
+            question: "SECTION C — #14 correction: Stars are glowing balls of gases that _______ light.",
             correct: "give off",
-            hint: "Stars generate their own light through nuclear fusion — they do not reflect light from somewhere else."
+            hint: "Stars generate their own light through nuclear fusion — 'give off' replaces 'reflect'."
         },
-        // Q15 — TRUE: A supergiant star that collapses and disappears from space is called a black hole.
         {
             type: "truefalse",
-            question: "Study Guide #15 — A supergiant star that collapses and disappears from space is called a black hole.",
+            question: "SECTION C — #15. A supergiant star that collapses and disappears from space is called a black hole. (True or False?)",
             correct: true,
-            hint: "TRUE. When a supergiant collapses completely, its gravity becomes so strong that not even light can escape."
+            hint: "TRUE — a black hole's gravity is so strong that not even light can escape."
         },
-        // Q16 — FALSE: underlined word is 'Proxima Centauri' → correction: the Sun
         {
             type: "truefalse",
-            question: "Study Guide #16 — Proxima Centauri is the closest star to Earth.",
+            question: "SECTION C — #16. [Proxima Centauri] is the closest star to Earth. (True or False?)",
             correct: false,
-            hint: "FALSE. \'Proxima Centauri\' should be replaced with THE SUN. The Sun is Earth\'s closest star."
+            hint: "FALSE — the underlined name 'Proxima Centauri' is wrong. Write the correction."
         },
         {
             type: "fillin",
-            question: "Study Guide #16 correction — _______ is the closest star to Earth.",
+            question: "SECTION C — #16 correction: _______ is the closest star to Earth.",
             correct: "the Sun",
-            hint: "The Sun is right in our solar system! Proxima Centauri is the closest star OUTSIDE our solar system."
+            hint: "The Sun IS a star, and it is right in our solar system! Proxima Centauri is the closest star OUTSIDE our solar system."
         },
-        // Q17 — TRUE: Variable stars regularly or repeatedly change in magnitude.
         {
             type: "truefalse",
-            question: "Study Guide #17 — Variable stars regularly or repeatedly change in magnitude.",
+            question: "SECTION C — #17. Variable stars regularly or repeatedly change in [magnitude]. (True or False?)",
             correct: true,
-            hint: "TRUE. Variable stars change in brightness — either by pulsating (changing size) or by eclipsing each other."
+            hint: "TRUE — variable stars do change in magnitude (brightness), either by pulsating or by eclipsing another star."
         },
 
-        // ── SECTION D: Written answers ─────────────────────────────────────
+        // ── SECTION D: Write the answers ───────────────────────────────────
 
-        // Q18 — Star color and surface temperature
         {
             type: "multiple",
-            question: "Study Guide #18 — Which statement correctly describes the relationship between a star\'s color and temperature?",
+            question: "SECTION D — #18. Summarize the relationship between a star's surface temperature and its color. Which answer is correct?",
             options: [
-                "Blue stars are the coolest; red stars are the hottest",
-                "Blue stars are the hottest; yellow stars are medium temperature; red stars are the coolest",
-                "All stars are the same temperature but different colors",
-                "Red stars are hotter than yellow stars"
+                "Red stars are the hottest; blue stars are the coolest",
+                "A star's color depends on its surface temperature: blue stars are the hottest, yellow stars are medium temperature, and red stars are the coolest",
+                "All stars are the same temperature; color is caused by distance",
+                "The Sun is blue because it is the hottest star"
             ],
             correct: 1,
-            hint: "Think of a flame: the hottest part glows blue-white, the cooler edges glow red-orange."
+            hint: "Think of a flame: the hottest inner part is blue-white; the cooler outer edges are orange-red."
         },
         {
             type: "fillin",
-            question: "Study Guide #18 — The hottest stars appear _______ in color.",
-            correct: "blue",
-            hint: "Blue-white stars have the highest surface temperatures."
-        },
-        {
-            type: "fillin",
-            question: "Study Guide #18 — The coolest stars appear _______ in color.",
-            correct: "red",
-            hint: "Red stars burn cooler than yellow or blue stars."
-        },
-
-        // Q19 — Pulsating vs eclipsing variable stars
-        {
-            type: "multiple",
-            question: "Study Guide #19 — What causes a PULSATING variable star to change in brightness?",
-            options: [
-                "Another star blocks its light",
-                "The star itself grows bigger and smaller (expands and contracts)",
-                "It explodes and reforms",
-                "Dust clouds pass in front of it"
-            ],
-            correct: 1,
-            hint: "Pulsating variable stars physically expand and contract, which changes how much light they put out."
+            question: "SECTION D — #18. Blue stars are _______ than red stars.",
+            correct: "hotter",
+            hint: "Color tells us temperature: blue = hot, yellow = medium, red = cool."
         },
         {
             type: "multiple",
-            question: "Study Guide #19 — What causes an ECLIPSING variable star to change in brightness?",
+            question: "SECTION D — #19. Explain the difference between pulsating variable stars and eclipsing variable stars. Which is correct?",
             options: [
-                "The star grows bigger and smaller",
-                "The star explodes periodically",
-                "One star in a pair passes in front of the other, blocking its light",
-                "Sunspots cover the star"
+                "Pulsating stars are blocked by another star; eclipsing stars grow and shrink",
+                "Both types explode to change brightness",
+                "Pulsating variable stars grow bigger and smaller (brighter and dimmer); eclipsing variable stars change brightness when one star blocks the other star's light",
+                "There is no difference; they are the same thing"
             ],
             correct: 2,
-            hint: "Eclipsing variable stars are actually two stars — when one blocks the other, the total light we see decreases."
+            hint: "Pulsating = the star ITSELF changes size. Eclipsing = one star BLOCKS another."
         },
         {
-            type: "multiple",
-            question: "Study Guide #19 — What is the key difference between pulsating and eclipsing variable stars?",
-            options: [
-                "Pulsating stars are larger than eclipsing stars",
-                "Pulsating stars change size themselves; eclipsing stars change brightness when one star blocks the other\'s light",
-                "Eclipsing stars spin faster",
-                "There is no real difference"
-            ],
-            correct: 1,
-            hint: "Pulsating = the star itself changes; eclipsing = two stars and one blocks the other."
+            type: "fillin",
+            question: "SECTION D — #19. Pulsating variable stars get brighter and dimmer because they grow bigger and _______.",
+            correct: "smaller",
+            hint: "Pulsating stars physically expand and contract — growing bigger (brighter) then smaller (dimmer)."
+        },
+        {
+            type: "fillin",
+            question: "SECTION D — #19. Eclipsing variable stars change brightness when one star _______ the other star's light.",
+            correct: "blocks",
+            hint: "An eclipse happens when one object passes in front of another and blocks its light."
         }
     ],
     11: [ // Solar System
